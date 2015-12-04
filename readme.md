@@ -18,11 +18,11 @@ or run  '$ npm link'  if you are in dev mode within the repo directory
 ## Usage
 ```
 this repo contains command line utilities for data mining
-run $ topic [args] to get facebook topic data forexample
+run $ topic <args> to get facebook topic data forexample
 '$ topic museveni uganda' will get you museveni json topic data on museveni this 
 operation will take a while  to execute look at the set time out variables to adjust the time
 duraion in the src/facebook/topic.js file.
-run $ pages [args] to get data on a page forexample '$ pages MTNUG' gets you mtn's facebook page
+run $ pages <args> to get data on a page forexample '$ pages MTNUG' gets you mtn's facebook page
 data
 
 if you are running these scripts on windows please note we are using unix shebangs at the top of 
@@ -40,15 +40,16 @@ I am not sure of the windows eqivalents, please switch them up accordinfly with 
 
 ## API
 
-### `dataMining(data, [options])`
+### $ topic <search_term>
+### $ pages <page_name>
 Description
 
 #### Parameters
-- **Array** `data`: An array of data
-- **Object** `options`: An object containing the following fields:
+- **strings** `search_term`: a string of search terms eg mtn uganda
+- **string** `page_name`: a page name eg MTNUG
 
 #### Return
-- **Array** - Result
+- **JSON** - Json file with data is returned with time stap in the data folder
 
 ## License
 MIT © [Allan](http://github.com/epicallan)
