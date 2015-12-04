@@ -11,7 +11,7 @@
 These scripts have been tested on unix environments and found to function fine
 Install phantomjs if you dont have it on your computer and make sure its available
 as an environment variable 
-$ npm install --save datamining
+'$ npm install --save datamining'
 or run  '$ npm link'  if you are in dev mode within the repo directory
 ```
 
@@ -19,9 +19,9 @@ or run  '$ npm link'  if you are in dev mode within the repo directory
 ```
 this repo contains command line utilities for data mining
 run $ topic [args] to get facebook topic data forexample
-'$ topic museveni uganda' will get you museveni json topic data on museveni
-The operation will take a while  to execute look at the set time out variables to adjust the time
-duration
+'$ topic museveni uganda' will get you museveni json topic data on museveni this 
+operation will take a while  to execute look at the set time out variables to adjust the time
+duraion in the src/facebook/topic.js file.
 run $ pages [args] to get data on a page forexample '$ pages MTNUG' gets you mtn's facebook page
 data
 
