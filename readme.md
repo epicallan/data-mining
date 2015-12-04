@@ -11,12 +11,19 @@
 These scripts have been tested on unix environments and found to function fine
 Install phantomjs if you dont have it on your computer and make sure its available
 as an environment variable 
+
 '$ npm install --save datamining'
 or run  '$ npm link'  if you are in dev mode within the repo directory
+
 ```
 
 ## Usage
 ```
+Before you can start mining facebook, please first login so that we can have access
+to a facebook login cook.
+
+'$ login <email> <password>' eg '$ login allan@gmail.com myawesommepassword'
+
 this repo contains command line utilities for data mining
 run $ topic <args> to get facebook topic data forexample
 '$ topic museveni uganda' will get you museveni json topic data on museveni this 
@@ -39,12 +46,13 @@ I am not sure of the windows eqivalents, please switch them up accordinfly with 
 - set up travis
 
 ## API
-
+### $ login <email> <password>
 ### $ topic <search_term>
 ### $ pages <page_name>
 Description
 
 #### Parameters
+-**strings** email and password : enter your facebook login details
 - **strings** `search_term`: a string of search terms eg mtn uganda
 - **string** `page_name`: a page name eg MTNUG
 

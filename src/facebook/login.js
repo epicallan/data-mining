@@ -1,7 +1,5 @@
-'use strict';
-/*jshint node: true */
-/* jshint browser: true */
-/* jshint phantom: true */
+#! /usr/bin/env phantomjs
+
 var fs = require('fs');
 var page = require('webpage').create();
 var url = 'http://www.facebook.com';
@@ -29,8 +27,7 @@ page.open(url, function(status) {
         phantom.exit();
     } else {
         //login into facebook supply your password
-        var state = page.evaluate(function() {
-            var logged_in = false;
+        page.evaluate(function(email,password) {
             var frm = document.getElementById('login_form');
             if (frm !== null) {
                 frm.elements.email.value = email;
@@ -40,16 +37,11 @@ page.open(url, function(status) {
                     console.log('clicking login');
                     login_btn.click();
                 }
-                logged_in = true;
             } else {
                 console.log('No login form ');
             }
-            return logged_in;
-        });
-        if (!state) {
-            console.log('Login error ');
-            phantom.exit();
-        }
+            return true;
+        },email,password);
         //get facebook cookie
         setTimeout(function() {
             page.render('login.png');
