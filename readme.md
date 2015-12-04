@@ -52,7 +52,7 @@ I am not sure of the windows eqivalents, please switch them up accordinfly with 
 Description
 
 #### Parameters
--**strings** email and password : enter your facebook login details
+- **strings** `email and password` : enter your facebook login details
 - **strings** `search_term`: a string of search terms eg mtn uganda
 - **string** `page_name`: a page name eg MTNUG
 
