@@ -11,8 +11,7 @@
     "tdd": "npm test -- --watch"
   },
   "repository": "epicallan/datamining",
-  "keywords": [
-  ],
+  "keywords": [],
   "files": [
     "dist",
     "src"
@@ -47,9 +46,10 @@
     "pages": "src/facebook/pages.js",
     "login": "src/facebook/login.js",
     "topic": "src/facebook/topic.js"
-    },
+  },
   "license": "MIT",
   "dependencies": {
-     "commander": "^2.9.0"
+    "commander": "^2.9.0",
+    "node-twitter-api": "^1.6.2"
   }
 }

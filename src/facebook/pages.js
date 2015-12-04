@@ -146,7 +146,7 @@ function gettingPostsComments() {
 
 function savePageContent(data) {
     var date = new Date().getTime();
-    fs.write(args[1] + date + '.json', JSON.stringify(data), 644);
+    fs.write('data/fb/pages/'+args[1] + date + '.json', JSON.stringify(data), 644);
     var length = "--------length: " + data.length + "------";
     console.log(length);
     //page.render('more.png');

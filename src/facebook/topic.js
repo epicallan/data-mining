@@ -1,18 +1,22 @@
 #! /usr/bin/env phantomjs
-'use strict';
-/* eslint node: true */
-/* eslint browser: true */
-/* eslint phantom: true */
+
 /*global $:false */
 
 var fs = require('fs');
 var page = require('webpage').create();
-//var url = 'https://www.facebook.com/MTNUG/';
 var url = 'https://www.facebook.com/search/top/?q=mtn%20uganda';
 var system = require('system');
+var args = require('system').args;
+
+//get search query
+args.splice(0,1);
+var query = args.join('%20');
+var url = 'https://www.facebook.com/search/top/?q='+query;
+console.log(url);
 
 //configure page settings
-page.settings.userAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36';
+page.settings.userAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) '
+                          +'Chrome/28.0.1500.71 Safari/537.36';
 page.settings.loadImages = false;
 
 //add cookie jar if it exists else login
@@ -68,7 +72,7 @@ function init() {
                 console.log('No login cookie ');
                 phantom.exit();
             }
-        },4000);
+        },5000);
     }
 }
 
@@ -76,10 +80,10 @@ function init() {
 function processPage(){
     var iteration = 0;
     var interval = setInterval(function() {
-        scroll = page.evaluate(function(getEndDate,iteration,clickThroughPage) {
+        var scroll = page.evaluate(function(getEndDate,iteration,clickThroughPage) {
             iteration++;
-            iteration % 20 === 0  && iteration > 20? clickThroughPage():
-            window.document.body.scrollTop = document.body.scrollHeight/2;
+            iteration % 40 === 0  && iteration > 500? clickThroughPage():
+            window.document.body.scrollTop = document.body.scrollHeight;
             return iteration;
         },getEndDate,iteration,clickThroughPage);
         //post scroll page
@@ -89,7 +93,7 @@ function processPage(){
     setTimeout(function(){
         clearInterval(interval);
         dataMinePage();
-    },100000);
+    },2500000);
 }
 
 function getPostsData() {
@@ -132,7 +136,7 @@ function getPostsData() {
                 post: $(this).find('._5pbx.userContent').text(),
                 poster:$(this).find('h5._5pbw a').first().text(),
                 url:$(this).find('h5._5pbw a').first().attr('href'),
-                comments: comments,
+                comments: comments
             };
             posts.push(obj);
         });
@@ -142,7 +146,7 @@ function getPostsData() {
 
 function savePageContent(data) {
     var date = new Date().getTime();
-    fs.write('mtn' + date + '.json', JSON.stringify(data), 644);
+    fs.write('data/fb/topic'+args[0] + date + '.json', JSON.stringify(data), 644);
     var length = '--------length: ' + data.length + '------';
     console.log(length);
     phantom.exit();
