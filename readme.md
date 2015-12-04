@@ -8,6 +8,9 @@
 ## Installation
 
 ```
+These scripts have been tested on unix environments and found to function fine
+Install phantomjs if you dont have it on your computer and make sure its available
+as an environment variable 
 $ npm install --save datamining
 or run  '$ npm link'  if you are in dev mode within the repo directory
 ```
@@ -21,6 +24,10 @@ The operation will take a while  to execute look at the set time out variables t
 duration
 run $ pages [args] to get data on a page forexample '$ pages MTNUG' gets you mtn's facebook page
 data
+
+if you are running these scripts on windows please note we are using unix shebangs at the top of 
+the scripts which tell the parent shell which interpreter should be used to execute the script 
+I am not sure of the windows eqivalents, please switch them up accordinfly with the windows eqivalent
 
 ```
 ## Todo
