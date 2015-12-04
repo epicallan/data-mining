@@ -9,23 +9,23 @@
 
 ```
 $ npm install --save datamining
-or run  '$ npm link'  if you are in dev mode
+or run  '$ npm link'  if you are in dev mode within the repo directory
 ```
 
 ## Usage
 ```
-this repo contains command line utilities
+this repo contains command line utilities for data mining
 run $ topic [args] to get facebook topic data forexample
-'$ topic museveni uganda' will get you museveni topic data, the data will be 
-placed in the data folder, this operation wwill take a while look at the set time 
-out variable to adjust the time for which we do the data mining
-run $ pages [args] to get data on a page forexample $ pages MTNUG gets you mtn's facebook
+'$ topic museveni uganda' will get you museveni json topic data on museveni
+The operation will take a while  to execute look at the set time out variables to adjust the time
+duration
+run $ pages [args] to get data on a page forexample '$ pages MTNUG' gets you mtn's facebook page
 data
 
 ```
 ## Todo
-- need to expose the time out variables as command line args, for now they are the optimal values
-after many tests.
+- need to expose the set time out variables as command line args, for now they are the optimal values
+  after many tests.
 - need to write tests
 - the facbook code has repitions
 - set up npm build and linting scripts
