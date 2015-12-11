@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "precommit": "npm test && npm run build",
+    "dist": "babel src --out-dir dist --watch",
     "build": "rimraf dist && webpack",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
     "coveralls": "npm run coverage && coveralls < coverage/lcov.info && rimraf coverage",

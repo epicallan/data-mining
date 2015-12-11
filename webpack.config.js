@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/module.js',
+  entry: 'index.js',
   output: {
     path: './dist',
     filename: 'module.js',
