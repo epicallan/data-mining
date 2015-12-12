@@ -28,6 +28,7 @@
     "no-unused-vars": 1,
     "no-trailing-spaces": [1, { "skipBlankLines": true }],
     "no-unreachable": 1,
-    "no-alert": 0
+    "no-alert": 0,
+    "semi":1
   }
 }

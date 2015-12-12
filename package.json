@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "precommit": "npm test && npm run build",
+    "precommit": "npm test",
     "dist": "babel src --out-dir dist --watch",
     "build": "rimraf dist && webpack",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",

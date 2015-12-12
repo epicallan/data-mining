@@ -45,6 +45,7 @@ I am not sure of the windows eqivalents, please switch them up accordinfly with 
 - set up npm build and linting scripts
 - set up travis
 - assign ids to data
+- get likes on comments
 
 ## API
 ### $ login <email> <password>
