@@ -17,32 +17,54 @@ export default class Analyzer {
    */
   constructor(options) {
     this.options = options;
-    this.data = options.data || this.getData(options.file);
+    this.data = options.data || this._getData(options.file);
     this.tokenizers = new salient.tokenizers.RegExpTokenizer({
       pattern: /\W+/
     });
     this.classifier = new salient.sentiment.BayesSentimentAnalyser();
+    this.posTagger = new salient.tagging.HmmTagger();
+
   }
 
-  getData(file) {
+  _getData(file) {
     const raw = fs.readFile(file);
     let data = cleanUp.assignIds(raw);
     if (this.options.type === 'topic')
       data = cleanUp.removeSelfPosts(data);
     return data;
   }
-
-  /**
-   * gets over all sentiment of the post by its title
-   * @return {array} has post objects
-   */
+  _getSentiment(sentence) {
+    return this.classifier.classify(sentence);
+  }
+  _getKeyWords(text) {
+    const concepts = this.tokenizer.tokenize(text);
+    const nouns = [];
+    concepts.forEach(function(concept) {
+      console.log(concept);
+      let tag = this.posTagger.tag([concept]);
+      if (tag[1] == 'NOUN' && concept.length > 3) {
+        nouns.push(concept);
+      }
+    });
+    return nouns;
+  }
+  _getItemCounts(terms) {
+      const aggregated = _.chain(terms)
+        .countBy(terms, term => term)
+        .pairs();
+      return aggregated;
+    }
+    /**
+     * gets over all sentiment of the post by its title
+     * @return {array} has post objects
+     */
   fbPostsSentimentsByTitle() {
       const list = _.cloneDeep(this.data);
       list.forEach((post) => {
         let post_title = post.post;
         let sentiment = null;
         if (!utils.isEmpty(post_title)) {
-          sentiment = this.classifier.classify(post.poster);
+          sentiment = this._getSentiment(post.poster);
           post.sentiment = sentiment;
           //remove the comments object
           delete post.comments;
@@ -63,7 +85,7 @@ export default class Analyzer {
           let sentiments = 0;
           post.comments.forEach((comment) => {
             if (!utils.isEmpty(comment.comment)) {
-              let sentiment = this.classifier.classify(comment.comment);
+              let sentiment = this._getSentiment(comment.comment);
               comment.sentiment = sentiment;
               sentiments += sentiment;
             }
@@ -79,32 +101,76 @@ export default class Analyzer {
      * @return {[type]} [description]
      */
   fbPostsStats() {
-    const list = _.cloneDeep(this.data);
-    //const list = Immutable.fromJS(this.data);
-    list.forEach((post) => {
-      const comments_count = post.comments.length;
-      post.comments.forEach((comment) => {
-        if (comment.reply) {
-          comments_count += comment.reply.length;
-        }
+      const list = _.cloneDeep(this.data);
+      //const list = Immutable.fromJS(this.data);
+      list.forEach((post) => {
+        const comments_count = post.comments.length;
+        post.comments.forEach((comment) => {
+          if (comment.reply) {
+            comments_count += comment.reply.length;
+          }
+        });
+        post.likes = ~~post.likes;
+        post.shares = ~~post.shares;
+        post.commentsCount = comments_count;
+        delete post.comments;
       });
-      post.likes = ~~post.likes;
-      post.shares = ~~post.shares;
-      post.commentsCount = comments_count;
-      delete post.comments;
+      return list;
+    }
+    /**
+     * [fbPostsKeyTermsByTitles get posts keyTerms]
+     * @return {[array]} [description]
+     */
+  fbPostsTerms() {
+    const list = _.cloneDeep(this.data);
+    list.forEach((post) => {
+      let terms = this._getKeyWords(post.post);
+      post.terms = terms;
+      post.comments.forEach((comment) => {
+        let terms = this._getKeyWords(comment.comment);
+        comment.terms = this._getItemCounts(terms);
+      });
     });
     return list;
   }
 
-  fbPostsKeyTermsByTitles() {
-
+  /**
+   * aggregatePostsTerms get top terms for each posts comments
+   * TODO
+   * @return {[type]} [description]
+   */
+  aggregatePostsTerms() {
+    const posts = this.fbPostsTerms();
+    let terms = [];
+    posts.forEach((post) => {
+      post.comments.forEach((comment) => {
+        terms.push(comment.terms);
+      });
+    });
   }
 
-  fbPostsCommentsKeyTerms() {}
+  /**
+   * fbPagesActiveCommenters gets a pages most active commenters
+   * @return {[type]} [description]
+   */
+  fbPagesActiveCommenters() {
+    const commenters = [];
+    this.data.forEach((post) => {
+      post.comments.forEach((comment) => {
+        commenters.push(comment.commenters);
+      });
+    });
+    return this._getItemCounts(commenters);
+  }
 
-  fbPagesActiveCommenters() {}
-
-  fbTopicsFrequentPosters() {}
+  /**
+   * [fbTopicsFrequentPosters description]
+   * @return {[type]} [description]
+   */
+  fbTopicsFrequentPosters() {
+    const posters = this.data.map(post => post.poster);
+    return this._getItemCounts(posters);
+  }
 
 
 }
