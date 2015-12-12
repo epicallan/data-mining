@@ -15,7 +15,7 @@ describe('cleanup mined data', () => {
   });
 
   it('should remove all self posts from topic data i.e data cleanup', () => {
-    let cleaned_data = cleanUp.removeSelfPosts('Airtel Uganda')
+    let cleaned_data = cleanUp.removeSelfPosts('Airtel Uganda');
     let posters = cleaned_data.map(obj => obj.poster);
     console.log(posters);
     expect(posters).to.not.include('Airtel Uganda');
@@ -29,15 +29,15 @@ describe('should get/segement posts by popularity based on shares and likes');
 
 describe('should aggregate sentiments and popularity into one value per post');
 
-describe('should get/segement posts by key terms (themes)')
+describe('should get/segement posts by key terms (themes)');
 
-describe('should get/segement actions of the posters and commenters on a per post basis eg mtn was sued, mobile money not working')
+describe('should get/segement actions of the posters and commenters on a per post basis eg mtn was sued, mobile money not working');
 
-describe('should get frequent commenters and posters on a per topic basis i.e people who post or tweet about mobile money ')
+describe('should get frequent commenters and posters on a per topic basis i.e people who post or tweet about mobile money ');
 
-describe('should get commenters per post with most likes')
+describe('should get commenters per post with most likes');
 
-describe('should get commenters per post with most negative or postive sentiments')
+describe('should get commenters per post with most negative or postive sentiments');
 
 /***
  *TODO

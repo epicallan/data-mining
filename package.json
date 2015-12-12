@@ -51,6 +51,10 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^2.9.0",
-    "node-twitter-api": "^1.6.2"
+    "immutable": "^3.7.5",
+    "lodash": "^3.10.1",
+    "node-twitter-api": "^1.6.2",
+    "salient": "^0.2.1",
+    "uid": "^0.0.2"
   }
 }
