@@ -17,7 +17,8 @@ export default class Analyzer {
    */
   constructor(options) {
     this.options = options;
-    this.data = options.data || this._getData(options.file);
+    this.raw = this._readInData(options.file);
+    this.data = options.data || this._cleanUpData(this.raw, options.poster, options.type);
     this.tokenizers = new salient.tokenizers.RegExpTokenizer({
       pattern: /\W+/
     });
@@ -25,12 +26,12 @@ export default class Analyzer {
     this.posTagger = new salient.tagging.HmmTagger();
 
   }
-
-  _getData(file) {
-    const raw = fs.readFile(file);
+  _readInData(file) {
+    return JSON.parse(fs.readFileSync(file, 'utf8'));
+  }
+  _cleanUpData(raw, poster, type) {
     let data = cleanUp.assignIds(raw);
-    if (this.options.type === 'topic')
-      data = cleanUp.removeSelfPosts(data);
+    if (type === 'topic') data = cleanUp.removeSelfPosts(poster, data);
     return data;
   }
   _getSentiment(sentence) {
@@ -104,7 +105,7 @@ export default class Analyzer {
       const list = _.cloneDeep(this.data);
       //const list = Immutable.fromJS(this.data);
       list.forEach((post) => {
-        const comments_count = post.comments.length;
+        let comments_count = post.comments.length;
         post.comments.forEach((comment) => {
           if (comment.reply) {
             comments_count += comment.reply.length;

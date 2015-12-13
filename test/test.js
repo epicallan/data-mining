@@ -2,28 +2,40 @@ import {
   expect as expect
 }
 from 'chai';
-import cleanUp from '../analysis/cleanUp';
-
-import fs from 'fs';
+import Analyzer from '../src/analysis/analyzer';
+import path from 'path';
 
 describe('cleanup mined data', () => {
-  this.data = null;
-  //import test data set
-  before(() => {
-    let mined_data = fs.readFileSync('./data/topic-airtel.json');
-    this.data = JSON.parse(mined_data);
+
+  let analyzer = null;
+
+  before(function() {
+    const file = path.resolve(__dirname, 'data/topic-airtel.json');
+
+    const options = {
+      file: file,
+      type: 'topic',
+      poster: 'Airtel Uganda'
+    };
+    analyzer = new Analyzer(options);
   });
 
-  it('should remove all self posts from topic data i.e data cleanup', () => {
-    let cleaned_data = cleanUp.removeSelfPosts('Airtel Uganda');
-    let posters = cleaned_data.map(obj => obj.poster);
-    console.log(posters);
-    expect(posters).to.not.include('Airtel Uganda');
+
+  it('should read In data from a specified datasource', () => {
+    const data = analyzer.raw;
+    expect(data).to.have.length.above(2);
   });
+
+  it('should create a cleaned up data instance without self posts and having ids', () => {
+    const posters = analyzer.data.map(post => post.poster);
+    expect(posters).to.not.include('Airtel Uganda');
+    expect(analyzer.data[0].id).to.exist;
+  });
+
 });
 
 
-describe('should get over all sentiment for each post by sentiment analyzer');
+/*describe('should get over all sentiment for each post by sentiment analyzer');
 
 describe('should get/segement posts by popularity based on shares and likes');
 
@@ -39,8 +51,4 @@ describe('should get commenters per post with most likes');
 
 describe('should get commenters per post with most negative or postive sentiments');
 
-/***
- *TODO
- */
-
-describe('should add location details to poster or commenter object ')
+describe('should add location details to poster or commenter object ');*/
