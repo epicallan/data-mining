@@ -4,8 +4,9 @@ import {
 from 'chai';
 import Analyzer from '../src/analysis/analyzer';
 import path from 'path';
+import prettyjson from 'prettyjson';
 
-describe('cleanup mined data', () => {
+describe('data analysis', () => {
 
   let analyzer = null;
 
@@ -26,16 +27,39 @@ describe('cleanup mined data', () => {
     expect(data).to.have.length.above(2);
   });
 
-  it('should create a cleaned up data instance without self posts and having ids', () => {
+  it('should have a cleaned up data instance without self posts and having ids', () => {
     const posters = analyzer.data.map(post => post.poster);
     expect(posters).to.not.include('Airtel Uganda');
     expect(analyzer.data[0].id).to.exist;
   });
 
+  it('should get sentiments of posts by their titles', () => {
+    const sentimented_data = analyzer.fbPostsSentimentsByTitle();
+    expect(sentimented_data[0].sentiment).to.be.above(0);
+  });
+
+  it('should get posts comment sentiments and overall post sentiment by comments', () => {
+    const sentimented_data = analyzer.fbPostsCommentsSentiments();
+    expect(sentimented_data[2].comments[0].sentiment).to.be.above(0);
+    expect(sentimented_data[2].commentSentiments).to.be.above(0);
+  });
+
+  it('should get stats on posts',()=>{
+    const stats_data = analyzer.fbPostsStats();
+    expect(stats_data[2].commentsCount).to.be.above(1);
+  });
+
+  it('should get fb post terms',()=>{
+    const termed_data = analyzer.fbPostsTerms();
+    //console.log(prettyjson.render(termed_data[2].comments[0]));
+    expect(termed_data[2].terms).to.have.length.above(1);
+    expect(termed_data[2].comments[0].terms).to.have.length.above(0);
+  });
+
 });
 
 
-/*describe('should get over all sentiment for each post by sentiment analyzer');
+/*
 
 describe('should get/segement posts by popularity based on shares and likes');
 

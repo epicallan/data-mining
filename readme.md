@@ -46,6 +46,7 @@ I am not sure of the windows eqivalents, please switch them up accordinfly with 
 - set up travis
 - assign ids to data
 - get likes on comments
+- Extract data from post links
 
 ## API
 ### $ login <email> <password>

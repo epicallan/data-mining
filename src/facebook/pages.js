@@ -1,6 +1,6 @@
 #! /usr/bin/env phantomjs
 'use strict';
-/* eslint node: true */
+
 /* eslint browser: true */
 /* eslint phantom: true */
 /*global $:false */

@@ -93,7 +93,7 @@ function processPage(){
     setTimeout(function(){
         clearInterval(interval);
         dataMinePage();
-    },1000000);
+    },100000);
 }
 
 function getPostsData() {

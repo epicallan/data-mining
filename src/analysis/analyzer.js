@@ -6,6 +6,7 @@ import salient from 'salient';
 import cleanUp from './cleanUp';
 import utils from '../utils/utils';
 import _ from 'lodash';
+//import prettyjson from 'prettyjson';
 //import Immutable from 'immutable';
 
 
@@ -23,7 +24,7 @@ export default class Analyzer {
       pattern: /\W+/
     });
     this.classifier = new salient.sentiment.BayesSentimentAnalyser();
-    this.posTagger = new salient.tagging.HmmTagger();
+    this.POSTagger = new salient.tagging.HmmTagger();
 
   }
   _readInData(file) {
@@ -38,15 +39,16 @@ export default class Analyzer {
     return this.classifier.classify(sentence);
   }
   _getKeyWords(text) {
-    const concepts = this.tokenizer.tokenize(text);
-    const nouns = [];
-    concepts.forEach(function(concept) {
-      console.log(concept);
-      let tag = this.posTagger.tag([concept]);
-      if (tag[1] == 'NOUN' && concept.length > 3) {
-        nouns.push(concept);
-      }
-    });
+    let nouns = [];
+    if (!utils.isEmpty(text)) {
+      const concepts = this.tokenizers.tokenize(text);
+      concepts.forEach((concept) => {
+        let tag = this.POSTagger.tag([concept]);
+        if (tag[1] == 'NOUN' && concept.length > 3) {
+          nouns.push(concept);
+        }
+      });
+    }
     return nouns;
   }
   _getItemCounts(terms) {
@@ -62,15 +64,15 @@ export default class Analyzer {
   fbPostsSentimentsByTitle() {
       const list = _.cloneDeep(this.data);
       list.forEach((post) => {
-        let post_title = post.post;
         let sentiment = null;
-        if (!utils.isEmpty(post_title)) {
-          sentiment = this._getSentiment(post.poster);
+        if (!utils.isEmpty(post.post)) {
+          sentiment = this._getSentiment(post.post);
           post.sentiment = sentiment;
           //remove the comments object
           delete post.comments;
         }
       });
+      //console.log(prettyjson.render(list));
       return list;
     }
     /**
@@ -129,7 +131,8 @@ export default class Analyzer {
       post.terms = terms;
       post.comments.forEach((comment) => {
         let terms = this._getKeyWords(comment.comment);
-        comment.terms = this._getItemCounts(terms);
+        comment.terms = terms;
+        //comment.terms = this._getItemCounts(terms);
       });
     });
     return list;
