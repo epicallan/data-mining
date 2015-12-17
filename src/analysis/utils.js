@@ -3,7 +3,8 @@
  */
 
 class Utils {
-  isEmpty(str){
+
+  isEmpty(str) {
     return typeof str == 'string' && !str.trim() || typeof str == 'undefined' || str === null;
   }
 }
