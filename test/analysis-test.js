@@ -69,33 +69,24 @@ describe('fb data analysis', () => {
 
 describe('twitter data analysis', () => {
 
-  let analyzer = null;
 
-  before(function() {
-    const file = path.resolve(__dirname, 'data/tw-allan.json');
+  const analyzer = new Analyzer();
 
+  before(function(done) {
+    const file = path.resolve(__dirname, 'data/tw-museveni.json');
     const options = {
       file: file,
       type: 'twitter'
     };
-    analyzer = new Analyzer(options);
-  });
-
-
-  it('should read In data from a specified datasource', () => {
-    const data = analyzer.raw;
-    expect(data).to.have.length.above(2);
-  });
-
-  it('should have normalized tweet data', () => {
-    const data = analyzer.data;
-    expect(data).to.have.length.above(0);
+    analyzer.readInData(options,()=>{
+      expect(analyzer.data).to.not.be.empty;
+      done();
+    });
   });
 
   it('should return filtered tweets or fb posts by a certain field', () => {
-    let data = analyzer.filterData(analyzer.data, 'replies', true);
-    //console.log(prettyjson.render(data));
-    expect(data).to.have.length.above(0);
+    const filtered = analyzer.filterData(analyzer.data, 'has_hashtags', true);
+    expect(filtered).to.have.length.above(0);
   });
 
   it('should get top tweeps (user_name)', () => {
@@ -104,7 +95,7 @@ describe('twitter data analysis', () => {
   });
 
   it('should get terms in tweets', () => {
-    const data = analyzer.twTerms(analyzer.data);
+    const data = analyzer.twTerms(data);
     expect(data).to.have.length.above(0);
   });
 
@@ -117,7 +108,6 @@ describe('twitter data analysis', () => {
     const count = analyzer.aggregateTwSentiments(analyzer.data);
     expect(count).to.not.equal(0);
   });
-
 
 });
 

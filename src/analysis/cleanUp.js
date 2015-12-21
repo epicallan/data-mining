@@ -2,7 +2,7 @@
  * data clean up utilities
  */
 import uid from 'uid';
-import utils from '../utils/utils';
+import utils from './utils';
 
 //import prettyjson from 'prettyjson';
 
@@ -27,7 +27,12 @@ class CleanUp {
       });
       return data;
     }
-  
+
+  fbData(data){
+    //TODO make fb data schema match twitters
+    return data;
+  }
+
   tweeterData(data) {
     let twitter_data = data.map((tweet) => {
       let obj = {};

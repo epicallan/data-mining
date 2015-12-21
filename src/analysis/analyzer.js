@@ -6,51 +6,55 @@ import salient from 'salient';
 import cleanUp from './cleanUp';
 import utils from './utils';
 import _ from 'lodash';
-//import prettyjson from 'prettyjson';
-//import Immutable from 'immutable';
-
+import Promise from 'bluebird';
+import prettyjson from 'prettyjson';
+const readFile = Promise.promisify(fs.readFile);
 
 export default class Analyzer {
-  /**
-   * takes in data source
-   * @param  {[string]} file [json file with data to analyze]
-   * @return {[promise] promise that has data}
-   */
+
   constructor() {
     this.tokenizers = new salient.tokenizers.RegExpTokenizer({
-      pattern: /\W+/
+      pattern: /\W+/,
     });
     this.classifier = new salient.sentiment.BayesSentimentAnalyser();
     this.POSTagger = new salient.tagging.HmmTagger();
+    this.data = null;
   }
 
 
-  readInData(file) {
-    return JSON.parse(fs.readFileSync(file, 'utf8'));
+  readInData(options, cb) {
+    console.log(options);
+    readFile(options.file).then(source => {
+      const raw = JSON.parse(source);
+      this.data = this.dataCleanUp(raw, options);
+      cb();
+    });
+
   }
 
-  cleanUpData(raw, options) {
+  dataCleanUp(raw, options) {
     let data = null;
     if (options.type === 'topic' || options.type === 'pages') {
       data = cleanUp.assignIds(raw);
     } else {
       data = cleanUp.tweeterData(raw);
     }
-    if (options.type == 'topic') data = cleanUp.removeSelfPosts(options.poster, data);
+    if (options.type === 'topic') data = cleanUp.removeSelfPosts(options.poster, data);
     return data;
   }
+
 
   getSentiment(sentence) {
     return this.classifier.classify(sentence);
   }
 
   getKeyWords(text) {
-    let nouns = [];
+    const nouns = [];
     if (!utils.isEmpty(text)) {
       const concepts = this.tokenizers.tokenize(text);
       concepts.forEach((concept) => {
-        let tag = this.POSTagger.tag([concept]);
-        if (tag[1] == 'NOUN' && concept.length > 3) {
+        const tag = this.POSTagger.tag([concept]);
+        if (tag[1] === 'NOUN' && concept.length > 3) {
           nouns.push(concept.toLowerCase());
         }
       });
@@ -59,97 +63,76 @@ export default class Analyzer {
   }
 
   getTopItems(terms, count) {
-      let aggregated = _.countBy(terms, (n) => {
-        return n;
-      });
-      aggregated = _.pairs(aggregated);
-      if (count >= aggregated.length) count = aggregated.length / 2;
-      aggregated = _.sortBy(aggregated, function(n) {
-        return n[1];
-      });
-      let top = aggregated.slice((aggregated.length - count), aggregated.length);
-      return top;
-    }
-    /**
-     * gets sentiment for a field in a d
-     * @return {array} has post objects
-     */
+    let aggregated = _.countBy(terms, (n) => {
+      return n;
+    });
+    aggregated = _.pairs(aggregated);
+    let myCount = count;
+    if (myCount >= aggregated.length) myCount = aggregated.length / 2;
+    aggregated = _.sortBy(aggregated, (n) => {
+      return n[1];
+    });
+    return aggregated.slice((aggregated.length - myCount), aggregated.length);
+  }
+
   fbPostsSentiments(list, field) {
-      return new Promise((resolve, reject) => {
-        list.forEach((post) => {
-          let sentiment = null;
-          if (!utils.isEmpty(post[field])) {
-            sentiment = this._getSentiment(post[field]);
-            post.sentiment = sentiment;
-          }
-        });
-        resolve(list);
-        reject(null);
-      });
-    }
-    /**
-     * fbPostsCommentsSentiments uses sentiments of a posts comments to
-     * determine posts sentiments
-     * @return {array} containing post data with comments sentiments
-     */
-  fbPostsCommentsSentiments(list) {
-    list.forEach((post) => {
-        if (post.comments) {
-          let sentiments = 0;
-          post.comments.forEach((comment) => {
-            if (!utils.isEmpty(comment.comment)) {
-              let sentiment = this._getSentiment(comment.comment);
-              comment.sentiment = sentiment;
-              sentiments += sentiment;
-            }
-          });
-          post.commentSentiments = sentiments;
+    return new Promise((resolve, reject) => {
+      list.forEach((post) => {
+        let sentiment = null;
+        if (!utils.isEmpty(post[field])) {
+          sentiment = this._getSentiment(post[field]);
+          post.sentiment = sentiment;
         }
       });
-      return list;
-    }
-    /**
-     * fbPostsStats gets total likes comments shares and replies
-     * Note we are adding replies to comments count
-     * @return {[type]} [description]
-     */
-  fbPostsStats(list) {
-      list.forEach((post) => {
-        let comments_count = post.comments.length;
+      resolve(list);
+      reject(null);
+    });
+  }
+
+  fbPostsCommentsSentiments(list) {
+    list.forEach((post) => {
+      if (post.comments) {
+        let sentiments = 0;
         post.comments.forEach((comment) => {
-          if (comment.reply) {
-            comments_count += comment.reply.length;
+          if (!utils.isEmpty(comment.comment)) {
+            const sentiment = this._getSentiment(comment.comment);
+            comment.sentiment = sentiment;
+            sentiments += sentiment;
           }
         });
-        post.likes = ~~post.likes;
-        post.shares = ~~post.shares;
-        post.commentsCount = comments_count;
-        delete post.comments;
+        post.commentSentiments = sentiments;
+      }
+    });
+    return list;
+  }
+
+  fbPostsStats(list) {
+    list.forEach((post) => {
+      let commentsCount = post.comments.length;
+      post.comments.forEach((comment) => {
+        if (comment.reply) {
+          commentsCount += comment.reply.length;
+        }
       });
-      return list;
-    }
-    /**
-     * [fbPostsKeyTermsByTitles get posts keyTerms]
-     * @return {[array]} [description]
-     */
+      post.likes = ~~post.likes;
+      post.shares = ~~post.shares;
+      post.commentsCount = commentsCount;
+      delete post.comments;
+    });
+    return list;
+  }
+
   fbPostsTerms(list) {
     list.forEach((post) => {
-      let terms = this._getKeyWords(post.post);
-      post.terms = terms;
+      post.terms = this._getKeyWords(post.post);
       post.comments.forEach((comment) => {
-        let terms = this._getKeyWords(comment.comment);
-        comment.terms = terms;
-        //comment.terms = this._getTopItems(terms);
+        comment.terms = this._getKeyWords(comment.comment);
       });
     });
     return list;
   }
 
-  /**
-   * aggregatePostsTerms get top terms for each posts comments
-   * this is a helper method for conveniance
-   * @return {[type]} [description]
-   */
+
   aggregatePostsTerms(count) {
     const posts = this.fbPostsTerms();
     let terms = [];
@@ -161,15 +144,10 @@ export default class Analyzer {
     });
     terms = _.flatten(terms);
     const top = this._getTopItems(terms, count);
-    //console.log(top);
     return top;
   }
 
-  /**
-   * fbPagesActiveCommenters gets a pages most active commenters
-   * @return {[type]} [description]
-   */
-  fbPagesActiveCommenters(data,count) {
+  fbPagesActiveCommenters(data, count) {
     const commenters = [];
     data.forEach((post) => {
       post.comments.forEach((comment) => {
@@ -186,42 +164,41 @@ export default class Analyzer {
   }
 
   filterData(data, field, assertion) {
-      return _.filter(data, d => d[field] == assertion || d[field].length > 0);
-    }
-    /**
-     * [fbTopicsFrequentPosters helper methods]
-     * @return {[type]} [description]
-     */
+    const filtered = _.filter(data, (d) => {
+      //console.log(prettyjson.render(d['has_hashtags']));
+      return d[field] == assertion
+    });
+    return filtered;
+  }
+
   fbTopicsFrequentPosters(data, count) {
     return this.topFrequentItems(data, 'poster', count);
   }
 
   twTerms(data) {
     data.forEach((tweet) => {
-      let terms = this._getKeyWords(tweet.text);
-      tweet.terms = terms;
+      tweet.terms = this._getKeyWords(tweet.text);
     });
     return data;
   }
 
   tweetSentiments(data) {
     data.forEach((tweet) => {
-      let sentiment = this._getSentiment(tweet.text);
-      tweet.sentiment = sentiment;
+      tweet.sentiment = this._getSentiment(tweet.text);
     });
     return data;
   }
 
   aggregateTwSentiments(data) {
-    let sentiment_count = 0;
+    let sentimentCount = 0;
     data.forEach((tweet) => {
-      sentiment_count += tweet.sentiment;
+      sentimentCount += tweet.sentiment;
     });
-    return sentiment_count;
+    return sentimentCount;
   }
 
   nestTweetReplies(data) {
-    let replies = _.filter(data, d => d.is_reply);
+    const replies = _.filter(data, d => d.is_reply);
     data.forEach((tweet) => {
       tweet.replies = [];
       replies.forEach((r) => {
