@@ -1,4 +1,6 @@
 {
+  "parser": "babel-eslint",
+  "extends": "airbnb/base",
   "env": {
     "browser": true,
     "amd": false,
@@ -6,30 +8,12 @@
     "node": true,
     "mocha": true
   },
-  "settings": {
-    "ecmascript": 6
-  },
-  "ecmaFeatures": {
-        "modules": true
-    },
   "globals": {
-      "describe": true,
-      "it": true,
-      "sinon": true,
-      "phantom":true
-    },
+    "describe": true,
+    "it": true,
+    "phantom": true
+  },
   "rules": {
-    "comma-dangle": 1,
-    "no-console":1,
-    "no-undef": 1,
-    "global-strict": 0,
-    "no-extra-semi": 1,
-    "no-underscore-dangle": 0,
-    "no-console": 0,
-    "no-unused-vars": 1,
-    "no-trailing-spaces": [1, { "skipBlankLines": true }],
-    "no-unreachable": 1,
-    "no-alert": 0,
-    "semi":1
+    "no-param-reassign":2
   }
 }

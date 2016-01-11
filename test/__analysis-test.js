@@ -7,7 +7,7 @@ import path from 'path';
 //import _ from 'lodash';
 import prettyjson from 'prettyjson';
 
-describe('fb data analysis', () => {
+describe.skip('fb data analysis', () => {
 
   let analyzer = null;
 
@@ -67,7 +67,7 @@ describe('fb data analysis', () => {
 
 });
 
-describe('twitter data analysis', () => {
+describe.skip('twitter data analysis', () => {
 
 
   const analyzer = new Analyzer();
@@ -111,7 +111,7 @@ describe('twitter data analysis', () => {
 
 });
 
-describe('TO DO ', () => {
+describe.skip('TO DO ', () => {
   //add location features
   let analyzer = null;
 
