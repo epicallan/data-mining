@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
+import uniqueValidator from 'mongoose-unique-validator';
 const Schema = mongoose.Schema;
 
 const TwitterSchema = new Schema({
-  date: { type: String, trim: true },
+  date: { type: String },
   text: { type: String, default: '', trim: true },
   user_name: { type: String, trim: true },
   location: { type: String, default: '', trim: true },
@@ -10,7 +11,7 @@ const TwitterSchema = new Schema({
   retweet_count: Number,
   favorite_count: Number,
   user_id: String,
-  id: Number,
+  id: { type: Number, unique: true },
   is_reply: Boolean,
   is_retweet: Boolean,
   approximated_geo: { type: Boolean, default: false },
@@ -22,6 +23,7 @@ const TwitterSchema = new Schema({
   user_mentions: [String],
 });
 
+TwitterSchema.plugin(uniqueValidator);
 TwitterSchema.path('user_mentions').required(true, 'Twitter must mention have a user mention');
 /* eslint-disable func-names*/
 TwitterSchema.pre('save', function (next) {

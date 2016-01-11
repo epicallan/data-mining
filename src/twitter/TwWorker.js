@@ -7,7 +7,7 @@ export default class TwWorker {
       type: 'twitter',
     });
     // add names if present in the tweet to the user mentions field
-    this.data = analyzer.addToUserMentions(this.data, ['museveni', 'besigye']);
+    this.data = analyzer.addToUserMentions(this.data, ['museveni', 'besigye', 'amama']);
   }
   removeRetweets() {
     return analyzer.filterData(this.data, 'is_retweet', false);
@@ -22,14 +22,19 @@ export default class TwWorker {
   }
 
   processData() {
-    return new Promise(async(resolve, reject) => {
+    /* eslint-disable func-names */
+    return new Promise(async function(resolve, reject) {
       try {
         const geoTagged = await this._addCordinates(this.data);
+        /* eslint-disable no-param-reassign */
+        geoTagged.forEach((d) => {
+          d.coordinates = `${d.coordinates.lat},${d.coordinates.lng}`;
+        });
         const sentimated = analyzer.tweetSentiments(geoTagged);
         resolve(sentimated);
       } catch (error) {
         reject(error);
       }
-    });
+    }.bind(this));
   }
 }

@@ -1,19 +1,25 @@
 import 'babel-polyfill';
 import config from './config';
-import twitter from './models/twitter';
+import Twitter from './models/twitter';
 import TwWorker from './twitter/TwWorker';
 
-// connect to mongodb
-config.dbOpen();
+config.dbOpen(() => {
+  /* eslint-disable no-console */
+  console.log('connected to MongoDb in child Process');
+});
 
 process.on('message', async(data) => {
-  const twWorker = new TwWorker(data);
+  console.log('recieved data');
+  const twWorker = new TwWorker([data]);
   try {
     const processedData = await twWorker.processData();
-    twitter.save(processedData, () => {
-      process.send('saved data to mongodb');
+    const twitter = new Twitter(processedData);
+    twitter.save((err) => {
+      if (err) throw new Error(err);
+      process.send(`saved twit: processedData.id`);
     });
   } catch (err) {
-    console.log(err);
+    /* eslint-disable no-console */
+    console.error(err);
   }
 });

@@ -1,12 +1,11 @@
 import chai from 'chai';
-import analyzer from '../api/lib/analyzer';
-import cf from '../api/lib/CfHelper';
+import analyzer from '../src/lib/analyzer';
 import path from 'path';
 import prettyjson from 'prettyjson';
 const expect = chai.expect;
 // import testData from './fixtures/cfdata';
 
-describe('analyzer class', () => {
+describe.skip('analyzer class', () => {
   let data = null;
   before('should read in data for tests', (done) => {
     const filePath = path.resolve(__dirname, '../content/besigye.json');
@@ -31,7 +30,7 @@ describe('analyzer class', () => {
       });
     });
   });
-  describe(' it should add specific names to user_mentions field', () => {
+  describe.skip(' it should add specific names to user_mentions field', () => {
     it('add specific names to the user_mentions array of a tweet', () => {
       const testTweets = [
         { text: 'hello',
@@ -68,26 +67,6 @@ describe('analyzer class', () => {
         count: 10,
       });
       expect(refinedTop).to.have.length.above(0);
-    });
-  });
-  describe('should create crossfilter groupings from array values', () => {
-    let cfData = null;
-    before((done) => {
-      data = analyzer.addToUserMentions(data, ['museveni', 'besigye']);
-      cfData = cf.createCrossFilter(data);
-      done();
-    });
-    it('should have method for getting an array filed group and dimension', () => {
-      const { group } = cf.arrayDimAndGroup(cfData, 'user_mentions');
-      console.log(prettyjson.render(group.all()));
-      expect(group).to.be.an('object');
-    });
-
-    it('should remove objects of less frequency in a group', () => {
-      const grp = { Technology: 10, Science: 6, Automotive: 2, Health: 1 };
-      const newGrp = cf.removeLowGroupObjs(grp);
-      // console.log(prettyjson.render(newGrp));
-      expect(newGrp).to.be.an('object');
     });
   });
   describe.skip('geocoding unit tests', () => {

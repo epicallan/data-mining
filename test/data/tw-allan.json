@@ -1,1906 +1,872 @@
 [{
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Thu Dec 17 10:53:21 +0000 2015",
-    "id": 677441445909962800,
-    "id_str": "677441445909962752",
-    "text": "@UmemeLtd is it possible to provide the time by which the line technical problems will be solved??!!",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": 677434931690229800,
-    "in_reply_to_status_id_str": "677434931690229762",
-    "in_reply_to_user_id": 306162968,
-    "in_reply_to_user_id_str": "306162968",
-    "in_reply_to_screen_name": "UmemeLtd",
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": {
-        "id": "939067979a7f3b95",
-        "url": "https://api.twitter.com/1.1/geo/id/939067979a7f3b95.json",
-        "place_type": "country",
-        "name": "Uganda",
-        "full_name": "Uganda",
-        "country_code": "UG",
-        "country": "Uganda",
-        "contained_within": [],
-        "bounding_box": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [29.5735676, -1.4812885],
-                    [35.0360497, -1.4812885],
-                    [35.0360497, 4.23164],
-                    [29.5735676, 4.23164]
-                ]
-            ]
-        },
-        "attributes": {}
-    },
-    "contributors": null,
-    "is_quote_status": false,
-    "retweet_count": 0,
-    "favorite_count": 0,
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Thu Dec 17 11:58:12 +0000 2015",
+  "id": 677457767234424800,
+  "id_str": "677457767234424836",
+  "text": "@yoweri_museveni Maybe you should also stop being a troll!",
+  "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M2)</a>",
+  "truncated": false,
+  "in_reply_to_status_id": 677381645847105500,
+  "in_reply_to_status_id_str": "677381645847105536",
+  "in_reply_to_user_id": 1527508728,
+  "in_reply_to_user_id_str": "1527508728",
+  "in_reply_to_screen_name": "yoweri_museveni",
+  "user": {
+    "id": 603918276,
+    "id_str": "603918276",
+    "name": "Thinguri Njau",
+    "screen_name": "ThinguriNjau",
+    "location": "Kenyatta Road",
+    "description": "| Mûgîkûyû | Mdaku | Little Monster | Arrogant | Vengeful | Uncle Bob's Student |",
+    "url": null,
     "entities": {
-        "hashtags": [],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "UmemeLtd",
-            "name": "Umeme Limited",
-            "id": 306162968,
-            "id_str": "306162968",
-            "indices": [0, 9]
-        }],
+      "description": {
         "urls": []
+      }
     },
-    "favorited": false,
-    "retweeted": false,
-    "lang": "en"
+    "protected": false,
+    "followers_count": 109,
+    "friends_count": 89,
+    "listed_count": 0,
+    "created_at": "Sat Jun 09 18:58:10 +0000 2012",
+    "favourites_count": 3,
+    "utc_offset": null,
+    "time_zone": null,
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 2215,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "C0DEED",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/507255269349281792/F7OnIWFV_normal.jpeg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/507255269349281792/F7OnIWFV_normal.jpeg",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/603918276/1408137393",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "C0DEED",
+    "profile_sidebar_fill_color": "DDEEF6",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": true,
+    "default_profile_image": false,
+    "following": false,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "yoweri_museveni",
+      "name": "Yoweri K Museveni",
+      "id": 1527508728,
+      "id_str": "1527508728",
+      "indices": [0, 16]
+    }],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
 }, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Thu Dec 17 10:31:54 +0000 2015",
-    "id": 677436046632726500,
-    "id_str": "677436046632726529",
-    "text": "what if JavaScript nativly favored abstraction instead of inheritance #javascript #nodejs",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": {
-        "id": "939067979a7f3b95",
-        "url": "https://api.twitter.com/1.1/geo/id/939067979a7f3b95.json",
-        "place_type": "country",
-        "name": "Uganda",
-        "full_name": "Uganda",
-        "country_code": "UG",
-        "country": "Uganda",
-        "contained_within": [],
-        "bounding_box": {
-            "type": "Polygon",
-            "coordinates": [
-                [
-                    [29.5735676, -1.4812885],
-                    [35.0360497, -1.4812885],
-                    [35.0360497, 4.23164],
-                    [29.5735676, 4.23164]
-                ]
-            ]
-        },
-        "attributes": {}
-    },
-    "contributors": null,
-    "is_quote_status": false,
-    "retweet_count": 0,
-    "favorite_count": 4,
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Thu Dec 17 10:53:21 +0000 2015",
+  "id": 677441445909962800,
+  "id_str": "677441445909962752",
+  "text": "@UmemeLtd is it possible to provide the time by which the line technical problems will be solved??!!",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": 677434931690229800,
+  "in_reply_to_status_id_str": "677434931690229762",
+  "in_reply_to_user_id": 306162968,
+  "in_reply_to_user_id_str": "306162968",
+  "in_reply_to_screen_name": "UmemeLtd",
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
     "entities": {
-        "hashtags": [{
-            "text": "javascript",
-            "indices": [70, 81]
-        }, {
-            "text": "nodejs",
-            "indices": [82, 89]
-        }],
-        "symbols": [],
-        "user_mentions": [],
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
         "urls": []
+      }
     },
-    "favorited": false,
-    "retweeted": false,
-    "lang": "en"
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": {
+    "id": "939067979a7f3b95",
+    "url": "https://api.twitter.com/1.1/geo/id/939067979a7f3b95.json",
+    "place_type": "country",
+    "name": "Uganda",
+    "full_name": "Uganda",
+    "country_code": "UG",
+    "country": "Uganda",
+    "contained_within": [],
+    "bounding_box": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [29.5735676, -1.4812885],
+          [35.0360497, -1.4812885],
+          [35.0360497, 4.23164],
+          [29.5735676, 4.23164]
+        ]
+      ]
+    },
+    "attributes": {}
+  },
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "UmemeLtd",
+      "name": "Umeme Limited",
+      "id": 306162968,
+      "id_str": "306162968",
+      "indices": [0, 9]
+    }],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
 }, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Thu Dec 17 10:31:54 +0000 2015",
+  "id": 677436046632726500,
+  "id_str": "677436046632726529",
+  "text": "what if JavaScript nativly favored abstraction instead of inheritance #javascript #nodejs",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
     },
-    "created_at": "Thu Dec 17 10:27:28 +0000 2015",
-    "id": 677434931690229800,
-    "id_str": "677434931690229762",
-    "text": "@epicAllanl There is a technical problem on the line,We are working to restore power asap. SN",
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": {
+    "id": "939067979a7f3b95",
+    "url": "https://api.twitter.com/1.1/geo/id/939067979a7f3b95.json",
+    "place_type": "country",
+    "name": "Uganda",
+    "full_name": "Uganda",
+    "country_code": "UG",
+    "country": "Uganda",
+    "contained_within": [],
+    "bounding_box": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [29.5735676, -1.4812885],
+          [35.0360497, -1.4812885],
+          [35.0360497, 4.23164],
+          [29.5735676, 4.23164]
+        ]
+      ]
+    },
+    "attributes": {}
+  },
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 4,
+  "entities": {
+    "hashtags": [{
+      "text": "javascript",
+      "indices": [70, 81]
+    }, {
+      "text": "nodejs",
+      "indices": [82, 89]
+    }],
+    "symbols": [],
+    "user_mentions": [],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
+}, {
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Thu Dec 17 10:27:28 +0000 2015",
+  "id": 677434931690229800,
+  "id_str": "677434931690229762",
+  "text": "@epicAllanl There is a technical problem on the line,We are working to restore power asap. SN",
+  "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
+  "truncated": false,
+  "in_reply_to_status_id": 677414098397700100,
+  "in_reply_to_status_id_str": "677414098397700096",
+  "in_reply_to_user_id": 282545192,
+  "in_reply_to_user_id_str": "282545192",
+  "in_reply_to_screen_name": "epicAllanl",
+  "user": {
+    "id": 306162968,
+    "id_str": "306162968",
+    "name": "Umeme Limited",
+    "screen_name": "UmemeLtd",
+    "location": "Uganda",
+    "description": "Umeme Ltd is Uganda's National Electricity Distribution Company. \r\n0800 185 185, 0800 185 186, 0800 285 285\r\n0312 185 185, 0752 185 185\r\ncallcentre@umeme.co.ug",
+    "url": "http://t.co/6IeQzwmyL3",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/6IeQzwmyL3",
+          "expanded_url": "http://www.umeme.co.ug",
+          "display_url": "umeme.co.ug",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 29961,
+    "friends_count": 3595,
+    "listed_count": 32,
+    "created_at": "Fri May 27 11:58:32 +0000 2011",
+    "favourites_count": 777,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 19878,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "4A913C",
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000024113963/ffea3751038ab423d5a124ef0b9426b8.gif",
+    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000024113963/ffea3751038ab423d5a124ef0b9426b8.gif",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/673770347263598592/T4t4QvJh_normal.png",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/673770347263598592/T4t4QvJh_normal.png",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/306162968/1444832747",
+    "profile_link_color": "4A913C",
+    "profile_sidebar_border_color": "FFFFFF",
+    "profile_sidebar_fill_color": "99CC33",
+    "profile_text_color": "3E4415",
+    "profile_use_background_image": false,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": false,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "epicAllanl",
+      "name": "lukwago allan",
+      "id": 282545192,
+      "id_str": "282545192",
+      "indices": [0, 11]
+    }],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
+}, {
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Thu Dec 17 09:04:41 +0000 2015",
+  "id": 677414098397700100,
+  "id_str": "677414098397700096",
+  "text": "@UmemeLtd I am in Bunamwaya and we don't have power as of now? is it a planned shutdown??!",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": 306162968,
+  "in_reply_to_user_id_str": "306162968",
+  "in_reply_to_screen_name": "UmemeLtd",
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "UmemeLtd",
+      "name": "Umeme Limited",
+      "id": 306162968,
+      "id_str": "306162968",
+      "indices": [0, 9]
+    }],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
+}, {
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Sat Dec 12 22:26:07 +0000 2015",
+  "id": 675803844899508200,
+  "id_str": "675803844899508224",
+  "text": "This week on twitter: 5 new followers, 2 new unfollowers via https://t.co/jwIdwjc8eB",
+  "source": "<a href=\"https://unfollowers.com\" rel=\"nofollow\">Unfollowers</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [],
+    "symbols": [],
+    "user_mentions": [],
+    "urls": [{
+      "url": "https://t.co/jwIdwjc8eB",
+      "expanded_url": "http://uapp.ly",
+      "display_url": "uapp.ly",
+      "indices": [61, 84]
+    }]
+  },
+  "favorited": false,
+  "retweeted": false,
+  "possibly_sensitive": true,
+  "lang": "en"
+}, {
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Sat Dec 12 09:33:37 +0000 2015",
+  "id": 675609441438457900,
+  "id_str": "675609441438457857",
+  "text": "RT @Jadwong: Our #AskMuseveni questions. What happened? Panelists asking their own qns @nbstv",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "retweeted_status": {
+    "metadata": {
+      "iso_language_code": "en",
+      "result_type": "recent"
+    },
+    "created_at": "Sat Dec 12 09:18:45 +0000 2015",
+    "id": 675605701243347000,
+    "id_str": "675605701243346945",
+    "text": "Our #AskMuseveni questions. What happened? Panelists asking their own qns @nbstv",
     "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
     "truncated": false,
-    "in_reply_to_status_id": 677414098397700100,
-    "in_reply_to_status_id_str": "677414098397700096",
-    "in_reply_to_user_id": 282545192,
-    "in_reply_to_user_id_str": "282545192",
-    "in_reply_to_screen_name": "epicAllanl",
-    "user": {
-        "id": 306162968,
-        "id_str": "306162968",
-        "name": "Umeme Limited",
-        "screen_name": "UmemeLtd",
-        "location": "Uganda",
-        "description": "Umeme Ltd is Uganda's National Electricity Distribution Company. \r\n0800 185 185, 0800 185 186, 0800 285 285\r\n0312 185 185, 0752 185 185\r\ncallcentre@umeme.co.ug",
-        "url": "http://t.co/6IeQzwmyL3",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/6IeQzwmyL3",
-                    "expanded_url": "http://www.umeme.co.ug",
-                    "display_url": "umeme.co.ug",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 29961,
-        "friends_count": 3595,
-        "listed_count": 32,
-        "created_at": "Fri May 27 11:58:32 +0000 2011",
-        "favourites_count": 777,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 19878,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "4A913C",
-        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000024113963/ffea3751038ab423d5a124ef0b9426b8.gif",
-        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000024113963/ffea3751038ab423d5a124ef0b9426b8.gif",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/673770347263598592/T4t4QvJh_normal.png",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/673770347263598592/T4t4QvJh_normal.png",
-        "profile_banner_url": "https://pbs.twimg.com/profile_banners/306162968/1444832747",
-        "profile_link_color": "4A913C",
-        "profile_sidebar_border_color": "FFFFFF",
-        "profile_sidebar_fill_color": "99CC33",
-        "profile_text_color": "3E4415",
-        "profile_use_background_image": false,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": false,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "is_quote_status": false,
-    "retweet_count": 0,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "epicAllanl",
-            "name": "lukwago allan",
-            "id": 282545192,
-            "id_str": "282545192",
-            "indices": [0, 11]
-        }],
-        "urls": []
-    },
-    "favorited": false,
-    "retweeted": false,
-    "lang": "en"
-}, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Thu Dec 17 09:04:41 +0000 2015",
-    "id": 677414098397700100,
-    "id_str": "677414098397700096",
-    "text": "@UmemeLtd I am in Bunamwaya and we don't have power as of now? is it a planned shutdown??!",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": 306162968,
-    "in_reply_to_user_id_str": "306162968",
-    "in_reply_to_screen_name": "UmemeLtd",
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "is_quote_status": false,
-    "retweet_count": 0,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "UmemeLtd",
-            "name": "Umeme Limited",
-            "id": 306162968,
-            "id_str": "306162968",
-            "indices": [0, 9]
-        }],
-        "urls": []
-    },
-    "favorited": false,
-    "retweeted": false,
-    "lang": "en"
-}, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Sat Dec 12 22:26:07 +0000 2015",
-    "id": 675803844899508200,
-    "id_str": "675803844899508224",
-    "text": "This week on twitter: 5 new followers, 2 new unfollowers via https://t.co/jwIdwjc8eB",
-    "source": "<a href=\"https://unfollowers.com\" rel=\"nofollow\">Unfollowers</a>",
-    "truncated": false,
     "in_reply_to_status_id": null,
     "in_reply_to_status_id_str": null,
     "in_reply_to_user_id": null,
     "in_reply_to_user_id_str": null,
     "in_reply_to_screen_name": null,
     "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "is_quote_status": false,
-    "retweet_count": 0,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [],
-        "symbols": [],
-        "user_mentions": [],
-        "urls": [{
-            "url": "https://t.co/jwIdwjc8eB",
-            "expanded_url": "http://uapp.ly",
-            "display_url": "uapp.ly",
-            "indices": [61, 84]
-        }]
-    },
-    "favorited": false,
-    "retweeted": false,
-    "possibly_sensitive": true,
-    "lang": "en"
-}, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Sat Dec 12 09:33:37 +0000 2015",
-    "id": 675609441438457900,
-    "id_str": "675609441438457857",
-    "text": "RT @Jadwong: Our #AskMuseveni questions. What happened? Panelists asking their own qns @nbstv",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "retweeted_status": {
-        "metadata": {
-            "iso_language_code": "en",
-            "result_type": "recent"
-        },
-        "created_at": "Sat Dec 12 09:18:45 +0000 2015",
-        "id": 675605701243347000,
-        "id_str": "675605701243346945",
-        "text": "Our #AskMuseveni questions. What happened? Panelists asking their own qns @nbstv",
-        "source": "<a href=\"https://about.twitter.com/products/tweetdeck\" rel=\"nofollow\">TweetDeck</a>",
-        "truncated": false,
-        "in_reply_to_status_id": null,
-        "in_reply_to_status_id_str": null,
-        "in_reply_to_user_id": null,
-        "in_reply_to_user_id_str": null,
-        "in_reply_to_screen_name": null,
-        "user": {
-            "id": 202627333,
-            "id_str": "202627333",
-            "name": "Louis Jadwong",
-            "screen_name": "Jadwong",
-            "location": "Uganda",
-            "description": "Head of Digital  -Vision Group-  since 2010 | Sports editor New Vision 94-10 | A Mobile News Agency! | Opinions are my own and retweets are not endorsements",
+      "id": 202627333,
+      "id_str": "202627333",
+      "name": "Louis Jadwong",
+      "screen_name": "Jadwong",
+      "location": "Uganda",
+      "description": "Head of Digital  -Vision Group-  since 2010 | Sports editor New Vision 94-10 | A Mobile News Agency! | Opinions are my own and retweets are not endorsements",
+      "url": "http://t.co/KciXiasnIH",
+      "entities": {
+        "url": {
+          "urls": [{
             "url": "http://t.co/KciXiasnIH",
-            "entities": {
-                "url": {
-                    "urls": [{
-                        "url": "http://t.co/KciXiasnIH",
-                        "expanded_url": "http://www.newvision.co.ug",
-                        "display_url": "newvision.co.ug",
-                        "indices": [0, 22]
-                    }]
-                },
-                "description": {
-                    "urls": []
-                }
-            },
-            "protected": false,
-            "followers_count": 6689,
-            "friends_count": 2470,
-            "listed_count": 108,
-            "created_at": "Thu Oct 14 13:32:51 +0000 2010",
-            "favourites_count": 10947,
-            "utc_offset": null,
-            "time_zone": null,
-            "geo_enabled": false,
-            "verified": true,
-            "statuses_count": 43511,
-            "lang": "en",
-            "contributors_enabled": false,
-            "is_translator": false,
-            "is_translation_enabled": false,
-            "profile_background_color": "C0DEED",
-            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-            "profile_background_tile": false,
-            "profile_image_url": "http://pbs.twimg.com/profile_images/667883396593528832/uzGGb3Yl_normal.jpg",
-            "profile_image_url_https": "https://pbs.twimg.com/profile_images/667883396593528832/uzGGb3Yl_normal.jpg",
-            "profile_banner_url": "https://pbs.twimg.com/profile_banners/202627333/1449027645",
-            "profile_link_color": "0084B4",
-            "profile_sidebar_border_color": "FFFFFF",
-            "profile_sidebar_fill_color": "DDEEF6",
-            "profile_text_color": "333333",
-            "profile_use_background_image": false,
-            "has_extended_profile": false,
-            "default_profile": false,
-            "default_profile_image": false,
-            "following": false,
-            "follow_request_sent": false,
-            "notifications": false
+            "expanded_url": "http://www.newvision.co.ug",
+            "display_url": "newvision.co.ug",
+            "indices": [0, 22]
+          }]
         },
-        "geo": null,
-        "coordinates": null,
-        "place": null,
-        "contributors": null,
-        "is_quote_status": false,
-        "retweet_count": 19,
-        "favorite_count": 20,
-        "entities": {
-            "hashtags": [{
-                "text": "AskMuseveni",
-                "indices": [4, 16]
-            }],
-            "symbols": [],
-            "user_mentions": [{
-                "screen_name": "nbstv",
-                "name": "NBS Television",
-                "id": 344718893,
-                "id_str": "344718893",
-                "indices": [74, 80]
-            }],
-            "urls": []
-        },
-        "favorited": false,
-        "retweeted": false,
-        "lang": "en"
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 6689,
+      "friends_count": 2470,
+      "listed_count": 108,
+      "created_at": "Thu Oct 14 13:32:51 +0000 2010",
+      "favourites_count": 10947,
+      "utc_offset": null,
+      "time_zone": null,
+      "geo_enabled": false,
+      "verified": true,
+      "statuses_count": 43511,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/667883396593528832/uzGGb3Yl_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/667883396593528832/uzGGb3Yl_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/202627333/1449027645",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
     },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
     "is_quote_status": false,
     "retweet_count": 19,
-    "favorite_count": 0,
+    "favorite_count": 20,
     "entities": {
-        "hashtags": [{
-            "text": "AskMuseveni",
-            "indices": [17, 29]
-        }],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "Jadwong",
-            "name": "Louis Jadwong",
-            "id": 202627333,
-            "id_str": "202627333",
-            "indices": [3, 11]
-        }, {
-            "screen_name": "nbstv",
-            "name": "NBS Television",
-            "id": 344718893,
-            "id_str": "344718893",
-            "indices": [87, 93]
-        }],
-        "urls": []
+      "hashtags": [{
+        "text": "AskMuseveni",
+        "indices": [4, 16]
+      }],
+      "symbols": [],
+      "user_mentions": [{
+        "screen_name": "nbstv",
+        "name": "NBS Television",
+        "id": 344718893,
+        "id_str": "344718893",
+        "indices": [74, 80]
+      }],
+      "urls": []
     },
     "favorited": false,
     "retweeted": false,
     "lang": "en"
+  },
+  "is_quote_status": false,
+  "retweet_count": 19,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [{
+      "text": "AskMuseveni",
+      "indices": [17, 29]
+    }],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "Jadwong",
+      "name": "Louis Jadwong",
+      "id": 202627333,
+      "id_str": "202627333",
+      "indices": [3, 11]
+    }, {
+      "screen_name": "nbstv",
+      "name": "NBS Television",
+      "id": 344718893,
+      "id_str": "344718893",
+      "indices": [87, 93]
+    }],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
 }, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Sat Dec 12 09:32:51 +0000 2015",
-    "id": 675609248315940900,
-    "id_str": "675609248315940864",
-    "text": "RT @Natabaalo: This was not #AskMuseveni this was #LetMeTellYou",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "retweeted_status": {
-        "metadata": {
-            "iso_language_code": "en",
-            "result_type": "recent"
-        },
-        "created_at": "Sat Dec 12 09:19:12 +0000 2015",
-        "id": 675605814137249800,
-        "id_str": "675605814137249792",
-        "text": "This was not #AskMuseveni this was #LetMeTellYou",
-        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-        "truncated": false,
-        "in_reply_to_status_id": null,
-        "in_reply_to_status_id_str": null,
-        "in_reply_to_user_id": null,
-        "in_reply_to_user_id_str": null,
-        "in_reply_to_screen_name": null,
-        "user": {
-            "id": 95019191,
-            "id_str": "95019191",
-            "name": "Grace Natabaalo",
-            "screen_name": "Natabaalo",
-            "location": "Kampala",
-            "description": "Programme Assoc. @ the African Centre for Media Excellence|Journalist|Crazy about Social Media and life http://t.co/8XKMnfXKWq",
-            "url": "http://t.co/Dz8v6379vJ",
-            "entities": {
-                "url": {
-                    "urls": [{
-                        "url": "http://t.co/Dz8v6379vJ",
-                        "expanded_url": "http://www.acme-ug.org",
-                        "display_url": "acme-ug.org",
-                        "indices": [0, 22]
-                    }]
-                },
-                "description": {
-                    "urls": [{
-                        "url": "http://t.co/8XKMnfXKWq",
-                        "expanded_url": "http://www.rebelmouse.com/Natabaalo",
-                        "display_url": "rebelmouse.com/Natabaalo",
-                        "indices": [104, 126]
-                    }]
-                }
-            },
-            "protected": false,
-            "followers_count": 34461,
-            "friends_count": 1513,
-            "listed_count": 239,
-            "created_at": "Sun Dec 06 15:41:07 +0000 2009",
-            "favourites_count": 1428,
-            "utc_offset": 10800,
-            "time_zone": "Nairobi",
-            "geo_enabled": false,
-            "verified": false,
-            "statuses_count": 45808,
-            "lang": "en",
-            "contributors_enabled": false,
-            "is_translator": false,
-            "is_translation_enabled": false,
-            "profile_background_color": "022330",
-            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-            "profile_background_tile": false,
-            "profile_image_url": "http://pbs.twimg.com/profile_images/587592748573663232/lmjdE7vI_normal.jpg",
-            "profile_image_url_https": "https://pbs.twimg.com/profile_images/587592748573663232/lmjdE7vI_normal.jpg",
-            "profile_banner_url": "https://pbs.twimg.com/profile_banners/95019191/1428928262",
-            "profile_link_color": "0084B4",
-            "profile_sidebar_border_color": "A8C7F7",
-            "profile_sidebar_fill_color": "C0DFEC",
-            "profile_text_color": "333333",
-            "profile_use_background_image": true,
-            "has_extended_profile": false,
-            "default_profile": false,
-            "default_profile_image": false,
-            "following": false,
-            "follow_request_sent": false,
-            "notifications": false
-        },
-        "geo": null,
-        "coordinates": null,
-        "place": null,
-        "contributors": null,
-        "is_quote_status": false,
-        "retweet_count": 77,
-        "favorite_count": 55,
-        "entities": {
-            "hashtags": [{
-                "text": "AskMuseveni",
-                "indices": [13, 25]
-            }, {
-                "text": "LetMeTellYou",
-                "indices": [35, 48]
-            }],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": []
-        },
-        "favorited": false,
-        "retweeted": false,
-        "lang": "en"
-    },
-    "is_quote_status": false,
-    "retweet_count": 77,
-    "favorite_count": 0,
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Sat Dec 12 09:32:51 +0000 2015",
+  "id": 675609248315940900,
+  "id_str": "675609248315940864",
+  "text": "RT @Natabaalo: This was not #AskMuseveni this was #LetMeTellYou",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
     "entities": {
-        "hashtags": [{
-            "text": "AskMuseveni",
-            "indices": [28, 40]
-        }, {
-            "text": "LetMeTellYou",
-            "indices": [50, 63]
-        }],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "Natabaalo",
-            "name": "Grace Natabaalo",
-            "id": 95019191,
-            "id_str": "95019191",
-            "indices": [3, 13]
-        }],
-        "urls": []
-    },
-    "favorited": false,
-    "retweeted": false,
-    "lang": "en"
-}, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Sat Dec 12 09:21:56 +0000 2015",
-    "id": 675606501432688600,
-    "id_str": "675606501432688640",
-    "text": "#AskMuseveni is a sham museveni has chosen to dodge all the questions by an early exist #Shameless",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "is_quote_status": false,
-    "retweet_count": 0,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [{
-            "text": "AskMuseveni",
-            "indices": [0, 12]
-        }, {
-            "text": "Shameless",
-            "indices": [88, 98]
-        }],
-        "symbols": [],
-        "user_mentions": [],
-        "urls": []
-    },
-    "favorited": false,
-    "retweeted": false,
-    "lang": "en"
-}, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Sat Dec 12 09:16:35 +0000 2015",
-    "id": 675605155472130000,
-    "id_str": "675605155472130048",
-    "text": "RT @bartlettdaron: Mildred tried to chip in but Museveni warns her not to waste His time. \n\nYou just can't dodge this guy's lectures \n\n#Ask…",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "retweeted_status": {
-        "metadata": {
-            "iso_language_code": "en",
-            "result_type": "recent"
-        },
-        "created_at": "Sat Dec 12 09:04:53 +0000 2015",
-        "id": 675602207480422400,
-        "id_str": "675602207480422400",
-        "text": "Mildred tried to chip in but Museveni warns her not to waste His time. \n\nYou just can't dodge this guy's lectures \n\n#AskMuseveni",
-        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
-        "truncated": false,
-        "in_reply_to_status_id": null,
-        "in_reply_to_status_id_str": null,
-        "in_reply_to_user_id": null,
-        "in_reply_to_user_id_str": null,
-        "in_reply_to_screen_name": null,
-        "user": {
-            "id": 327475656,
-            "id_str": "327475656",
-            "name": "Daron",
-            "screen_name": "bartlettdaron",
-            "location": "Around The World ",
-            "description": "Social Media||Law||Philosophy||Guitarist|| Social Moral Ethic Advocate|| @yideeh the ninja #Chelsea and @mildredkayaga(BF) 93.3 KFM #TheHotSeat Update",
-            "url": "https://t.co/LU7aiJn1IT",
-            "entities": {
-                "url": {
-                    "urls": [{
-                        "url": "https://t.co/LU7aiJn1IT",
-                        "expanded_url": "http://daronenock.wordpress.com",
-                        "display_url": "daronenock.wordpress.com",
-                        "indices": [0, 23]
-                    }]
-                },
-                "description": {
-                    "urls": []
-                }
-            },
-            "protected": false,
-            "followers_count": 3479,
-            "friends_count": 932,
-            "listed_count": 48,
-            "created_at": "Fri Jul 01 16:42:06 +0000 2011",
-            "favourites_count": 3508,
-            "utc_offset": -18000,
-            "time_zone": "Quito",
-            "geo_enabled": true,
-            "verified": false,
-            "statuses_count": 100888,
-            "lang": "en",
-            "contributors_enabled": false,
-            "is_translator": false,
-            "is_translation_enabled": false,
-            "profile_background_color": "F5ABB5",
-            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000151605029/uNgRK3LA.jpeg",
-            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000151605029/uNgRK3LA.jpeg",
-            "profile_background_tile": false,
-            "profile_image_url": "http://pbs.twimg.com/profile_images/674990456598601728/uWkznJzC_normal.jpg",
-            "profile_image_url_https": "https://pbs.twimg.com/profile_images/674990456598601728/uWkznJzC_normal.jpg",
-            "profile_banner_url": "https://pbs.twimg.com/profile_banners/327475656/1448914298",
-            "profile_link_color": "CC3366",
-            "profile_sidebar_border_color": "FFFFFF",
-            "profile_sidebar_fill_color": "F6F6F6",
-            "profile_text_color": "333333",
-            "profile_use_background_image": false,
-            "has_extended_profile": true,
-            "default_profile": false,
-            "default_profile_image": false,
-            "following": false,
-            "follow_request_sent": false,
-            "notifications": false
-        },
-        "geo": null,
-        "coordinates": null,
-        "place": null,
-        "contributors": null,
-        "is_quote_status": false,
-        "retweet_count": 12,
-        "favorite_count": 5,
-        "entities": {
-            "hashtags": [{
-                "text": "AskMuseveni",
-                "indices": [116, 128]
-            }],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": []
-        },
-        "favorited": false,
-        "retweeted": false,
-        "lang": "en"
-    },
-    "is_quote_status": false,
-    "retweet_count": 12,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [{
-            "text": "AskMuseveni",
-            "indices": [135, 140]
-        }],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "bartlettdaron",
-            "name": "Daron",
-            "id": 327475656,
-            "id_str": "327475656",
-            "indices": [3, 17]
-        }],
-        "urls": []
-    },
-    "favorited": false,
-    "retweeted": false,
-    "lang": "en"
-}, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Sat Dec 12 09:09:32 +0000 2015",
-    "id": 675603379704471600,
-    "id_str": "675603379704471552",
-    "text": "#AskMuseveni this is turning into another campaign session some one tell museveni to be precise and direct while answering questions",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "is_quote_status": false,
-    "retweet_count": 0,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [{
-            "text": "AskMuseveni",
-            "indices": [0, 12]
-        }],
-        "symbols": [],
-        "user_mentions": [],
-        "urls": []
-    },
-    "favorited": false,
-    "retweeted": false,
-    "lang": "en"
-}, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Sat Dec 12 08:37:34 +0000 2015",
-    "id": 675595333934694400,
-    "id_str": "675595333934694401",
-    "text": "RT @andsjeff: Where will you be procuring the 18million hoes to help in Agriculture Modernization? #AskMuseveni",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "retweeted_status": {
-        "metadata": {
-            "iso_language_code": "en",
-            "result_type": "recent"
-        },
-        "created_at": "Sat Dec 12 05:28:47 +0000 2015",
-        "id": 675547826626166800,
-        "id_str": "675547826626166784",
-        "text": "Where will you be procuring the 18million hoes to help in Agriculture Modernization? #AskMuseveni",
-        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-        "truncated": false,
-        "in_reply_to_status_id": null,
-        "in_reply_to_status_id_str": null,
-        "in_reply_to_user_id": null,
-        "in_reply_to_user_id_str": null,
-        "in_reply_to_screen_name": null,
-        "user": {
-            "id": 238053427,
-            "id_str": "238053427",
-            "name": "Jeff 2.9.5™",
-            "screen_name": "andsjeff",
-            "location": "Uganda",
-            "description": "@LFC |Computer Scientist|#YNWA|Politics|Loves Writing",
-            "url": "https://t.co/1a0fuWjSZu",
-            "entities": {
-                "url": {
-                    "urls": [{
-                        "url": "https://t.co/1a0fuWjSZu",
-                        "expanded_url": "http://andsjeff.wordpress.com",
-                        "display_url": "andsjeff.wordpress.com",
-                        "indices": [0, 23]
-                    }]
-                },
-                "description": {
-                    "urls": []
-                }
-            },
-            "protected": false,
-            "followers_count": 1799,
-            "friends_count": 295,
-            "listed_count": 20,
-            "created_at": "Fri Jan 14 07:25:37 +0000 2011",
-            "favourites_count": 3577,
-            "utc_offset": 10800,
-            "time_zone": "Nairobi",
-            "geo_enabled": true,
-            "verified": false,
-            "statuses_count": 19415,
-            "lang": "en",
-            "contributors_enabled": false,
-            "is_translator": false,
-            "is_translation_enabled": false,
-            "profile_background_color": "0099B9",
-            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/458980174361411584/znT_YrrO.jpeg",
-            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/458980174361411584/znT_YrrO.jpeg",
-            "profile_background_tile": true,
-            "profile_image_url": "http://pbs.twimg.com/profile_images/677080274426068992/iRgcNaMr_normal.jpg",
-            "profile_image_url_https": "https://pbs.twimg.com/profile_images/677080274426068992/iRgcNaMr_normal.jpg",
-            "profile_banner_url": "https://pbs.twimg.com/profile_banners/238053427/1433399201",
-            "profile_link_color": "B80600",
-            "profile_sidebar_border_color": "FFFFFF",
-            "profile_sidebar_fill_color": "95E8EC",
-            "profile_text_color": "3C3940",
-            "profile_use_background_image": false,
-            "has_extended_profile": false,
-            "default_profile": false,
-            "default_profile_image": false,
-            "following": false,
-            "follow_request_sent": false,
-            "notifications": false
-        },
-        "geo": null,
-        "coordinates": null,
-        "place": null,
-        "contributors": null,
-        "is_quote_status": false,
-        "retweet_count": 5,
-        "favorite_count": 1,
-        "entities": {
-            "hashtags": [{
-                "text": "AskMuseveni",
-                "indices": [85, 97]
-            }],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": []
-        },
-        "favorited": false,
-        "retweeted": false,
-        "lang": "en"
-    },
-    "is_quote_status": false,
-    "retweet_count": 5,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [{
-            "text": "AskMuseveni",
-            "indices": [99, 111]
-        }],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "andsjeff",
-            "name": "Jeff 2.9.5™",
-            "id": 238053427,
-            "id_str": "238053427",
-            "indices": [3, 12]
-        }],
-        "urls": []
-    },
-    "favorited": false,
-    "retweeted": false,
-    "lang": "en"
-}, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Sat Dec 12 08:37:06 +0000 2015",
-    "id": 675595218167668700,
-    "id_str": "675595218167668736",
-    "text": "RT @andsjeff: We don't need to #AskMuseveni but rather thank him for the great improvement in the health sector for the last 30yrs https://…",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "retweeted_status": {
-        "metadata": {
-            "iso_language_code": "en",
-            "result_type": "recent"
-        },
-        "created_at": "Sat Dec 12 05:37:36 +0000 2015",
-        "id": 675550044813197300,
-        "id_str": "675550044813197312",
-        "text": "We don't need to #AskMuseveni but rather thank him for the great improvement in the health sector for the last 30yrs https://t.co/cpiyDGTjgI",
-        "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-        "truncated": false,
-        "in_reply_to_status_id": null,
-        "in_reply_to_status_id_str": null,
-        "in_reply_to_user_id": null,
-        "in_reply_to_user_id_str": null,
-        "in_reply_to_screen_name": null,
-        "user": {
-            "id": 238053427,
-            "id_str": "238053427",
-            "name": "Jeff 2.9.5™",
-            "screen_name": "andsjeff",
-            "location": "Uganda",
-            "description": "@LFC |Computer Scientist|#YNWA|Politics|Loves Writing",
-            "url": "https://t.co/1a0fuWjSZu",
-            "entities": {
-                "url": {
-                    "urls": [{
-                        "url": "https://t.co/1a0fuWjSZu",
-                        "expanded_url": "http://andsjeff.wordpress.com",
-                        "display_url": "andsjeff.wordpress.com",
-                        "indices": [0, 23]
-                    }]
-                },
-                "description": {
-                    "urls": []
-                }
-            },
-            "protected": false,
-            "followers_count": 1799,
-            "friends_count": 295,
-            "listed_count": 20,
-            "created_at": "Fri Jan 14 07:25:37 +0000 2011",
-            "favourites_count": 3577,
-            "utc_offset": 10800,
-            "time_zone": "Nairobi",
-            "geo_enabled": true,
-            "verified": false,
-            "statuses_count": 19415,
-            "lang": "en",
-            "contributors_enabled": false,
-            "is_translator": false,
-            "is_translation_enabled": false,
-            "profile_background_color": "0099B9",
-            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/458980174361411584/znT_YrrO.jpeg",
-            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/458980174361411584/znT_YrrO.jpeg",
-            "profile_background_tile": true,
-            "profile_image_url": "http://pbs.twimg.com/profile_images/677080274426068992/iRgcNaMr_normal.jpg",
-            "profile_image_url_https": "https://pbs.twimg.com/profile_images/677080274426068992/iRgcNaMr_normal.jpg",
-            "profile_banner_url": "https://pbs.twimg.com/profile_banners/238053427/1433399201",
-            "profile_link_color": "B80600",
-            "profile_sidebar_border_color": "FFFFFF",
-            "profile_sidebar_fill_color": "95E8EC",
-            "profile_text_color": "3C3940",
-            "profile_use_background_image": false,
-            "has_extended_profile": false,
-            "default_profile": false,
-            "default_profile_image": false,
-            "following": false,
-            "follow_request_sent": false,
-            "notifications": false
-        },
-        "geo": null,
-        "coordinates": null,
-        "place": null,
-        "contributors": null,
-        "is_quote_status": false,
-        "retweet_count": 33,
-        "favorite_count": 7,
-        "entities": {
-            "hashtags": [{
-                "text": "AskMuseveni",
-                "indices": [17, 29]
-            }],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": [],
-            "media": [{
-                "id": 675549968472649700,
-                "id_str": "675549968472649728",
-                "indices": [117, 140],
-                "media_url": "http://pbs.twimg.com/media/CWAJHfrWsAAJgwe.jpg",
-                "media_url_https": "https://pbs.twimg.com/media/CWAJHfrWsAAJgwe.jpg",
-                "url": "https://t.co/cpiyDGTjgI",
-                "display_url": "pic.twitter.com/cpiyDGTjgI",
-                "expanded_url": "http://twitter.com/andsjeff/status/675550044813197312/photo/1",
-                "type": "photo",
-                "sizes": {
-                    "large": {
-                        "w": 749,
-                        "h": 904,
-                        "resize": "fit"
-                    },
-                    "thumb": {
-                        "w": 150,
-                        "h": 150,
-                        "resize": "crop"
-                    },
-                    "small": {
-                        "w": 340,
-                        "h": 410,
-                        "resize": "fit"
-                    },
-                    "medium": {
-                        "w": 600,
-                        "h": 724,
-                        "resize": "fit"
-                    }
-                }
-            }]
-        },
-        "favorited": false,
-        "retweeted": false,
-        "possibly_sensitive": false,
-        "lang": "en"
-    },
-    "is_quote_status": false,
-    "retweet_count": 33,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [{
-            "text": "AskMuseveni",
-            "indices": [31, 43]
-        }],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "andsjeff",
-            "name": "Jeff 2.9.3™",
-            "id": 238053427,
-            "id_str": "238053427",
-            "indices": [3, 12]
-        }],
-        "urls": [],
-        "media": [{
-            "id": 675549968472649700,
-            "id_str": "675549968472649728",
-            "indices": [139, 140],
-            "media_url": "http://pbs.twimg.com/media/CWAJHfrWsAAJgwe.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/CWAJHfrWsAAJgwe.jpg",
-            "url": "https://t.co/cpiyDGTjgI",
-            "display_url": "pic.twitter.com/cpiyDGTjgI",
-            "expanded_url": "http://twitter.com/andsjeff/status/675550044813197312/photo/1",
-            "type": "photo",
-            "sizes": {
-                "large": {
-                    "w": 749,
-                    "h": 904,
-                    "resize": "fit"
-                },
-                "thumb": {
-                    "w": 150,
-                    "h": 150,
-                    "resize": "crop"
-                },
-                "small": {
-                    "w": 340,
-                    "h": 410,
-                    "resize": "fit"
-                },
-                "medium": {
-                    "w": 600,
-                    "h": 724,
-                    "resize": "fit"
-                }
-            },
-            "source_status_id": 675550044813197300,
-            "source_status_id_str": "675550044813197312",
-            "source_user_id": 238053427,
-            "source_user_id_str": "238053427"
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
         }]
-    },
-    "favorited": false,
-    "retweeted": false,
-    "possibly_sensitive": true,
-    "lang": "en"
-}, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Sat Dec 12 07:29:09 +0000 2015",
-    "id": 675578118430675000,
-    "id_str": "675578118430674944",
-    "text": "RT @eriasa1: People in Bududa are allowed into forest reserves during campaigns and then get evicted after elections. Why? #AskMuseveni",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "retweeted_status": {
-        "metadata": {
-            "iso_language_code": "en",
-            "result_type": "recent"
-        },
-        "created_at": "Sat Dec 12 06:51:01 +0000 2015",
-        "id": 675568522387398700,
-        "id_str": "675568522387398656",
-        "text": "People in Bududa are allowed into forest reserves during campaigns and then get evicted after elections. Why? #AskMuseveni",
-        "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
-        "truncated": false,
-        "in_reply_to_status_id": null,
-        "in_reply_to_status_id_str": null,
-        "in_reply_to_user_id": null,
-        "in_reply_to_user_id_str": null,
-        "in_reply_to_screen_name": null,
-        "user": {
-            "id": 360619314,
-            "id_str": "360619314",
-            "name": "Eriasa Mukiibi Sseru",
-            "screen_name": "eriasa1",
-            "location": "Kampala, Uganda",
-            "description": "A Ugandan journalist interested in politics and investigation, currently working with Daily Monitor",
-            "url": "http://t.co/kRPGEFGtRM",
-            "entities": {
-                "url": {
-                    "urls": [{
-                        "url": "http://t.co/kRPGEFGtRM",
-                        "expanded_url": "http://mukiibisserunjogi.wordpress.com",
-                        "display_url": "mukiibisserunjogi.wordpress.com",
-                        "indices": [0, 22]
-                    }]
-                },
-                "description": {
-                    "urls": []
-                }
-            },
-            "protected": false,
-            "followers_count": 356,
-            "friends_count": 201,
-            "listed_count": 7,
-            "created_at": "Tue Aug 23 14:05:58 +0000 2011",
-            "favourites_count": 2,
-            "utc_offset": 3600,
-            "time_zone": "Amsterdam",
-            "geo_enabled": false,
-            "verified": false,
-            "statuses_count": 936,
-            "lang": "en",
-            "contributors_enabled": false,
-            "is_translator": false,
-            "is_translation_enabled": false,
-            "profile_background_color": "C0DEED",
-            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-            "profile_background_tile": false,
-            "profile_image_url": "http://pbs.twimg.com/profile_images/1638891917/Mukiibi_pic_normal.jpg",
-            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1638891917/Mukiibi_pic_normal.jpg",
-            "profile_link_color": "0084B4",
-            "profile_sidebar_border_color": "C0DEED",
-            "profile_sidebar_fill_color": "DDEEF6",
-            "profile_text_color": "333333",
-            "profile_use_background_image": true,
-            "has_extended_profile": false,
-            "default_profile": true,
-            "default_profile_image": false,
-            "following": false,
-            "follow_request_sent": false,
-            "notifications": false
-        },
-        "geo": null,
-        "coordinates": null,
-        "place": null,
-        "contributors": null,
-        "is_quote_status": false,
-        "retweet_count": 11,
-        "favorite_count": 2,
-        "entities": {
-            "hashtags": [{
-                "text": "AskMuseveni",
-                "indices": [110, 122]
-            }],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": []
-        },
-        "favorited": false,
-        "retweeted": false,
-        "lang": "en"
-    },
-    "is_quote_status": false,
-    "retweet_count": 11,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [{
-            "text": "AskMuseveni",
-            "indices": [123, 135]
-        }],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "eriasa1",
-            "name": "Eriasa Mukiibi Sseru",
-            "id": 360619314,
-            "id_str": "360619314",
-            "indices": [3, 11]
-        }],
+      },
+      "description": {
         "urls": []
+      }
     },
-    "favorited": false,
-    "retweeted": false,
-    "lang": "en"
-}, {
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "retweeted_status": {
     "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
+      "iso_language_code": "en",
+      "result_type": "recent"
     },
-    "created_at": "Fri Dec 11 13:59:08 +0000 2015",
-    "id": 675313872685912000,
-    "id_str": "675313872685912064",
-    "text": "RT @reubenbond: Most JS/Python/Ruby apps... https://t.co/hkDkjdxpFH",
+    "created_at": "Sat Dec 12 09:19:12 +0000 2015",
+    "id": 675605814137249800,
+    "id_str": "675605814137249792",
+    "text": "This was not #AskMuseveni this was #LetMeTellYou",
     "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
     "truncated": false,
     "in_reply_to_status_id": null,
@@ -1909,183 +875,288 @@
     "in_reply_to_user_id_str": null,
     "in_reply_to_screen_name": null,
     "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
+      "id": 95019191,
+      "id_str": "95019191",
+      "name": "Grace Natabaalo",
+      "screen_name": "Natabaalo",
+      "location": "Kampala",
+      "description": "Programme Assoc. @ the African Centre for Media Excellence|Journalist|Crazy about Social Media and life http://t.co/8XKMnfXKWq",
+      "url": "http://t.co/Dz8v6379vJ",
+      "entities": {
+        "url": {
+          "urls": [{
+            "url": "http://t.co/Dz8v6379vJ",
+            "expanded_url": "http://www.acme-ug.org",
+            "display_url": "acme-ug.org",
+            "indices": [0, 22]
+          }]
         },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
+        "description": {
+          "urls": [{
+            "url": "http://t.co/8XKMnfXKWq",
+            "expanded_url": "http://www.rebelmouse.com/Natabaalo",
+            "display_url": "rebelmouse.com/Natabaalo",
+            "indices": [104, 126]
+          }]
+        }
+      },
+      "protected": false,
+      "followers_count": 34461,
+      "friends_count": 1513,
+      "listed_count": 239,
+      "created_at": "Sun Dec 06 15:41:07 +0000 2009",
+      "favourites_count": 1428,
+      "utc_offset": 10800,
+      "time_zone": "Nairobi",
+      "geo_enabled": false,
+      "verified": false,
+      "statuses_count": 45808,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "022330",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/587592748573663232/lmjdE7vI_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/587592748573663232/lmjdE7vI_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/95019191/1428928262",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "A8C7F7",
+      "profile_sidebar_fill_color": "C0DFEC",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
     },
     "geo": null,
     "coordinates": null,
     "place": null,
     "contributors": null,
-    "retweeted_status": {
-        "metadata": {
-            "iso_language_code": "en",
-            "result_type": "recent"
-        },
-        "created_at": "Thu Nov 05 00:20:06 +0000 2015",
-        "id": 662061791497744400,
-        "id_str": "662061791497744384",
-        "text": "Most JS/Python/Ruby apps... https://t.co/hkDkjdxpFH",
-        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-        "truncated": false,
-        "in_reply_to_status_id": null,
-        "in_reply_to_status_id_str": null,
-        "in_reply_to_user_id": null,
-        "in_reply_to_user_id_str": null,
-        "in_reply_to_screen_name": null,
-        "user": {
-            "id": 57183972,
-            "id_str": "57183972",
-            "name": "Reuben Bond",
-            "screen_name": "reubenbond",
-            "location": "Melbourne, Australia",
-            "description": "Software & Economics. @ProjectOrleans & #ServiceFabric. Tweets mostly technical.",
-            "url": null,
-            "entities": {
-                "description": {
-                    "urls": []
-                }
-            },
-            "protected": false,
-            "followers_count": 971,
-            "friends_count": 298,
-            "listed_count": 46,
-            "created_at": "Thu Jul 16 00:14:32 +0000 2009",
-            "favourites_count": 530,
-            "utc_offset": 39600,
-            "time_zone": "Melbourne",
-            "geo_enabled": true,
-            "verified": false,
-            "statuses_count": 1831,
-            "lang": "en",
-            "contributors_enabled": false,
-            "is_translator": false,
-            "is_translation_enabled": false,
-            "profile_background_color": "1A1B1F",
-            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/590504686278430721/NFc78eQg.png",
-            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/590504686278430721/NFc78eQg.png",
-            "profile_background_tile": true,
-            "profile_image_url": "http://pbs.twimg.com/profile_images/577568614640791552/INwRHGAK_normal.jpeg",
-            "profile_image_url_https": "https://pbs.twimg.com/profile_images/577568614640791552/INwRHGAK_normal.jpeg",
-            "profile_banner_url": "https://pbs.twimg.com/profile_banners/57183972/1448245902",
-            "profile_link_color": "FA743E",
-            "profile_sidebar_border_color": "C0DEED",
-            "profile_sidebar_fill_color": "DDEEF6",
-            "profile_text_color": "333333",
-            "profile_use_background_image": true,
-            "has_extended_profile": false,
-            "default_profile": false,
-            "default_profile_image": false,
-            "following": false,
-            "follow_request_sent": false,
-            "notifications": false
-        },
-        "geo": null,
-        "coordinates": null,
-        "place": null,
-        "contributors": null,
-        "is_quote_status": false,
-        "retweet_count": 14535,
-        "favorite_count": 11392,
-        "entities": {
-            "hashtags": [],
-            "symbols": [],
-            "user_mentions": [],
-            "urls": [{
-                "url": "https://t.co/hkDkjdxpFH",
-                "expanded_url": "http://twitter.com/reubenbond/status/662061791497744384/photo/1",
-                "display_url": "pic.twitter.com/hkDkjdxpFH",
-                "indices": [28, 51]
-            }]
-        },
-        "favorited": false,
-        "retweeted": false,
-        "possibly_sensitive": false,
-        "lang": "en"
-    },
     "is_quote_status": false,
-    "retweet_count": 14535,
-    "favorite_count": 0,
+    "retweet_count": 77,
+    "favorite_count": 55,
     "entities": {
-        "hashtags": [],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "reubenbond",
-            "name": "Reuben Bond",
-            "id": 57183972,
-            "id_str": "57183972",
-            "indices": [3, 14]
-        }],
-        "urls": [{
-            "url": "https://t.co/hkDkjdxpFH",
-            "expanded_url": "http://twitter.com/reubenbond/status/662061791497744384/photo/1",
-            "display_url": "pic.twitter.com/hkDkjdxpFH",
-            "indices": [44, 67]
-        }]
+      "hashtags": [{
+        "text": "AskMuseveni",
+        "indices": [13, 25]
+      }, {
+        "text": "LetMeTellYou",
+        "indices": [35, 48]
+      }],
+      "symbols": [],
+      "user_mentions": [],
+      "urls": []
     },
     "favorited": false,
     "retweeted": false,
-    "possibly_sensitive": true,
     "lang": "en"
+  },
+  "is_quote_status": false,
+  "retweet_count": 77,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [{
+      "text": "AskMuseveni",
+      "indices": [28, 40]
+    }, {
+      "text": "LetMeTellYou",
+      "indices": [50, 63]
+    }],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "Natabaalo",
+      "name": "Grace Natabaalo",
+      "id": 95019191,
+      "id_str": "95019191",
+      "indices": [3, 13]
+    }],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
 }, {
-    "metadata": {
-        "iso_language_code": "und",
-        "result_type": "recent"
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Sat Dec 12 09:21:56 +0000 2015",
+  "id": 675606501432688600,
+  "id_str": "675606501432688640",
+  "text": "#AskMuseveni is a sham museveni has chosen to dodge all the questions by an early exist #Shameless",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
     },
-    "created_at": "Wed Dec 09 19:43:01 +0000 2015",
-    "id": 674675639497150500,
-    "id_str": "674675639497150464",
-    "text": "By @BTianah @happy_alexander_photography @fredbugembe @Mwangusha @KUSASIRAIVAN @epicAllanl… https://t.co/EqV6xCwZz7 https://t.co/whyudKq2iR",
-    "source": "<a href=\"http://ifttt.com\" rel=\"nofollow\">IFTTT</a>",
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [{
+      "text": "AskMuseveni",
+      "indices": [0, 12]
+    }, {
+      "text": "Shameless",
+      "indices": [88, 98]
+    }],
+    "symbols": [],
+    "user_mentions": [],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
+}, {
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Sat Dec 12 09:16:35 +0000 2015",
+  "id": 675605155472130000,
+  "id_str": "675605155472130048",
+  "text": "RT @bartlettdaron: Mildred tried to chip in but Museveni warns her not to waste His time. \n\nYou just can't dodge this guy's lectures \n\n#Ask…",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "retweeted_status": {
+    "metadata": {
+      "iso_language_code": "en",
+      "result_type": "recent"
+    },
+    "created_at": "Sat Dec 12 09:04:53 +0000 2015",
+    "id": 675602207480422400,
+    "id_str": "675602207480422400",
+    "text": "Mildred tried to chip in but Museveni warns her not to waste His time. \n\nYou just can't dodge this guy's lectures \n\n#AskMuseveni",
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
     "truncated": false,
     "in_reply_to_status_id": null,
     "in_reply_to_status_id_str": null,
@@ -2093,441 +1164,1455 @@
     "in_reply_to_user_id_str": null,
     "in_reply_to_screen_name": null,
     "user": {
-        "id": 3295773754,
-        "id_str": "3295773754",
-        "name": "UgWeekly Images",
-        "screen_name": "UgWeeklyImages",
-        "location": "Kampala, Uganda",
-        "description": "UgWeekly Images: Moving the world with Images. (a division of @ug_weekly)",
-        "url": null,
-        "entities": {
-            "description": {
-                "urls": []
-            }
+      "id": 327475656,
+      "id_str": "327475656",
+      "name": "Daron",
+      "screen_name": "bartlettdaron",
+      "location": "Around The World ",
+      "description": "Social Media||Law||Philosophy||Guitarist|| Social Moral Ethic Advocate|| @yideeh the ninja #Chelsea and @mildredkayaga(BF) 93.3 KFM #TheHotSeat Update",
+      "url": "https://t.co/LU7aiJn1IT",
+      "entities": {
+        "url": {
+          "urls": [{
+            "url": "https://t.co/LU7aiJn1IT",
+            "expanded_url": "http://daronenock.wordpress.com",
+            "display_url": "daronenock.wordpress.com",
+            "indices": [0, 23]
+          }]
         },
-        "protected": false,
-        "followers_count": 449,
-        "friends_count": 17,
-        "listed_count": 32,
-        "created_at": "Sat May 23 21:00:13 +0000 2015",
-        "favourites_count": 731,
-        "utc_offset": -28800,
-        "time_zone": "Pacific Time (US & Canada)",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 6127,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "000000",
-        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/603540115495849986/oXimp8UK.jpg",
-        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/603540115495849986/oXimp8UK.jpg",
-        "profile_background_tile": true,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/655176972532916224/HiuoUEHT_normal.png",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/655176972532916224/HiuoUEHT_normal.png",
-        "profile_banner_url": "https://pbs.twimg.com/profile_banners/3295773754/1448758122",
-        "profile_link_color": "3B94D9",
-        "profile_sidebar_border_color": "000000",
-        "profile_sidebar_fill_color": "000000",
-        "profile_text_color": "000000",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": false,
-        "follow_request_sent": false,
-        "notifications": false
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 3479,
+      "friends_count": 932,
+      "listed_count": 48,
+      "created_at": "Fri Jul 01 16:42:06 +0000 2011",
+      "favourites_count": 3508,
+      "utc_offset": -18000,
+      "time_zone": "Quito",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 100888,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "F5ABB5",
+      "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000151605029/uNgRK3LA.jpeg",
+      "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000151605029/uNgRK3LA.jpeg",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/674990456598601728/uWkznJzC_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/674990456598601728/uWkznJzC_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/327475656/1448914298",
+      "profile_link_color": "CC3366",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "F6F6F6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": false,
+      "has_extended_profile": true,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
     },
     "geo": null,
     "coordinates": null,
     "place": null,
     "contributors": null,
     "is_quote_status": false,
-    "retweet_count": 0,
+    "retweet_count": 12,
+    "favorite_count": 5,
+    "entities": {
+      "hashtags": [{
+        "text": "AskMuseveni",
+        "indices": [116, 128]
+      }],
+      "symbols": [],
+      "user_mentions": [],
+      "urls": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  "is_quote_status": false,
+  "retweet_count": 12,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [{
+      "text": "AskMuseveni",
+      "indices": [135, 140]
+    }],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "bartlettdaron",
+      "name": "Daron",
+      "id": 327475656,
+      "id_str": "327475656",
+      "indices": [3, 17]
+    }],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
+}, {
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Sat Dec 12 09:09:32 +0000 2015",
+  "id": 675603379704471600,
+  "id_str": "675603379704471552",
+  "text": "#AskMuseveni this is turning into another campaign session some one tell museveni to be precise and direct while answering questions",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [{
+      "text": "AskMuseveni",
+      "indices": [0, 12]
+    }],
+    "symbols": [],
+    "user_mentions": [],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
+}, {
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Sat Dec 12 08:37:34 +0000 2015",
+  "id": 675595333934694400,
+  "id_str": "675595333934694401",
+  "text": "RT @andsjeff: Where will you be procuring the 18million hoes to help in Agriculture Modernization? #AskMuseveni",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "retweeted_status": {
+    "metadata": {
+      "iso_language_code": "en",
+      "result_type": "recent"
+    },
+    "created_at": "Sat Dec 12 05:28:47 +0000 2015",
+    "id": 675547826626166800,
+    "id_str": "675547826626166784",
+    "text": "Where will you be procuring the 18million hoes to help in Agriculture Modernization? #AskMuseveni",
+    "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 238053427,
+      "id_str": "238053427",
+      "name": "Jeff 2.9.5™",
+      "screen_name": "andsjeff",
+      "location": "Uganda",
+      "description": "@LFC |Computer Scientist|#YNWA|Politics|Loves Writing",
+      "url": "https://t.co/1a0fuWjSZu",
+      "entities": {
+        "url": {
+          "urls": [{
+            "url": "https://t.co/1a0fuWjSZu",
+            "expanded_url": "http://andsjeff.wordpress.com",
+            "display_url": "andsjeff.wordpress.com",
+            "indices": [0, 23]
+          }]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 1799,
+      "friends_count": 295,
+      "listed_count": 20,
+      "created_at": "Fri Jan 14 07:25:37 +0000 2011",
+      "favourites_count": 3577,
+      "utc_offset": 10800,
+      "time_zone": "Nairobi",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 19415,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "0099B9",
+      "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/458980174361411584/znT_YrrO.jpeg",
+      "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/458980174361411584/znT_YrrO.jpeg",
+      "profile_background_tile": true,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/677080274426068992/iRgcNaMr_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/677080274426068992/iRgcNaMr_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/238053427/1433399201",
+      "profile_link_color": "B80600",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "95E8EC",
+      "profile_text_color": "3C3940",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 5,
     "favorite_count": 1,
     "entities": {
-        "hashtags": [],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "BTianah",
-            "name": "Bettinah Tianah",
-            "id": 1858933038,
-            "id_str": "1858933038",
-            "indices": [3, 11]
-        }, {
-            "screen_name": "fredbugembe",
-            "name": "fredbugembe",
-            "id": 2417496530,
-            "id_str": "2417496530",
-            "indices": [41, 53]
-        }, {
-            "screen_name": "Mwangusha",
-            "name": "mwangusha_dianah_k",
-            "id": 254592303,
-            "id_str": "254592303",
-            "indices": [54, 64]
-        }, {
-            "screen_name": "KUSASIRAIVAN",
-            "name": "@savage_life",
-            "id": 500854953,
-            "id_str": "500854953",
-            "indices": [65, 78]
-        }, {
-            "screen_name": "epicAllanl",
-            "name": "lukwago allan",
-            "id": 282545192,
-            "id_str": "282545192",
-            "indices": [79, 90]
-        }],
+      "hashtags": [{
+        "text": "AskMuseveni",
+        "indices": [85, 97]
+      }],
+      "symbols": [],
+      "user_mentions": [],
+      "urls": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  "is_quote_status": false,
+  "retweet_count": 5,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [{
+      "text": "AskMuseveni",
+      "indices": [99, 111]
+    }],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "andsjeff",
+      "name": "Jeff 2.9.5™",
+      "id": 238053427,
+      "id_str": "238053427",
+      "indices": [3, 12]
+    }],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
+}, {
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Sat Dec 12 08:37:06 +0000 2015",
+  "id": 675595218167668700,
+  "id_str": "675595218167668736",
+  "text": "RT @andsjeff: We don't need to #AskMuseveni but rather thank him for the great improvement in the health sector for the last 30yrs https://…",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
         "urls": [{
-            "url": "https://t.co/EqV6xCwZz7",
-            "expanded_url": "https://www.instagram.com/p/_FRS4VoI8C/",
-            "display_url": "instagram.com/p/_FRS4VoI8C/",
-            "indices": [92, 115]
-        }],
-        "media": [{
-            "id": 674675638050152400,
-            "id_str": "674675638050152448",
-            "indices": [116, 139],
-            "media_url": "http://pbs.twimg.com/media/CVzt6xCW4AAoyQY.jpg",
-            "media_url_https": "https://pbs.twimg.com/media/CVzt6xCW4AAoyQY.jpg",
-            "url": "https://t.co/whyudKq2iR",
-            "display_url": "pic.twitter.com/whyudKq2iR",
-            "expanded_url": "http://twitter.com/UgWeeklyImages/status/674675639497150464/photo/1",
-            "type": "photo",
-            "sizes": {
-                "small": {
-                    "w": 340,
-                    "h": 340,
-                    "resize": "fit"
-                },
-                "thumb": {
-                    "w": 150,
-                    "h": 150,
-                    "resize": "crop"
-                },
-                "medium": {
-                    "w": 600,
-                    "h": 600,
-                    "resize": "fit"
-                },
-                "large": {
-                    "w": 1024,
-                    "h": 1024,
-                    "resize": "fit"
-                }
-            }
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
         }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "retweeted_status": {
+    "metadata": {
+      "iso_language_code": "en",
+      "result_type": "recent"
+    },
+    "created_at": "Sat Dec 12 05:37:36 +0000 2015",
+    "id": 675550044813197300,
+    "id_str": "675550044813197312",
+    "text": "We don't need to #AskMuseveni but rather thank him for the great improvement in the health sector for the last 30yrs https://t.co/cpiyDGTjgI",
+    "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 238053427,
+      "id_str": "238053427",
+      "name": "Jeff 2.9.5™",
+      "screen_name": "andsjeff",
+      "location": "Uganda",
+      "description": "@LFC |Computer Scientist|#YNWA|Politics|Loves Writing",
+      "url": "https://t.co/1a0fuWjSZu",
+      "entities": {
+        "url": {
+          "urls": [{
+            "url": "https://t.co/1a0fuWjSZu",
+            "expanded_url": "http://andsjeff.wordpress.com",
+            "display_url": "andsjeff.wordpress.com",
+            "indices": [0, 23]
+          }]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 1799,
+      "friends_count": 295,
+      "listed_count": 20,
+      "created_at": "Fri Jan 14 07:25:37 +0000 2011",
+      "favourites_count": 3577,
+      "utc_offset": 10800,
+      "time_zone": "Nairobi",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 19415,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "0099B9",
+      "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/458980174361411584/znT_YrrO.jpeg",
+      "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/458980174361411584/znT_YrrO.jpeg",
+      "profile_background_tile": true,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/677080274426068992/iRgcNaMr_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/677080274426068992/iRgcNaMr_normal.jpg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/238053427/1433399201",
+      "profile_link_color": "B80600",
+      "profile_sidebar_border_color": "FFFFFF",
+      "profile_sidebar_fill_color": "95E8EC",
+      "profile_text_color": "3C3940",
+      "profile_use_background_image": false,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 33,
+    "favorite_count": 7,
+    "entities": {
+      "hashtags": [{
+        "text": "AskMuseveni",
+        "indices": [17, 29]
+      }],
+      "symbols": [],
+      "user_mentions": [],
+      "urls": [],
+      "media": [{
+        "id": 675549968472649700,
+        "id_str": "675549968472649728",
+        "indices": [117, 140],
+        "media_url": "http://pbs.twimg.com/media/CWAJHfrWsAAJgwe.jpg",
+        "media_url_https": "https://pbs.twimg.com/media/CWAJHfrWsAAJgwe.jpg",
+        "url": "https://t.co/cpiyDGTjgI",
+        "display_url": "pic.twitter.com/cpiyDGTjgI",
+        "expanded_url": "http://twitter.com/andsjeff/status/675550044813197312/photo/1",
+        "type": "photo",
+        "sizes": {
+          "large": {
+            "w": 749,
+            "h": 904,
+            "resize": "fit"
+          },
+          "thumb": {
+            "w": 150,
+            "h": 150,
+            "resize": "crop"
+          },
+          "small": {
+            "w": 340,
+            "h": 410,
+            "resize": "fit"
+          },
+          "medium": {
+            "w": 600,
+            "h": 724,
+            "resize": "fit"
+          }
+        }
+      }]
     },
     "favorited": false,
     "retweeted": false,
     "possibly_sensitive": false,
-    "lang": "und"
-}, {
-    "metadata": {
-        "iso_language_code": "und",
-        "result_type": "recent"
-    },
-    "created_at": "Wed Dec 09 17:14:55 +0000 2015",
-    "id": 674638367498309600,
-    "id_str": "674638367498309632",
-    "text": "#VR #wishlist https://t.co/miNyCEQesO via @verge",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "is_quote_status": false,
-    "retweet_count": 0,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [{
-            "text": "VR",
-            "indices": [0, 3]
-        }, {
-            "text": "wishlist",
-            "indices": [4, 13]
-        }],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "verge",
-            "name": "The Verge",
-            "id": 275686563,
-            "id_str": "275686563",
-            "indices": [42, 48]
-        }],
-        "urls": [{
-            "url": "https://t.co/miNyCEQesO",
-            "expanded_url": "http://www.theverge.com/2015/12/9/9878198/samsung-gear-vr-review-real-world-mainstream?utm_campaign=theverge&utm_content=feature&utm_medium=social&utm_source=twitter",
-            "display_url": "theverge.com/2015/12/9/9878…",
-            "indices": [14, 37]
-        }]
-    },
-    "favorited": false,
-    "retweeted": false,
-    "possibly_sensitive": true,
-    "lang": "und"
-}, {
-    "metadata": {
-        "iso_language_code": "und",
-        "result_type": "recent"
-    },
-    "created_at": "Wed Dec 09 17:11:41 +0000 2015",
-    "id": 674637552696062000,
-    "id_str": "674637552696061955",
-    "text": "#quantum #quantumcomputing https://t.co/R0m832AJ2f via @VentureBeat",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "is_quote_status": false,
-    "retweet_count": 0,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [{
-            "text": "quantum",
-            "indices": [0, 8]
-        }, {
-            "text": "quantumcomputing",
-            "indices": [9, 26]
-        }],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "VentureBeat",
-            "name": "VentureBeat",
-            "id": 60642052,
-            "id_str": "60642052",
-            "indices": [55, 67]
-        }],
-        "urls": [{
-            "url": "https://t.co/R0m832AJ2f",
-            "expanded_url": "http://venturebeat.com/2015/12/08/google-says-its-quantum-computer-is-more-than-100-million-times-faster-than-a-regular-computer-chip/",
-            "display_url": "venturebeat.com/2015/12/08/goo…",
-            "indices": [27, 50]
-        }]
-    },
-    "favorited": false,
-    "retweeted": false,
-    "possibly_sensitive": true,
-    "lang": "und"
-}, {
-    "metadata": {
-        "iso_language_code": "en",
-        "result_type": "recent"
-    },
-    "created_at": "Wed Dec 09 17:06:29 +0000 2015",
-    "id": 674636246560436200,
-    "id_str": "674636246560436224",
-    "text": "Martin Shkreli: 'I Would've Raised Prices Higher' https://t.co/O46KegMRNF via @YouTube",
-    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-        "id": 282545192,
-        "id_str": "282545192",
-        "name": "lukwago allan",
-        "screen_name": "epicAllanl",
-        "location": "uganda kampala",
-        "description": "programmer,3d technical artist,tinkerer of things",
-        "url": "http://t.co/ovKvFTRHab",
-        "entities": {
-            "url": {
-                "urls": [{
-                    "url": "http://t.co/ovKvFTRHab",
-                    "expanded_url": "http://lukwagoallan.blogspot.com/",
-                    "display_url": "lukwagoallan.blogspot.com",
-                    "indices": [0, 22]
-                }]
-            },
-            "description": {
-                "urls": []
-            }
-        },
-        "protected": false,
-        "followers_count": 405,
-        "friends_count": 404,
-        "listed_count": 16,
-        "created_at": "Fri Apr 15 12:17:36 +0000 2011",
-        "favourites_count": 106,
-        "utc_offset": 10800,
-        "time_zone": "Nairobi",
-        "geo_enabled": true,
-        "verified": false,
-        "statuses_count": 1450,
-        "lang": "en",
-        "contributors_enabled": false,
-        "is_translator": false,
-        "is_translation_enabled": false,
-        "profile_background_color": "022330",
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
-        "profile_background_tile": false,
-        "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
-        "profile_link_color": "0084B4",
-        "profile_sidebar_border_color": "A8C7F7",
-        "profile_sidebar_fill_color": "C0DFEC",
-        "profile_text_color": "333333",
-        "profile_use_background_image": true,
-        "has_extended_profile": false,
-        "default_profile": false,
-        "default_profile_image": false,
-        "following": true,
-        "follow_request_sent": false,
-        "notifications": false
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "is_quote_status": false,
-    "retweet_count": 0,
-    "favorite_count": 0,
-    "entities": {
-        "hashtags": [],
-        "symbols": [],
-        "user_mentions": [{
-            "screen_name": "YouTube",
-            "name": "YouTube",
-            "id": 10228272,
-            "id_str": "10228272",
-            "indices": [78, 86]
-        }],
-        "urls": [{
-            "url": "https://t.co/O46KegMRNF",
-            "expanded_url": "https://youtu.be/NS9blbLrKv4",
-            "display_url": "youtu.be/NS9blbLrKv4",
-            "indices": [50, 73]
-        }]
-    },
-    "favorited": false,
-    "retweeted": false,
-    "possibly_sensitive": true,
     "lang": "en"
+  },
+  "is_quote_status": false,
+  "retweet_count": 33,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [{
+      "text": "AskMuseveni",
+      "indices": [31, 43]
+    }],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "andsjeff",
+      "name": "Jeff 2.9.3™",
+      "id": 238053427,
+      "id_str": "238053427",
+      "indices": [3, 12]
+    }],
+    "urls": [],
+    "media": [{
+      "id": 675549968472649700,
+      "id_str": "675549968472649728",
+      "indices": [139, 140],
+      "media_url": "http://pbs.twimg.com/media/CWAJHfrWsAAJgwe.jpg",
+      "media_url_https": "https://pbs.twimg.com/media/CWAJHfrWsAAJgwe.jpg",
+      "url": "https://t.co/cpiyDGTjgI",
+      "display_url": "pic.twitter.com/cpiyDGTjgI",
+      "expanded_url": "http://twitter.com/andsjeff/status/675550044813197312/photo/1",
+      "type": "photo",
+      "sizes": {
+        "large": {
+          "w": 749,
+          "h": 904,
+          "resize": "fit"
+        },
+        "thumb": {
+          "w": 150,
+          "h": 150,
+          "resize": "crop"
+        },
+        "small": {
+          "w": 340,
+          "h": 410,
+          "resize": "fit"
+        },
+        "medium": {
+          "w": 600,
+          "h": 724,
+          "resize": "fit"
+        }
+      },
+      "source_status_id": 675550044813197300,
+      "source_status_id_str": "675550044813197312",
+      "source_user_id": 238053427,
+      "source_user_id_str": "238053427"
+    }]
+  },
+  "favorited": false,
+  "retweeted": false,
+  "possibly_sensitive": true,
+  "lang": "en"
+}, {
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Sat Dec 12 07:29:09 +0000 2015",
+  "id": 675578118430675000,
+  "id_str": "675578118430674944",
+  "text": "RT @eriasa1: People in Bududa are allowed into forest reserves during campaigns and then get evicted after elections. Why? #AskMuseveni",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "retweeted_status": {
+    "metadata": {
+      "iso_language_code": "en",
+      "result_type": "recent"
+    },
+    "created_at": "Sat Dec 12 06:51:01 +0000 2015",
+    "id": 675568522387398700,
+    "id_str": "675568522387398656",
+    "text": "People in Bududa are allowed into forest reserves during campaigns and then get evicted after elections. Why? #AskMuseveni",
+    "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 360619314,
+      "id_str": "360619314",
+      "name": "Eriasa Mukiibi Sseru",
+      "screen_name": "eriasa1",
+      "location": "Kampala, Uganda",
+      "description": "A Ugandan journalist interested in politics and investigation, currently working with Daily Monitor",
+      "url": "http://t.co/kRPGEFGtRM",
+      "entities": {
+        "url": {
+          "urls": [{
+            "url": "http://t.co/kRPGEFGtRM",
+            "expanded_url": "http://mukiibisserunjogi.wordpress.com",
+            "display_url": "mukiibisserunjogi.wordpress.com",
+            "indices": [0, 22]
+          }]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 356,
+      "friends_count": 201,
+      "listed_count": 7,
+      "created_at": "Tue Aug 23 14:05:58 +0000 2011",
+      "favourites_count": 2,
+      "utc_offset": 3600,
+      "time_zone": "Amsterdam",
+      "geo_enabled": false,
+      "verified": false,
+      "statuses_count": 936,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "C0DEED",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+      "profile_background_tile": false,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/1638891917/Mukiibi_pic_normal.jpg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1638891917/Mukiibi_pic_normal.jpg",
+      "profile_link_color": "0084B4",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "has_extended_profile": false,
+      "default_profile": true,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 11,
+    "favorite_count": 2,
+    "entities": {
+      "hashtags": [{
+        "text": "AskMuseveni",
+        "indices": [110, 122]
+      }],
+      "symbols": [],
+      "user_mentions": [],
+      "urls": []
+    },
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en"
+  },
+  "is_quote_status": false,
+  "retweet_count": 11,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [{
+      "text": "AskMuseveni",
+      "indices": [123, 135]
+    }],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "eriasa1",
+      "name": "Eriasa Mukiibi Sseru",
+      "id": 360619314,
+      "id_str": "360619314",
+      "indices": [3, 11]
+    }],
+    "urls": []
+  },
+  "favorited": false,
+  "retweeted": false,
+  "lang": "en"
+}, {
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Fri Dec 11 13:59:08 +0000 2015",
+  "id": 675313872685912000,
+  "id_str": "675313872685912064",
+  "text": "RT @reubenbond: Most JS/Python/Ruby apps... https://t.co/hkDkjdxpFH",
+  "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "retweeted_status": {
+    "metadata": {
+      "iso_language_code": "en",
+      "result_type": "recent"
+    },
+    "created_at": "Thu Nov 05 00:20:06 +0000 2015",
+    "id": 662061791497744400,
+    "id_str": "662061791497744384",
+    "text": "Most JS/Python/Ruby apps... https://t.co/hkDkjdxpFH",
+    "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+    "truncated": false,
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+      "id": 57183972,
+      "id_str": "57183972",
+      "name": "Reuben Bond",
+      "screen_name": "reubenbond",
+      "location": "Melbourne, Australia",
+      "description": "Software & Economics. @ProjectOrleans & #ServiceFabric. Tweets mostly technical.",
+      "url": null,
+      "entities": {
+        "description": {
+          "urls": []
+        }
+      },
+      "protected": false,
+      "followers_count": 971,
+      "friends_count": 298,
+      "listed_count": 46,
+      "created_at": "Thu Jul 16 00:14:32 +0000 2009",
+      "favourites_count": 530,
+      "utc_offset": 39600,
+      "time_zone": "Melbourne",
+      "geo_enabled": true,
+      "verified": false,
+      "statuses_count": 1831,
+      "lang": "en",
+      "contributors_enabled": false,
+      "is_translator": false,
+      "is_translation_enabled": false,
+      "profile_background_color": "1A1B1F",
+      "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/590504686278430721/NFc78eQg.png",
+      "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/590504686278430721/NFc78eQg.png",
+      "profile_background_tile": true,
+      "profile_image_url": "http://pbs.twimg.com/profile_images/577568614640791552/INwRHGAK_normal.jpeg",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/577568614640791552/INwRHGAK_normal.jpeg",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/57183972/1448245902",
+      "profile_link_color": "FA743E",
+      "profile_sidebar_border_color": "C0DEED",
+      "profile_sidebar_fill_color": "DDEEF6",
+      "profile_text_color": "333333",
+      "profile_use_background_image": true,
+      "has_extended_profile": false,
+      "default_profile": false,
+      "default_profile_image": false,
+      "following": false,
+      "follow_request_sent": false,
+      "notifications": false
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 14535,
+    "favorite_count": 11392,
+    "entities": {
+      "hashtags": [],
+      "symbols": [],
+      "user_mentions": [],
+      "urls": [{
+        "url": "https://t.co/hkDkjdxpFH",
+        "expanded_url": "http://twitter.com/reubenbond/status/662061791497744384/photo/1",
+        "display_url": "pic.twitter.com/hkDkjdxpFH",
+        "indices": [28, 51]
+      }]
+    },
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en"
+  },
+  "is_quote_status": false,
+  "retweet_count": 14535,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "reubenbond",
+      "name": "Reuben Bond",
+      "id": 57183972,
+      "id_str": "57183972",
+      "indices": [3, 14]
+    }],
+    "urls": [{
+      "url": "https://t.co/hkDkjdxpFH",
+      "expanded_url": "http://twitter.com/reubenbond/status/662061791497744384/photo/1",
+      "display_url": "pic.twitter.com/hkDkjdxpFH",
+      "indices": [44, 67]
+    }]
+  },
+  "favorited": false,
+  "retweeted": false,
+  "possibly_sensitive": true,
+  "lang": "en"
+}, {
+  "metadata": {
+    "iso_language_code": "und",
+    "result_type": "recent"
+  },
+  "created_at": "Wed Dec 09 19:43:01 +0000 2015",
+  "id": 674675639497150500,
+  "id_str": "674675639497150464",
+  "text": "By @BTianah @happy_alexander_photography @fredbugembe @Mwangusha @KUSASIRAIVAN @epicAllanl… https://t.co/EqV6xCwZz7 https://t.co/whyudKq2iR",
+  "source": "<a href=\"http://ifttt.com\" rel=\"nofollow\">IFTTT</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 3295773754,
+    "id_str": "3295773754",
+    "name": "UgWeekly Images",
+    "screen_name": "UgWeeklyImages",
+    "location": "Kampala, Uganda",
+    "description": "UgWeekly Images: Moving the world with Images. (a division of @ug_weekly)",
+    "url": null,
+    "entities": {
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 449,
+    "friends_count": 17,
+    "listed_count": 32,
+    "created_at": "Sat May 23 21:00:13 +0000 2015",
+    "favourites_count": 731,
+    "utc_offset": -28800,
+    "time_zone": "Pacific Time (US & Canada)",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 6127,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "000000",
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/603540115495849986/oXimp8UK.jpg",
+    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/603540115495849986/oXimp8UK.jpg",
+    "profile_background_tile": true,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/655176972532916224/HiuoUEHT_normal.png",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/655176972532916224/HiuoUEHT_normal.png",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/3295773754/1448758122",
+    "profile_link_color": "3B94D9",
+    "profile_sidebar_border_color": "000000",
+    "profile_sidebar_fill_color": "000000",
+    "profile_text_color": "000000",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": false,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 1,
+  "entities": {
+    "hashtags": [],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "BTianah",
+      "name": "Bettinah Tianah",
+      "id": 1858933038,
+      "id_str": "1858933038",
+      "indices": [3, 11]
+    }, {
+      "screen_name": "fredbugembe",
+      "name": "fredbugembe",
+      "id": 2417496530,
+      "id_str": "2417496530",
+      "indices": [41, 53]
+    }, {
+      "screen_name": "Mwangusha",
+      "name": "mwangusha_dianah_k",
+      "id": 254592303,
+      "id_str": "254592303",
+      "indices": [54, 64]
+    }, {
+      "screen_name": "KUSASIRAIVAN",
+      "name": "@savage_life",
+      "id": 500854953,
+      "id_str": "500854953",
+      "indices": [65, 78]
+    }, {
+      "screen_name": "epicAllanl",
+      "name": "lukwago allan",
+      "id": 282545192,
+      "id_str": "282545192",
+      "indices": [79, 90]
+    }],
+    "urls": [{
+      "url": "https://t.co/EqV6xCwZz7",
+      "expanded_url": "https://www.instagram.com/p/_FRS4VoI8C/",
+      "display_url": "instagram.com/p/_FRS4VoI8C/",
+      "indices": [92, 115]
+    }],
+    "media": [{
+      "id": 674675638050152400,
+      "id_str": "674675638050152448",
+      "indices": [116, 139],
+      "media_url": "http://pbs.twimg.com/media/CVzt6xCW4AAoyQY.jpg",
+      "media_url_https": "https://pbs.twimg.com/media/CVzt6xCW4AAoyQY.jpg",
+      "url": "https://t.co/whyudKq2iR",
+      "display_url": "pic.twitter.com/whyudKq2iR",
+      "expanded_url": "http://twitter.com/UgWeeklyImages/status/674675639497150464/photo/1",
+      "type": "photo",
+      "sizes": {
+        "small": {
+          "w": 340,
+          "h": 340,
+          "resize": "fit"
+        },
+        "thumb": {
+          "w": 150,
+          "h": 150,
+          "resize": "crop"
+        },
+        "medium": {
+          "w": 600,
+          "h": 600,
+          "resize": "fit"
+        },
+        "large": {
+          "w": 1024,
+          "h": 1024,
+          "resize": "fit"
+        }
+      }
+    }]
+  },
+  "favorited": false,
+  "retweeted": false,
+  "possibly_sensitive": false,
+  "lang": "und"
+}, {
+  "metadata": {
+    "iso_language_code": "und",
+    "result_type": "recent"
+  },
+  "created_at": "Wed Dec 09 17:14:55 +0000 2015",
+  "id": 674638367498309600,
+  "id_str": "674638367498309632",
+  "text": "#VR #wishlist https://t.co/miNyCEQesO via @verge",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [{
+      "text": "VR",
+      "indices": [0, 3]
+    }, {
+      "text": "wishlist",
+      "indices": [4, 13]
+    }],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "verge",
+      "name": "The Verge",
+      "id": 275686563,
+      "id_str": "275686563",
+      "indices": [42, 48]
+    }],
+    "urls": [{
+      "url": "https://t.co/miNyCEQesO",
+      "expanded_url": "http://www.theverge.com/2015/12/9/9878198/samsung-gear-vr-review-real-world-mainstream?utm_campaign=theverge&utm_content=feature&utm_medium=social&utm_source=twitter",
+      "display_url": "theverge.com/2015/12/9/9878…",
+      "indices": [14, 37]
+    }]
+  },
+  "favorited": false,
+  "retweeted": false,
+  "possibly_sensitive": true,
+  "lang": "und"
+}, {
+  "metadata": {
+    "iso_language_code": "und",
+    "result_type": "recent"
+  },
+  "created_at": "Wed Dec 09 17:11:41 +0000 2015",
+  "id": 674637552696062000,
+  "id_str": "674637552696061955",
+  "text": "#quantum #quantumcomputing https://t.co/R0m832AJ2f via @VentureBeat",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [{
+      "text": "quantum",
+      "indices": [0, 8]
+    }, {
+      "text": "quantumcomputing",
+      "indices": [9, 26]
+    }],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "VentureBeat",
+      "name": "VentureBeat",
+      "id": 60642052,
+      "id_str": "60642052",
+      "indices": [55, 67]
+    }],
+    "urls": [{
+      "url": "https://t.co/R0m832AJ2f",
+      "expanded_url": "http://venturebeat.com/2015/12/08/google-says-its-quantum-computer-is-more-than-100-million-times-faster-than-a-regular-computer-chip/",
+      "display_url": "venturebeat.com/2015/12/08/goo…",
+      "indices": [27, 50]
+    }]
+  },
+  "favorited": false,
+  "retweeted": false,
+  "possibly_sensitive": true,
+  "lang": "und"
+}, {
+  "metadata": {
+    "iso_language_code": "en",
+    "result_type": "recent"
+  },
+  "created_at": "Wed Dec 09 17:06:29 +0000 2015",
+  "id": 674636246560436200,
+  "id_str": "674636246560436224",
+  "text": "Martin Shkreli: 'I Would've Raised Prices Higher' https://t.co/O46KegMRNF via @YouTube",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+  "truncated": false,
+  "in_reply_to_status_id": null,
+  "in_reply_to_status_id_str": null,
+  "in_reply_to_user_id": null,
+  "in_reply_to_user_id_str": null,
+  "in_reply_to_screen_name": null,
+  "user": {
+    "id": 282545192,
+    "id_str": "282545192",
+    "name": "lukwago allan",
+    "screen_name": "epicAllanl",
+    "location": "uganda kampala",
+    "description": "programmer,3d technical artist,tinkerer of things",
+    "url": "http://t.co/ovKvFTRHab",
+    "entities": {
+      "url": {
+        "urls": [{
+          "url": "http://t.co/ovKvFTRHab",
+          "expanded_url": "http://lukwagoallan.blogspot.com/",
+          "display_url": "lukwagoallan.blogspot.com",
+          "indices": [0, 22]
+        }]
+      },
+      "description": {
+        "urls": []
+      }
+    },
+    "protected": false,
+    "followers_count": 405,
+    "friends_count": 404,
+    "listed_count": 16,
+    "created_at": "Fri Apr 15 12:17:36 +0000 2011",
+    "favourites_count": 106,
+    "utc_offset": 10800,
+    "time_zone": "Nairobi",
+    "geo_enabled": true,
+    "verified": false,
+    "statuses_count": 1450,
+    "lang": "en",
+    "contributors_enabled": false,
+    "is_translator": false,
+    "is_translation_enabled": false,
+    "profile_background_color": "022330",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme15/bg.png",
+    "profile_background_tile": false,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/649584485210583040/69Amf7us_normal.jpg",
+    "profile_link_color": "0084B4",
+    "profile_sidebar_border_color": "A8C7F7",
+    "profile_sidebar_fill_color": "C0DFEC",
+    "profile_text_color": "333333",
+    "profile_use_background_image": true,
+    "has_extended_profile": false,
+    "default_profile": false,
+    "default_profile_image": false,
+    "following": true,
+    "follow_request_sent": false,
+    "notifications": false
+  },
+  "geo": null,
+  "coordinates": null,
+  "place": null,
+  "contributors": null,
+  "is_quote_status": false,
+  "retweet_count": 0,
+  "favorite_count": 0,
+  "entities": {
+    "hashtags": [],
+    "symbols": [],
+    "user_mentions": [{
+      "screen_name": "YouTube",
+      "name": "YouTube",
+      "id": 10228272,
+      "id_str": "10228272",
+      "indices": [78, 86]
+    }],
+    "urls": [{
+      "url": "https://t.co/O46KegMRNF",
+      "expanded_url": "https://youtu.be/NS9blbLrKv4",
+      "display_url": "youtu.be/NS9blbLrKv4",
+      "indices": [50, 73]
+    }]
+  },
+  "favorited": false,
+  "retweeted": false,
+  "possibly_sensitive": true,
+  "lang": "en"
 }]

@@ -14,7 +14,7 @@ class Config {
       this.db = 'mine-dev';
     } else if (process.env.NODE_ENV === 'production') {
       this.db = 'mine';
-    } else if (process.env.NODE_ENV == 'test') {
+    } else if (process.env.NODE_ENV === 'test') {
       this.db = 'mine-test';
     }
   }

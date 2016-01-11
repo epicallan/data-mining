@@ -4,16 +4,20 @@
 [![Dependency Status][depstat-image]][depstat-url]
 
 > Description
+## Getting started
+
+I have merged the twitter data mining into this repo which also contains the facebook data mining scripts
+src/index.js starts a master node process that mines twitter and spawns off a child process
+that does some data clean up and saves the data in mongoDB.
+
 
 ## Installation
 
 ```
-These scripts have been tested on unix environments and found to function fine
+These facebook mining scripts have been tested on unix environments and found to function fine
 Install phantomjs if you dont have it on your computer and make sure its available
 as an environment variable
-
-'$ npm install --save datamining'
-or run  '$ npm link'  if you are in dev mode within the repo directory
+run $ npm link to run the scripts as executables
 
 ```
 
@@ -44,11 +48,10 @@ I am not sure of the windows eqivalents, please switch them up accordinfly with 
 - the facbook code has repitions
 - set up npm build and linting scripts
 - set up travis
-- assign ids to data
 - get likes on comments
 - Extract data from post links
 
-## API
+## Fb API
 ### $ login <email> <password>
 ### $ topic <search_term>
 ### $ pages <page_name>

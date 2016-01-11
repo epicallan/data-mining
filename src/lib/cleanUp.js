@@ -48,7 +48,8 @@ class CleanUp {
       obj.favorite_count = tweet.favorite_count;
       obj.user_id = tweet.user.id;
       obj.id = tweet.id;
-      obj.is_reply = tweet.in_reply_to_status_id === null || !tweet.in_reply_to_status_id ? false : true;
+      obj.is_reply = tweet.in_reply_to_status_id === null ||
+                    !tweet.in_reply_to_status_id ? false : true;
       if (obj.is_reply) {
         obj.in_reply_to_status_id = tweet.in_reply_to_status_id;
       }

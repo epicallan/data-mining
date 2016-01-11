@@ -8,8 +8,9 @@
     "build": "rimraf dist && webpack",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
     "coveralls": "npm run coverage && coveralls < coverage/lcov.info && rimraf coverage",
-    "test": "mocha --recursive --compilers js:babel-core/register",
-    "tdd": "npm test -- --watch"
+    "test": "mocha --recursive --compilers js:babel-core/register --require babel-polyfill",
+    "tdd": "npm test -- --watch",
+    "start": "node dist/index.js"
   },
   "repository": "epicallan/datamining",
   "keywords": [],
@@ -53,13 +54,16 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^2.9.0",
+    "fs-extra": "^0.26.4",
     "immutable": "^3.7.5",
     "jquery": "^2.2.0",
     "lodash": "^3.10.1",
     "mongoose": "^4.3.5",
+    "mongoose-unique-validator": "^0.6.2",
     "node-twitter-api": "^1.6.2",
     "prettyjson": "^1.1.3",
     "salient": "^0.2.1",
+    "twit": "^2.1.1",
     "uid": "^0.0.2"
   }
 }
