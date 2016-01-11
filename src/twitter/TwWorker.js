@@ -7,7 +7,7 @@ export default class TwWorker {
       type: 'twitter',
     });
     // add names if present in the tweet to the user mentions field
-    this.data = analyzer.addToUserMentions(this.data, ['museveni', 'besigye', 'amama']);
+    this.data = analyzer.addToUserMentions(this.data, ['museveni', 'besigye', 'amama', 'messi']);
   }
   removeRetweets() {
     return analyzer.filterData(this.data, 'is_retweet', false);

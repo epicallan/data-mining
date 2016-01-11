@@ -7,9 +7,10 @@
 /* eslint-disable comma-dangle */
 import process from 'child_process';
 import Twit from 'twit';
-import crendentials from './config/twCredentials';
+import path from 'path';
+import crendentials from './config/cred';
 
-const child = process.fork('./main');
+const child = process.fork(path.resolve(__dirname, './main.js'));
 const twitter = new Twit(crendentials);
 
 const stream = twitter.stream('statuses/filter', {

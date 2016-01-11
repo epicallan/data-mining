@@ -1,17 +1,27 @@
+/* eslint-disable */
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
-  entry: 'index.js',
+  entry: ['babel-polyfill', './src/main.js'],
+  target: 'node',
   output: {
-    path: './dist',
-    filename: 'module.js',
-    libraryTarget: 'umd'
+    path: __dirname + "/dist",
+    filename: 'index.js',
+    libraryTarget: 'commonjs2'
   },
+  externals: [/^[a-z\-0-9]+$/],
   module: {
     loaders: [{
       test: /\.js?$/,
-      exclude: /(node_modules|bower_components)/,
-      loader: 'babel'
+      include: [
+        path.resolve(__dirname, "src"),
+      ],
+      exclude: /(node_modules)/,
+      loader: "babel-loader"
     }]
+  },
+  query: {
+    plugins: ['transform-runtime']
   }
 };
