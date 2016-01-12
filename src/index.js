@@ -9,7 +9,7 @@ import childProcess from 'child_process';
 import Twit from 'twit';
 import path from 'path';
 import crendentials from './config/cred';
-const tweetsBuffer = [];
+let tweetsBuffer = [];
 // process.cwd is a hacky replacement for __dirname and i am not sure why it
 // wouldnt work
 const childPath = path.resolve(process.cwd(), 'dist/main.js');
@@ -18,19 +18,18 @@ const child = childProcess.fork(childPath);
 const twitter = new Twit(crendentials);
 
 const stream = twitter.stream('statuses/filter', {
-  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,JPM,amama,david'
+  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,JPM,amama'
 });
 
-if (tweetsBuffer.length < 4) {
-  stream.on('tweet', (data) => {
-    tweetsBuffer.push(data);
-    if (tweetsBuffer.length === 2) {
-      console.log('sending tweets');
-      child.send(tweetsBuffer);
-    }
-  });
-}
-
+stream.on('tweet', (data) => {
+  tweetsBuffer.push(data);
+  if (tweetsBuffer.length > 3) {
+    setTimeout(() => {
+      if (tweetsBuffer.length) child.send(tweetsBuffer);
+      tweetsBuffer = [];
+    }, 10000);
+  }
+});
 
 child.on('message', (msg) => {
   console.log('msg content from child: ' + msg);

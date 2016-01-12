@@ -8,7 +8,7 @@ import request from 'request';
 import redis from 'redis';
 import bluebird from 'bluebird';
 import _async from 'async';
-import prettyjson from 'prettyjson';
+// import prettyjson from 'prettyjson';
 
 const GOOGLE_API_KEY = 'AIzaSyChXVTkq8bGhAxeJnQnNHfsmWcGcC2GXEE';
 const GEO_CODE_API = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
@@ -191,20 +191,19 @@ class Analyzer {
     const { filtered, residue } = geoFiltered;
     // look through redis for canched locations and co-ordinates (we are mutating the residue data)
     this._getSavedCoordinates(residue, (_residue, error) => {
-      if (error) throw new Error('Getting coodinate error');
+      if (error) throw new Error('Getting coodinates from redis error');
       _async.each(_residue, async(d, callback) => {
         try {
           const location = d.location || d.time_zone;
-          if (!d.approximated_geo) d.coordinates = await this._geoCodeLocation(location);
+          if (!d.approximated_geo && location)d.coordinates = await this._geoCodeLocation(location);
           if (d.coordinates) d.approximated_geo = true;
+          callback();
         } catch (e) {
-          throw new Error(e);
+          /* eslint-disable no-console*/
+          console.log(e);
         }
-        callback();
       }, (err) => {
-        const geoTaggedData = _residue.concat(filtered);
-        console.log(prettyjson.render(geoTaggedData));
-        cb(geoTaggedData, err);
+        cb(filtered.concat(_residue), err);
       });
     });
   }

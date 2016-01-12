@@ -3,28 +3,27 @@ import mongoose from 'mongoose';
 import TwitterSchema from '../src/models/twitter';
 import TwWorker from './twitter/TwWorker';
 /* eslint-disable no-console */
-// const connection = mongoose.createConnection(process.env.MONGO_URL);
-// let Twitter = null;
-
-/* connection.once('open', () => {
+const connection = mongoose.createConnection(process.env.MONGO_URL);
+let Twitter = null;
+let counter = 0;
+connection.once('open', () => {
   console.log('connected to Mongo DB');
-  // Twitter = connection.model('Twitter', TwitterSchema);
-});*/
-process.on('message', (data) => {
-  console.log('got messages');
+  Twitter = connection.model('Twitter', TwitterSchema);
+});
+process.on('message', async(data) => {
   const twWorker = new TwWorker(data);
   try {
-    twWorker.processData().then((processedData) => {
-      processedData.forEach((d) => {
-        process.send(`saved twit: ${d.id}`);
-        // const twitter = new Twitter(d);
-        /* twitter.save((err) => {
-          if (err) throw new Error(err);
-          process.send(`saved twit: ${d.id}`);
-        });*/
+    const processedData = await twWorker.processData();
+    processedData.forEach((d) => {
+      // console.log(`processed twit: ${d.id}`);
+      const twitter = new Twitter(d);
+      twitter.save((err) => {
+        if (err) throw new Error(err);
+        counter ++;
+        process.send(`saved twit: ${d.id} number : ${counter}`);
       });
     });
   } catch (err) {
-    console.error(`error: ${err}`);
+    console.log(err);
   }
 });
