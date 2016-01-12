@@ -23,18 +23,18 @@ export default class TwWorker {
 
   processData() {
     /* eslint-disable func-names */
-    return new Promise(async function(resolve, reject) {
+    return new Promise(async (resolve, reject) => {
       try {
         const geoTagged = await this._addCordinates(this.data);
         /* eslint-disable no-param-reassign */
         geoTagged.forEach((d) => {
-          d.coordinates = `${d.coordinates.lat},${d.coordinates.lng}`;
+          if (d.coordinates) d.coordinates = `${d.coordinates.lat},${d.coordinates.lng}`;
         });
         const sentimated = analyzer.tweetSentiments(geoTagged);
         resolve(sentimated);
       } catch (error) {
         reject(error);
       }
-    }.bind(this));
+    });
   }
 }

@@ -116,7 +116,7 @@ class Analyzer {
     return new Promise((resolve, reject) => {
       this.client.hgetall(key, (err, reply) => {
         resolve(reply);
-        reject(reply);
+        reject(err);
       });
     });
   }
@@ -149,7 +149,7 @@ class Analyzer {
   }
   _geoCodeLocation(location) {
     if (!location || location.length < 2) {
-      throw new Error(`this location name is not searchable, its not a string ${location}`);
+      throw new Error(`this location ${location} is not searchable`);
     }
     const urlPart = location.replace(/[\W_]+/g, '+');
     const url = GEO_CODE_API + urlPart + '&key=' + GOOGLE_API_KEY;
@@ -175,42 +175,36 @@ class Analyzer {
       });
     });
   }
+
   _getSavedCoordinates(data, cb) {
-    const unmapped = [];
     _async.each(data, async(d, callback) => {
-      const location = d.location;
-      const coordinates = await this._getFromRedis(location);
-      if (!coordinates || coordinates === undefined) {
-        unmapped.push(d);
-      }
-      if (coordinates) {
-        d.approximated_geo = true;
-        d.coordinates = coordinates;
-      }
+      if (d.location) d.coordinates = await this._getFromRedis(d.location);
+      if (d.coordinates) d.approximated_geo = true;
       callback();
     }, (error) => {
-      cb(unmapped, error);
+      cb(data, error);
     });
   }
   getCordinates(data, cb) {
     // filter out data with geo-cordinates
     const geoFiltered = this._filterResidue(data, 'geo_enabled', true);
     const { filtered, residue } = geoFiltered;
-    this._getSavedCoordinates(residue, (unmapped, error) => {
+    // look through redis for canched locations and co-ordinates (we are mutating the residue data)
+    this._getSavedCoordinates(residue, (_residue, error) => {
       if (error) throw new Error('Getting coodinate error');
-      // unmapped represents data that has locations that arenot canched in redis
-      _async.each(unmapped, async(d, callback) => {
+      _async.each(_residue, async(d, callback) => {
         try {
           const location = d.location || d.time_zone;
-          d.coordinates = await this._geoCodeLocation(location);
-          d.approximated_geo = true;
+          if (!d.approximated_geo) d.coordinates = await this._geoCodeLocation(location);
+          if (d.coordinates) d.approximated_geo = true;
         } catch (e) {
-          /* eslint-disable no-console */
-          console.error(prettyjson.render(e.message));
+          throw new Error(e);
         }
         callback();
       }, (err) => {
-        cb(data.concat(filtered), err);
+        const geoTaggedData = _residue.concat(filtered);
+        console.log(prettyjson.render(geoTaggedData));
+        cb(geoTaggedData, err);
       });
     });
   }

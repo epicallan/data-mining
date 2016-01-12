@@ -4,7 +4,7 @@ var path = require('path');
 
 module.exports = {
   entry: {
-    main: ['babel-polyfill', './src/main.js'],
+    main: ['babel-core/polyfill', './src/main.js'],
     index: './src/index.js'
   },
   target: 'node',
@@ -23,8 +23,5 @@ module.exports = {
       exclude: /(node_modules)/,
       loader: "babel-loader"
     }]
-  },
-  query: {
-    plugins: ['transform-runtime']
   }
 };
