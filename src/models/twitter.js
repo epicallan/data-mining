@@ -26,7 +26,7 @@ const TwitterSchema = new Schema({
 TwitterSchema.plugin(uniqueValidator);
 // TwitterSchema.path('user_mentions').required(true, 'Twitter must mention have a user mention');
 /* eslint-disable func-names*/
-TwitterSchema.pre('save', function (next) {
+TwitterSchema.pre('save', (next) => {
   const err = this.validateSync();
   if (err && err.toString()) throw new Error(err.toString());
   next(err);

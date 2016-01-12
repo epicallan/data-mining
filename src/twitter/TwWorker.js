@@ -1,4 +1,5 @@
 import analyzer from '../lib/analyzer';
+import settings from '../config/settings';
 
 export default class TwWorker {
 
@@ -7,7 +8,8 @@ export default class TwWorker {
       type: 'twitter',
     });
     // add names if present in the tweet to the user mentions field
-    this.data = analyzer.addToUserMentions(this.data, ['museveni', 'besigye', 'amama', 'jpm']);
+    const userMentionsMatch = settings.track.split(',');
+    this.data = analyzer.addToUserMentions(this.data, userMentionsMatch);
   }
   removeRetweets() {
     return analyzer.filterData(this.data, 'is_retweet', false);

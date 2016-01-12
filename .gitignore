@@ -2,4 +2,6 @@ node_modules
 coverage
 npm-debug.log
 dist
-src/facebook/.facebook
+src/config/cred.js
+src/facebook
+src/config/settings.js
