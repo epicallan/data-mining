@@ -1,26 +1,30 @@
-import config from './config';
-import Twitter from './models/twitter';
+import 'babel-polyfill';
+import './config';
+import mongoose from 'mongoose';
+import TwitterSchema from '../src/models/twitter';
 import TwWorker from './twitter/TwWorker';
+/* eslint-disable no-console */
+const connection = mongoose.createConnection(process.env.MONGO_URL);
+let Twitter = null;
 
-config.dbOpen(() => {
-  /* eslint-disable no-console */
-  console.log('connected to MongoDb in child Process');
+connection.once('open', () => {
+  console.log('connected to Mongo DB');
+  Twitter = connection.model('Twitter', TwitterSchema);
 });
 
 process.on('message', async(data) => {
-  console.log(`tweet: ${data.id} `);
-  const twWorker = new TwWorker([data]);
+  console.log('receieved payload from master');
+  const twWorker = new TwWorker(data);
   try {
-    console.log('in try');
     const processedData = await twWorker.processData();
-    console.log(processedData);
-    const twitter = new Twitter(processedData);
-    twitter.save((err) => {
-      if (err) throw new Error(err);
-      process.send(`saved twit: ${processedData.id}`);
+    processedData.forEach((d) => {
+      const twitter = new Twitter(d);
+      twitter.save((err) => {
+        if (err) throw new Error(err);
+        process.send(`saved twit: ${d.id}`);
+      });
     });
   } catch (err) {
-    /* eslint-disable no-console */
     console.error(`error: ${err}`);
   }
 });

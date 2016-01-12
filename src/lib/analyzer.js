@@ -195,9 +195,7 @@ class Analyzer {
   getCordinates(data, cb) {
     // filter out data with geo-cordinates
     const geoFiltered = this._filterResidue(data, 'geo_enabled', true);
-    const {
-      filtered, residue
-    } = geoFiltered;
+    const { filtered, residue } = geoFiltered;
     this._getSavedCoordinates(residue, (unmapped, error) => {
       if (error) throw new Error('Getting coodinate error');
       // unmapped represents data that has locations that arenot canched in redis

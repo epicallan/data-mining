@@ -24,7 +24,7 @@ const TwitterSchema = new Schema({
 });
 
 TwitterSchema.plugin(uniqueValidator);
-TwitterSchema.path('user_mentions').required(true, 'Twitter must mention have a user mention');
+// TwitterSchema.path('user_mentions').required(true, 'Twitter must mention have a user mention');
 /* eslint-disable func-names*/
 TwitterSchema.pre('save', function (next) {
   const err = this.validateSync();
@@ -32,6 +32,4 @@ TwitterSchema.pre('save', function (next) {
   next(err);
 });
 
-const Twitter = mongoose.model('Twitter', TwitterSchema);
-
-export default Twitter;
+export default TwitterSchema;

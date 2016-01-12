@@ -3,11 +3,14 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
-  entry: ['babel-polyfill', './src/main.js'],
+  entry: {
+    main: ['babel-polyfill', './src/main.js'],
+    index: './src/index.js'
+  },
   target: 'node',
   output: {
     path: __dirname + "/dist",
-    filename: 'index.js',
+    filename: "[name].js",
     libraryTarget: 'commonjs2'
   },
   externals: [/^[a-z\-0-9]+$/],
