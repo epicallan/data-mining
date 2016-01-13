@@ -147,7 +147,7 @@ class Analyzer {
       cb();
     });
   }
-  _geoCodeLocation(location) {
+  _geoCodeLocation(location, id) {
     if (!location || location.length < 2) {
       throw new Error(`this location ${location} is not searchable`);
     }
@@ -159,7 +159,7 @@ class Analyzer {
           if (error) throw new Error(error);
           const json = JSON.parse(body);
           if (!json.results[0]) {
-            reject(new Error(`Location is not geoTaggable ${location}`));
+            reject(new Error(`Location is not geoTaggable ${location} ${id}`));
           } else {
             const coordinates = json.results[0].geometry.location;
             this._saveToRedis({
@@ -195,12 +195,15 @@ class Analyzer {
       _async.each(_residue, async(d, callback) => {
         try {
           const location = d.location || d.time_zone;
-          if (!d.approximated_geo && location)d.coordinates = await this._geoCodeLocation(location);
+          if (!d.approximated_geo && location) {
+            d.coordinates = await this._geoCodeLocation(location, d.id);
+          }
           if (d.coordinates) d.approximated_geo = true;
           callback();
         } catch (e) {
           /* eslint-disable no-console*/
-          console.log(e);
+          console.log(e.message);
+          callback();
         }
       }, (err) => {
         cb(filtered.concat(_residue), err);

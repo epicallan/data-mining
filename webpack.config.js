@@ -4,8 +4,8 @@ var path = require('path');
 
 module.exports = {
   entry: {
-    main: ['babel-core/polyfill', './src/main.js'],
-    index: './src/index.js'
+    index: './src/index.js',
+    child: ['babel-core/polyfill', './src/child.js'],
   },
   target: 'node',
   output: {

@@ -28,7 +28,6 @@ TwitterSchema.plugin(uniqueValidator);
 /* eslint-disable func-names*/
 TwitterSchema.pre('save', function (next) {
   const err = this.validateSync();
-  if (err && err.toString()) throw new Error(err.toString());
   next(err);
 });
 

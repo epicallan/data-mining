@@ -7,10 +7,10 @@
     "build": "rimraf dist && webpack --watch",
     "coverage": "babel-node node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
     "coveralls": "npm run coverage && coveralls < coverage/lcov.info && rimraf coverage",
-    "test": "mocha --recursive --compilers js:babel-core/register --require babel-polyfill",
-    "tdd": "npm test -- --watch",
+    "test": "mocha --recursive --compilers js:babel-core/register --require babel-core/polyfill",
+    "tdd": "NODE_ENV=test npm test -- --watch",
     "start": "NODE_ENV=production node dist/index.js",
-    "start-dev": "nodemon dist/index.js"
+    "start-dev": "NODE_ENV=development nodemon dist/index.js"
   },
   "repository": "epicallan/datamining",
   "keywords": [],
@@ -23,8 +23,6 @@
     "babel-core": "5.8.34",
     "babel-eslint": "^4.1.6",
     "babel-loader": "^5.4.0",
-    "babel-plugin-transform-runtime": "^6.4.0",
-    "babel-polyfill": "^6.2.0",
     "babel-preset-es2015": "^6.0.15",
     "babel-preset-stage-0": "^6.1.18",
     "chai": "^3.2.0",

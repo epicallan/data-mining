@@ -4,6 +4,7 @@ import TwWorker from '../src/twitter/TwWorker';
 import path from 'path';
 import mongoose from 'mongoose';
 import TwitterSchema from '../src/models/twitter';
+import _async from 'async';
 
 const expect = chai.expect;
 /* eslint-disable func-names */
@@ -28,19 +29,27 @@ describe('twitter worker tests', function () {
     });
   });
 
-  it('should process data and save to mongodb', (done) => {
-    const twWorker = new TwWorker([data[1]]);
-    twWorker.processData().then((res) => {
-      // console.log(res[0]);
-      const twitter = new Twitter(res[0]);
-      twitter.save((err) => {
-        if (err) console.log(err);
-        expect(res[0]).to.to.have.property('id');
-        Twitter.remove({}, (error) => {
-          if (error) console.log(error);
-          done();
+  it('should process data and save to mongodb', async(done) => {
+    const twWorker = new TwWorker(data);
+    try {
+      const processedData = await twWorker.processData();
+      let savedTweets = 0;
+      _async.each(processedData, (d, callback) => {
+        const twitter = new Twitter(d);
+        twitter.save((err) => {
+          if (err) console.log(err.message);
+          savedTweets++;
+          console.log('saved ' + d.id);
+          callback();
         });
+      }, (err) => {
+        expect(processedData.length).to.equal(savedTweets);
+        Twitter.remove({});
+        if (err) throw new Error(err);
+        done();
       });
-    }).catch(error => console.log(error));
+    } catch (err) {
+      console.log(err.message);
+    }
   });
 });
