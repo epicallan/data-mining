@@ -42,6 +42,7 @@ class CleanUp {
       obj.date = new Date(tweet.created_at);
       obj.text = tweet.text;
       obj.user_name = tweet.user.name;
+      obj.screen_name = tweet.user.screen_name;
       obj.location = tweet.user.location;
       obj.time_zone = tweet.user.time_zone;
       obj.retweet_count = tweet.retweet_count;
