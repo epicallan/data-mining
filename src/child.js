@@ -13,6 +13,7 @@ const connection = mongoose.createConnection(process.env.MONGO_URL);
 let Twitter = null;
 let counter = 0;
 let savedTweets = 0;
+let notSaved = 0;
 let isWorking = null;
 
 function changeState(state) {
@@ -37,13 +38,17 @@ async function processPayload(data) {
       counter++;
       const twitter = new Twitter(d);
       twitter.save((err) => {
-        if (err) console.log(err.message);
-        savedTweets++;
+        if (err) {
+          notSaved++;
+          console.log(`err.message not saved ${d.id}`);
+        } else {
+          savedTweets++;
+        }
         callback();
       });
     }, (err) => {
       if (err) console.log(err);
-      process.send(`total processed ${counter} total saved: ${savedTweets} `);
+      process.send(`total processed ${counter} total saved: ${savedTweets} notSaved: ${notSaved}`);
       changeState('0');
     });
   } catch (err) {

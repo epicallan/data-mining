@@ -9,7 +9,7 @@
     "coveralls": "npm run coverage && coveralls < coverage/lcov.info && rimraf coverage",
     "test": "mocha --recursive --compilers js:babel-core/register --require babel-core/polyfill",
     "tdd": "NODE_ENV=test npm test -- --watch",
-    "start": "NODE_ENV=production node dist/index.js",
+    "start": "NODE_ENV=production nodemon dist/index.js",
     "start-dev": "NODE_ENV=development nodemon dist/index.js"
   },
   "repository": "epicallan/datamining",

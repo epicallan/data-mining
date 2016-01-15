@@ -4,10 +4,10 @@ const Schema = mongoose.Schema;
 
 const TwitterSchema = new Schema({
   date: { type: String },
-  text: { type: String, default: '', trim: true },
+  text: { type: String, default: null, trim: true },
   user_name: { type: String, trim: true },
   screen_name: { type: String, trim: true },
-  location: { type: String, default: '', trim: true },
+  location: { type: String, default: null, trim: true },
   time_zone: String,
   sentiment: Number,
   retweet_count: Number,
@@ -20,13 +20,13 @@ const TwitterSchema = new Schema({
   geo_enabled: { type: Boolean, default: false },
   has_hashtags: Boolean,
   hashtags: [String],
-  coordinates: { type: String, default: '' },
+  coordinates: { type: String, default: null },
   has_user_mentions: Boolean,
   user_mentions: [String],
 });
 
 TwitterSchema.plugin(uniqueValidator);
-// TwitterSchema.path('user_mentions').required(true, 'Twitter must mention have a user mention');
+TwitterSchema.path('user_mentions').required(true, 'Twitter must have a user mention');
 /* eslint-disable func-names*/
 TwitterSchema.pre('save', function (next) {
   const err = this.validateSync();
