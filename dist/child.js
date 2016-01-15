@@ -5419,7 +5419,7 @@ module.exports =
 	});
 
 	TwitterSchema.plugin(_mongooseUniqueValidator2['default']);
-	TwitterSchema.path('user_mentions').required(true, 'Twitter must have a user mention');
+	// TwitterSchema.path('user_mentions').required(true, 'Twitter must have a user mention');
 	/* eslint-disable func-names*/
 	TwitterSchema.pre('save', function (next) {
 	  var err = this.validateSync();
@@ -6331,7 +6331,7 @@ module.exports =
 	  value: true
 	});
 	var settings = {
-	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba'
+	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16'
 	};
 	exports['default'] = settings;
 	module.exports = exports['default'];
