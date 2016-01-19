@@ -6014,7 +6014,21 @@ module.exports =
 	module.exports = require("async");
 
 /***/ },
-/* 208 */,
+/* 208 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	var settings = {
+	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16'
+	};
+	exports['default'] = settings;
+	module.exports = exports['default'];
+
+/***/ },
 /* 209 */,
 /* 210 */,
 /* 211 */,
@@ -6033,6 +6047,7 @@ module.exports =
 	 * and save it to a new collection
 	 */
 	/* eslint-disable no-console */
+	/* eslint-disable no-param-reassign*/
 	'use strict';
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -6049,112 +6064,103 @@ module.exports =
 
 	var _async3 = _interopRequireDefault(_async2);
 
+	var _configSettings = __webpack_require__(208);
+
+	var _configSettings2 = _interopRequireDefault(_configSettings);
+
 	var MongoClient = _mongodb2['default'].MongoClient;
 	var MONGO_URL = 'mongodb://localhost/mine-twt';
 	var db = null;
-
+	var tweets = [];
 	function _connection() {
 	  return new Promise(function (resolve, reject) {
 	    MongoClient.connect(MONGO_URL, function (err, connection) {
 	      resolve(connection);
+	      console.log('connected');
 	      reject(err);
 	    });
 	  });
 	}
 
-	function findAll() {
-	  return regeneratorRuntime.async(function findAll$(context$1$0) {
+	function run() {
+	  return regeneratorRuntime.async(function run$(context$1$0) {
+	    var _this = this;
+
 	    while (1) switch (context$1$0.prev = context$1$0.next) {
 	      case 0:
 	        context$1$0.prev = 0;
 	        context$1$0.next = 3;
-	        return regeneratorRuntime.awrap(_connection());
+	        return regeneratorRuntime.awrap((function callee$1$0() {
+	          var counter, cursor;
+	          return regeneratorRuntime.async(function callee$1$0$(context$2$0) {
+	            while (1) switch (context$2$0.prev = context$2$0.next) {
+	              case 0:
+	                counter = 0;
+
+	                console.log(new Date());
+	                context$2$0.next = 4;
+	                return regeneratorRuntime.awrap(_connection());
+
+	              case 4:
+	                db = context$2$0.sent;
+	                cursor = db.collection('twitters').find({
+	                  is_retweet: false
+	                }).stream({
+	                  transform: function transform(tweet) {
+	                    // purge user_mentions
+	                    // console.log(tweet.id);
+	                    var userMentionsMatch = _configSettings2['default'].track.toLowerCase().split(',');
+	                    var newTweet = _srcLibAnalyzer2['default'].addToUserMentions([tweet], userMentionsMatch)[0];
+	                    newTweet.terms = _srcLibAnalyzer2['default']._getKeyWords(newTweet.text);
+	                    newTweet.timeStamp = new Date(newTweet.date).getTime();
+	                    return tweet;
+	                  }
+	                });
+
+	                cursor.Option = {
+	                  noTimeout: true,
+	                  maxScan: -1,
+	                  maxTimeMS: 10000
+	                };
+	                cursor.on('data', function (doc) {
+	                  /* db.collection('tweetss').insertOne(doc, (err) => {
+	                    if (err) {
+	                      console.log('insert Error');
+	                      throw new Error(err);
+	                    }
+	                    counter++;
+	                    // console.log(`saved ${doc.id} ${counter}`);
+	                  });*/
+	                  counter++;
+	                  tweets.push(doc.id);
+	                });
+	                cursor.once('end', function () {
+	                  var date = new Date();
+	                  console.log('final tweets saved ' + counter + ' ' + date);
+	                  db.close();
+	                });
+
+	              case 9:
+	              case 'end':
+	                return context$2$0.stop();
+	            }
+	          }, null, _this);
+	        })());
 
 	      case 3:
-	        db = context$1$0.sent;
-	        return context$1$0.abrupt('return', db.collection('twitters').find({
-	          is_retweet: false
-	        }).toArray());
+	        context$1$0.next = 8;
+	        break;
 
-	      case 7:
-	        context$1$0.prev = 7;
+	      case 5:
+	        context$1$0.prev = 5;
 	        context$1$0.t0 = context$1$0['catch'](0);
 	        throw new Error(context$1$0.t0);
 
-	      case 10:
+	      case 8:
 	      case 'end':
 	        return context$1$0.stop();
 	    }
-	  }, null, this, [[0, 7]]);
-	}
-
-	/* function reverseTag(coordinates) {
-
-	}*/
-
-	function transform(data, cb) {
-	  var _this = this;
-
-	  /* eslint-disable no-param-reassign*/
-	  console.log('intial tweets ' + data.length);
-	  var counter = 0;
-	  _async3['default'].each(data, function callee$1$0(tweet, callback) {
-	    return regeneratorRuntime.async(function callee$1$0$(context$2$0) {
-	      while (1) switch (context$2$0.prev = context$2$0.next) {
-	        case 0:
-	          tweet.terms = _srcLibAnalyzer2['default']._getKeyWords(tweet.text);
-	          // tweet.country = await reverseTag(tweet.coordinates);
-	          tweet.timeStamp = new Date(tweet.date).getTime();
-	          if (!db) callback(new Error('db is null'));
-	          db.collection('tws').insertOne(tweet, function (err) {
-	            if (err) throw new Error(err);
-	            counter++;
-	            callback();
-	          });
-
-	        case 4:
-	        case 'end':
-	          return context$2$0.stop();
-	      }
-	    }, null, _this);
-	  }, function (err) {
-	    if (err) throw new Error(err);
-	    var date = new Date();
-	    console.log('final tweets saved ' + counter + ' ' + date);
-	    cb();
-	  });
-	}
-
-	function run() {
-	  var data;
-	  return regeneratorRuntime.async(function run$(context$1$0) {
-	    while (1) switch (context$1$0.prev = context$1$0.next) {
-	      case 0:
-	        context$1$0.prev = 0;
-	        context$1$0.next = 3;
-	        return regeneratorRuntime.awrap(findAll());
-
-	      case 3:
-	        data = context$1$0.sent;
-
-	        transform(data, function () {
-	          console.log('resaved all data');
-	          db.close();
-	        });
-	        context$1$0.next = 10;
-	        break;
-
-	      case 7:
-	        context$1$0.prev = 7;
-	        context$1$0.t0 = context$1$0['catch'](0);
-
-	        console.log(context$1$0.t0);
-
-	      case 10:
-	      case 'end':
-	        return context$1$0.stop();
-	    }
-	  }, null, this, [[0, 7]]);
+	  }, null, this, [[0, 5]]);
 	}
 
 	run();
