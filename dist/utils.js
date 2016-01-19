@@ -46,7 +46,7 @@ module.exports =
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(191);
+	module.exports = __webpack_require__(217);
 
 
 /***/ },
@@ -5220,336 +5220,12 @@ module.exports =
 
 
 /***/ },
-/* 191 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _this = this;
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	__webpack_require__(192);
-
-	var _mongoose = __webpack_require__(193);
-
-	var _mongoose2 = _interopRequireDefault(_mongoose);
-
-	var _srcModelsTwitter = __webpack_require__(194);
-
-	var _srcModelsTwitter2 = _interopRequireDefault(_srcModelsTwitter);
-
-	var _twitterTwWorker = __webpack_require__(196);
-
-	var _twitterTwWorker2 = _interopRequireDefault(_twitterTwWorker);
-
-	var _redis = __webpack_require__(205);
-
-	var _redis2 = _interopRequireDefault(_redis);
-
-	var _async2 = __webpack_require__(207);
-
-	var _async3 = _interopRequireDefault(_async2);
-
-	/* eslint-disable no-console */
-	var client = _redis2['default'].createClient();
-	client.on('error', function (err) {
-	  return console.log(err);
-	});
-
-	var connection = _mongoose2['default'].createConnection(process.env.MONGO_URL);
-	var Twitter = null;
-	var counter = 0;
-	var savedTweets = 0;
-	var notSaved = 0;
-	var isWorking = null;
-
-	function changeState(state) {
-	  isWorking = state;
-	  client.set(process.pid, isWorking, function (err) {
-	    if (err) console.log(err);
-	    console.log('process ' + process.pid + ' changed state to ' + isWorking + ' ');
-	  });
-	}
-
-	connection.once('open', function () {
-	  console.log('connected to Mongo DB in process: ' + process.pid);
-	  Twitter = connection.model('Tw', _srcModelsTwitter2['default']);
-	});
-
-	function processPayload(data) {
-	  var twWorker, processedData;
-	  return regeneratorRuntime.async(function processPayload$(context$1$0) {
-	    while (1) switch (context$1$0.prev = context$1$0.next) {
-	      case 0:
-	        changeState('1');
-	        twWorker = new _twitterTwWorker2['default'](data);
-	        context$1$0.prev = 2;
-	        context$1$0.next = 5;
-	        return regeneratorRuntime.awrap(twWorker.processData());
-
-	      case 5:
-	        processedData = context$1$0.sent;
-
-	        _async3['default'].each(processedData, function (d, callback) {
-	          counter++;
-	          var twitter = new Twitter(d);
-	          twitter.save(function (err) {
-	            if (err) {
-	              notSaved++;
-	              console.log(err.message + ' not saved ' + d.id);
-	            } else {
-	              savedTweets++;
-	            }
-	            callback();
-	          });
-	        }, function (err) {
-	          if (err) console.log(err);
-	          var date = new Date();
-	          process.send('processed ' + counter + ' saved: ' + savedTweets + ' notSaved: ' + notSaved + ' ' + date);
-	          changeState('0');
-	        });
-	        context$1$0.next = 12;
-	        break;
-
-	      case 9:
-	        context$1$0.prev = 9;
-	        context$1$0.t0 = context$1$0['catch'](2);
-
-	        console.log(context$1$0.t0.message);
-
-	      case 12:
-	      case 'end':
-	        return context$1$0.stop();
-	    }
-	  }, null, this, [[2, 9]]);
-	}
-
-	process.on('message', function callee$0$0(data) {
-	  return regeneratorRuntime.async(function callee$0$0$(context$1$0) {
-	    while (1) switch (context$1$0.prev = context$1$0.next) {
-	      case 0:
-	        // set process to be busy on redis
-	        processPayload(data);
-
-	      case 1:
-	      case 'end':
-	        return context$1$0.stop();
-	    }
-	  }, null, _this);
-	});
-
-/***/ },
-/* 192 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	var Config = function Config() {
-	  _classCallCheck(this, Config);
-
-	  process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-	  if (process.env.NODE_ENV === 'development') {
-	    this.db = 'mine-dev';
-	  } else if (process.env.NODE_ENV === 'production') {
-	    this.db = 'mine-twt';
-	  } else if (process.env.NODE_ENV === 'test') {
-	    this.db = 'mine-test';
-	  }
-	  process.env.MONGO_URL = 'mongodb://localhost/' + this.db;
-	};
-
-	exports['default'] = new Config();
-	module.exports = exports['default'];
-
-/***/ },
-/* 193 */
-/***/ function(module, exports) {
-
-	module.exports = require("mongoose");
-
-/***/ },
-/* 194 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	var _mongoose = __webpack_require__(193);
-
-	var _mongoose2 = _interopRequireDefault(_mongoose);
-
-	var _mongooseUniqueValidator = __webpack_require__(195);
-
-	var _mongooseUniqueValidator2 = _interopRequireDefault(_mongooseUniqueValidator);
-
-	var Schema = _mongoose2['default'].Schema;
-
-	var TwitterSchema = new Schema({
-	  date: { type: String },
-	  text: { type: String, 'default': null, trim: true },
-	  user_name: { type: String, trim: true },
-	  screen_name: { type: String, trim: true },
-	  location: { type: String, 'default': null, trim: true },
-	  time_zone: String,
-	  sentiment: Number,
-	  retweet_count: Number,
-	  favorite_count: Number,
-	  timeStamp: Number,
-	  terms: [String],
-	  user_id: String,
-	  id: { type: Number, unique: true },
-	  is_reply: Boolean,
-	  is_retweet: Boolean,
-	  approximated_geo: { type: Boolean, 'default': false },
-	  geo_enabled: { type: Boolean, 'default': false },
-	  has_hashtags: Boolean,
-	  hashtags: [String],
-	  coordinates: { type: String, 'default': null },
-	  has_user_mentions: Boolean,
-	  user_mentions: [String]
-	});
-
-	TwitterSchema.plugin(_mongooseUniqueValidator2['default']);
-	TwitterSchema.path('terms').required(true, 'Tweet must have terms');
-	/* eslint-disable func-names*/
-	TwitterSchema.pre('save', function (next) {
-	  var err = this.validateSync();
-	  next(err);
-	});
-
-	exports['default'] = TwitterSchema;
-	module.exports = exports['default'];
-
-/***/ },
-/* 195 */
-/***/ function(module, exports) {
-
-	module.exports = require("mongoose-unique-validator");
-
-/***/ },
-/* 196 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	var _libAnalyzer = __webpack_require__(197);
-
-	var _libAnalyzer2 = _interopRequireDefault(_libAnalyzer);
-
-	var _configSettings = __webpack_require__(208);
-
-	var _configSettings2 = _interopRequireDefault(_configSettings);
-
-	var TwWorker = (function () {
-	  function TwWorker(data) {
-	    _classCallCheck(this, TwWorker);
-
-	    this.data = _libAnalyzer2['default'].getData(data, {
-	      type: 'twitter'
-	    });
-	    // add names if present in the tweet to the user mentions field
-	    var userMentionsMatch = _configSettings2['default'].track.toLowerCase().split(',');
-	    this.data = _libAnalyzer2['default'].addToUserMentions(this.data, userMentionsMatch);
-	  }
-
-	  _createClass(TwWorker, [{
-	    key: 'removeRetweets',
-	    value: function removeRetweets() {
-	      return _libAnalyzer2['default'].filterData(this.data, 'is_retweet', false);
-	    }
-	  }, {
-	    key: '_addCordinates',
-	    value: function _addCordinates(data) {
-	      return new Promise(function (resolve, reject) {
-	        _libAnalyzer2['default'].getCordinates(data, function (results, error) {
-	          resolve(results);
-	          reject(error);
-	        });
-	      });
-	    }
-	  }, {
-	    key: '_addTermsandTimeStamp',
-	    value: function _addTermsandTimeStamp(data) {
-	      /* eslint-disable no-param-reassign */
-	      data.forEach(function (tweet) {
-	        tweet.terms = _libAnalyzer2['default']._getKeyWords(tweet.text);
-	        tweet.timeStamp = new Date(tweet.date).getTime();
-	      });
-	    }
-	  }, {
-	    key: 'processData',
-	    value: function processData() {
-	      var _this = this;
-
-	      /* eslint-disable func-names */
-	      return new Promise(function callee$2$0(resolve, reject) {
-	        var geoTagged, sentimated;
-	        return regeneratorRuntime.async(function callee$2$0$(context$3$0) {
-	          while (1) switch (context$3$0.prev = context$3$0.next) {
-	            case 0:
-	              context$3$0.prev = 0;
-
-	              this._addTermsandTimeStamp(this.data);
-	              context$3$0.next = 4;
-	              return regeneratorRuntime.awrap(this._addCordinates(this.data));
-
-	            case 4:
-	              geoTagged = context$3$0.sent;
-
-	              /* eslint-disable no-param-reassign */
-	              geoTagged.forEach(function (d) {
-	                if (d.coordinates) d.coordinates = d.coordinates.lat + ',' + d.coordinates.lng;
-	              });
-	              sentimated = _libAnalyzer2['default'].tweetSentiments(geoTagged);
-
-	              resolve(sentimated);
-	              context$3$0.next = 13;
-	              break;
-
-	            case 10:
-	              context$3$0.prev = 10;
-	              context$3$0.t0 = context$3$0['catch'](0);
-
-	              reject(context$3$0.t0);
-
-	            case 13:
-	            case 'end':
-	              return context$3$0.stop();
-	          }
-	        }, null, _this, [[0, 10]]);
-	      });
-	    }
-	  }]);
-
-	  return TwWorker;
-	})();
-
-	exports['default'] = TwWorker;
-	module.exports = exports['default'];
-
-/***/ },
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
 /* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -6338,19 +6014,156 @@ module.exports =
 	module.exports = require("async");
 
 /***/ },
-/* 208 */
-/***/ function(module, exports) {
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */
+/***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * go through entire dataset
+	 * add a time stamp field
+	 * add used terms
+	 * and save it to a new collection
+	 */
+	/* eslint-disable no-console */
 	'use strict';
 
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-	var settings = {
-	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16'
-	};
-	exports['default'] = settings;
-	module.exports = exports['default'];
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	var _mongodb = __webpack_require__(218);
+
+	var _mongodb2 = _interopRequireDefault(_mongodb);
+
+	var _srcLibAnalyzer = __webpack_require__(197);
+
+	var _srcLibAnalyzer2 = _interopRequireDefault(_srcLibAnalyzer);
+
+	var _async2 = __webpack_require__(207);
+
+	var _async3 = _interopRequireDefault(_async2);
+
+	var MongoClient = _mongodb2['default'].MongoClient;
+	var MONGO_URL = 'mongodb://localhost/mine-twt';
+	var db = null;
+
+	function _connection() {
+	  return new Promise(function (resolve, reject) {
+	    MongoClient.connect(MONGO_URL, function (err, connection) {
+	      resolve(connection);
+	      reject(err);
+	    });
+	  });
+	}
+
+	function findAll() {
+	  return regeneratorRuntime.async(function findAll$(context$1$0) {
+	    while (1) switch (context$1$0.prev = context$1$0.next) {
+	      case 0:
+	        context$1$0.prev = 0;
+	        context$1$0.next = 3;
+	        return regeneratorRuntime.awrap(_connection());
+
+	      case 3:
+	        db = context$1$0.sent;
+	        return context$1$0.abrupt('return', db.collection('twitters').find({
+	          is_retweet: false
+	        }).toArray());
+
+	      case 7:
+	        context$1$0.prev = 7;
+	        context$1$0.t0 = context$1$0['catch'](0);
+	        throw new Error(context$1$0.t0);
+
+	      case 10:
+	      case 'end':
+	        return context$1$0.stop();
+	    }
+	  }, null, this, [[0, 7]]);
+	}
+
+	/* function reverseTag(coordinates) {
+
+	}*/
+
+	function transform(data, cb) {
+	  var _this = this;
+
+	  /* eslint-disable no-param-reassign*/
+	  console.log('intial tweets ' + data.length);
+	  var counter = 0;
+	  _async3['default'].each(data, function callee$1$0(tweet, callback) {
+	    return regeneratorRuntime.async(function callee$1$0$(context$2$0) {
+	      while (1) switch (context$2$0.prev = context$2$0.next) {
+	        case 0:
+	          tweet.terms = _srcLibAnalyzer2['default']._getKeyWords(tweet.text);
+	          // tweet.country = await reverseTag(tweet.coordinates);
+	          tweet.timeStamp = new Date(tweet.date).getTime();
+	          if (!db) callback(new Error('db is null'));
+	          db.collection('tws').insertOne(tweet, function (err) {
+	            if (err) throw new Error(err);
+	            counter++;
+	            callback();
+	          });
+
+	        case 4:
+	        case 'end':
+	          return context$2$0.stop();
+	      }
+	    }, null, _this);
+	  }, function (err) {
+	    if (err) throw new Error(err);
+	    var date = new Date();
+	    console.log('final tweets saved ' + counter + ' ' + date);
+	    cb();
+	  });
+	}
+
+	function run() {
+	  var data;
+	  return regeneratorRuntime.async(function run$(context$1$0) {
+	    while (1) switch (context$1$0.prev = context$1$0.next) {
+	      case 0:
+	        context$1$0.prev = 0;
+	        context$1$0.next = 3;
+	        return regeneratorRuntime.awrap(findAll());
+
+	      case 3:
+	        data = context$1$0.sent;
+
+	        transform(data, function () {
+	          console.log('resaved all data');
+	          db.close();
+	        });
+	        context$1$0.next = 10;
+	        break;
+
+	      case 7:
+	        context$1$0.prev = 7;
+	        context$1$0.t0 = context$1$0['catch'](0);
+
+	        console.log(context$1$0.t0);
+
+	      case 10:
+	      case 'end':
+	        return context$1$0.stop();
+	    }
+	  }, null, this, [[0, 7]]);
+	}
+
+	run();
+
+/***/ },
+/* 218 */
+/***/ function(module, exports) {
+
+	module.exports = require("mongodb");
 
 /***/ }
 /******/ ]);

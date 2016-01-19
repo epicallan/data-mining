@@ -33,6 +33,7 @@ class Master {
     this.workers = [];
     this.isConsumed = false;
     this.createWorkerPool();
+    console.log(`Master process pid ${process.pid}`);
   }
 
   init() {
@@ -46,7 +47,7 @@ class Master {
     for (let i = 0; i < os.cpus().length - 1; i++) {
       const child = childProcess.fork(childPath);
       client.set(child.pid.toString(), '0', redis.print);
-      console.log(`process pid ${child.pid}`);
+      console.log(`child process pid ${child.pid}`);
       this.workers.push(child);
     }
     console.log('number of workers: ' + this.workers.length);
@@ -126,10 +127,12 @@ class Master {
 
       child.on('exit', (signal) => {
         console.log(`child process exited with signal ${signal}`);
+        process.exit(1);
       });
 
       child.on('close', (code) => {
         console.log(`child process exited with code ${code}`);
+        process.exit(1);
       });
     });
   }

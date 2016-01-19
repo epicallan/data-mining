@@ -93,21 +93,24 @@ class Analyzer {
   addToUserMentions(data, names) {
     data.forEach(d => {
       names.forEach(name => {
-        const regex = new RegExp('\\b' + name, 'gi');
-        // find if the name is not in the user mentions already
-        const mentions = d.user_mentions.join(' ');
-        const userMentionsMatch = mentions.match(regex);
-        if (!userMentionsMatch) {
-          // check whether the name is with in the tweet
-          const matchArr = d.text.match(regex);
-          if (matchArr) {
-            d.user_mentions.push(name);
+        // if a mention fuzzy matches our tracked names then replace
+        // it with our tracker name
+        const nameIsInMention = d.user_mentions.some((mention, index, arr) => {
+          let bool = false;
+          if (mention.toLowerCase().indexOf(name) !== -1) {
+            bool = true;
+            arr.splice(index, 1, name);
           }
+          return bool;
+        });
+        if (!nameIsInMention) {
+          if (d.text.toLowerCase().indexOf(name) !== -1) d.user_mentions.push(name);
         }
       });
     });
     return data;
   }
+
   _saveToRedis(obj) {
     this.client.hmset(obj.location, 'lat', obj.lat, 'lng', obj.lng, redis.print);
   }

@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: './src/index.js',
     child: ['babel-core/polyfill', './src/child.js'],
+    utils: ['babel-core/polyfill', './src/utils/index.js'],
   },
   target: 'node',
   output: {

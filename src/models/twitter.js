@@ -12,6 +12,8 @@ const TwitterSchema = new Schema({
   sentiment: Number,
   retweet_count: Number,
   favorite_count: Number,
+  timeStamp: Number,
+  terms: [String],
   user_id: String,
   id: { type: Number, unique: true },
   is_reply: Boolean,
@@ -26,7 +28,7 @@ const TwitterSchema = new Schema({
 });
 
 TwitterSchema.plugin(uniqueValidator);
-// TwitterSchema.path('user_mentions').required(true, 'Twitter must have a user mention');
+TwitterSchema.path('terms').required(true, 'Tweet must have terms');
 /* eslint-disable func-names*/
 TwitterSchema.pre('save', function (next) {
   const err = this.validateSync();

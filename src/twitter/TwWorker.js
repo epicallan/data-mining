@@ -8,7 +8,7 @@ export default class TwWorker {
       type: 'twitter',
     });
     // add names if present in the tweet to the user mentions field
-    const userMentionsMatch = settings.track.split(',');
+    const userMentionsMatch = settings.track.toLowerCase().split(',');
     this.data = analyzer.addToUserMentions(this.data, userMentionsMatch);
   }
   removeRetweets() {
@@ -22,11 +22,18 @@ export default class TwWorker {
       });
     });
   }
-
+  _addTermsandTimeStamp(data) {
+    /* eslint-disable no-param-reassign */
+    data.forEach((tweet) => {
+      tweet.terms = analyzer._getKeyWords(tweet.text);
+      tweet.timeStamp = new Date(tweet.date).getTime();
+    });
+  }
   processData() {
     /* eslint-disable func-names */
-    return new Promise(async (resolve, reject) => {
+    return new Promise(async(resolve, reject) => {
       try {
+        this._addTermsandTimeStamp(this.data);
         const geoTagged = await this._addCordinates(this.data);
         /* eslint-disable no-param-reassign */
         geoTagged.forEach((d) => {

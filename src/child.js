@@ -26,7 +26,7 @@ function changeState(state) {
 
 connection.once('open', () => {
   console.log(`connected to Mongo DB in process: ${process.pid}`);
-  Twitter = connection.model('Twitter', TwitterSchema);
+  Twitter = connection.model('Tw', TwitterSchema);
 });
 
 async function processPayload(data) {
@@ -40,7 +40,7 @@ async function processPayload(data) {
       twitter.save((err) => {
         if (err) {
           notSaved++;
-          console.log(`err.message not saved ${d.id}`);
+          console.log(`${err.message} not saved ${d.id}`);
         } else {
           savedTweets++;
         }
@@ -48,7 +48,8 @@ async function processPayload(data) {
       });
     }, (err) => {
       if (err) console.log(err);
-      process.send(`total processed ${counter} total saved: ${savedTweets} notSaved: ${notSaved}`);
+      const date = new Date();
+      process.send(`processed ${counter} saved: ${savedTweets} notSaved: ${notSaved} ${date}`);
       changeState('0');
     });
   } catch (err) {

@@ -5,15 +5,15 @@ import prettyjson from 'prettyjson';
 const expect = chai.expect;
 // import testData from './fixtures/cfdata';
 
-describe.skip('analyzer class', () => {
+describe('analyzer class', () => {
   let data = null;
   before('should read in data for tests', (done) => {
-    const filePath = path.resolve(__dirname, '../content/besigye.json');
+    const filePath = path.resolve(__dirname, './data/tw-allan.json');
     const options = {
       file: filePath,
       type: 'twitter',
     };
-    data = analyzer.getData(options);
+    data = analyzer.getDataFromFile(options);
     expect(data).to.have.length.above(0);
     done();
   });
@@ -30,20 +30,21 @@ describe.skip('analyzer class', () => {
       });
     });
   });
-  describe.skip(' it should add specific names to user_mentions field', () => {
+  describe(' it should add specific names to user_mentions field', () => {
     it('add specific names to the user_mentions array of a tweet', () => {
       const testTweets = [
-        { text: 'hello',
-          user_mentions: ['allan', 'beat'],
+        { text: '@yoweri_museveni Maybe you should also - mbabazi stop being a troll! @besigye',
+          user_mentions: ['Yoweri K Museveni'],
         },
-        { text: 'hello alex',
-          user_mentions: ['alex', 'beat'],
+        { text: 'besigye Maybe you should also - Amamambabazi stop being a troll!',
+          user_mentions: ['besigye'],
         },
-        { text: 'hello alex',
-          user_mentions: ['beat'],
+        { text: 'UgandaDecides Maybe you should also museveni stop being a troll! @besigye',
+          user_mentions: ['besigye'],
         },
       ];
-      const newTweetdata = analyzer.addToUserMentions(testTweets, ['allan', 'alex']);
+      const trackedNames = ['museveni', 'besigye', 'UgandaDecides', 'mbabazi'];
+      const newTweetdata = analyzer.addToUserMentions(testTweets, trackedNames);
       console.log(prettyjson.render(newTweetdata));
       expect(newTweetdata[2].user_mentions).to.have.length.above(1);
     });

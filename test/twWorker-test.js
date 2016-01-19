@@ -5,6 +5,7 @@ import path from 'path';
 import mongoose from 'mongoose';
 import TwitterSchema from '../src/models/twitter';
 import _async from 'async';
+// import prettyjson from 'prettyjson';
 
 const expect = chai.expect;
 /* eslint-disable func-names */
@@ -33,6 +34,7 @@ describe('twitter worker tests', function () {
     const twWorker = new TwWorker(data);
     try {
       const processedData = await twWorker.processData();
+      // console.log(prettyjson.render(processedData));
       let savedTweets = 0;
       _async.each(processedData, (d, callback) => {
         const twitter = new Twitter(d);

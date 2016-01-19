@@ -172,6 +172,7 @@ module.exports =
 	    this.workers = [];
 	    this.isConsumed = false;
 	    this.createWorkerPool();
+	    console.log('Master process pid ' + process.pid);
 	  }
 
 	  _createClass(Master, [{
@@ -189,7 +190,7 @@ module.exports =
 	      for (var i = 0; i < _os2['default'].cpus().length - 1; i++) {
 	        var child = _child_process2['default'].fork(childPath);
 	        client.set(child.pid.toString(), '0', _redis2['default'].print);
-	        console.log('process pid ' + child.pid);
+	        console.log('child process pid ' + child.pid);
 	        this.workers.push(child);
 	      }
 	      console.log('number of workers: ' + this.workers.length);
@@ -289,10 +290,12 @@ module.exports =
 
 	        child.on('exit', function (signal) {
 	          console.log('child process exited with signal ' + signal);
+	          process.exit(1);
 	        });
 
 	        child.on('close', function (code) {
 	          console.log('child process exited with code ' + code);
+	          process.exit(1);
 	        });
 	      });
 	    }
