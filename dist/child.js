@@ -5274,7 +5274,7 @@ module.exports =
 
 	connection.once('open', function () {
 	  console.log('connected to Mongo DB in process: ' + process.pid);
-	  Twitter = connection.model('Tw', _srcModelsTwitter2['default']);
+	  Twitter = connection.model('tweeps', _srcModelsTwitter2['default']);
 	});
 
 	function processPayload(data) {

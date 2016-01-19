@@ -14,7 +14,7 @@ const Schema = mongoose.Schema;
 
 const MONGO_URL = 'mongodb://localhost/mine-twt';
 mongoose.connect(MONGO_URL);
-const Tweets = mongoose.model('newTweps02', TwitterSchema);
+const Tweets = mongoose.model('tweeps', TwitterSchema);
 const OldTweets = mongoose.model('twitters', new Schema({ any: {} }));
 
 

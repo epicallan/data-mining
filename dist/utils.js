@@ -6139,7 +6139,7 @@ module.exports =
 
 	var MONGO_URL = 'mongodb://localhost/mine-twt';
 	_mongoose2['default'].connect(MONGO_URL);
-	var Tweets = _mongoose2['default'].model('newTweps02', _modelsTwitter2['default']);
+	var Tweets = _mongoose2['default'].model('tweeps', _modelsTwitter2['default']);
 	var OldTweets = _mongoose2['default'].model('twitters', new Schema({ any: {} }));
 
 	function run() {

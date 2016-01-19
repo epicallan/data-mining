@@ -26,7 +26,7 @@ function changeState(state) {
 
 connection.once('open', () => {
   console.log(`connected to Mongo DB in process: ${process.pid}`);
-  Twitter = connection.model('Tw', TwitterSchema);
+  Twitter = connection.model('tweeps', TwitterSchema);
 });
 
 async function processPayload(data) {
