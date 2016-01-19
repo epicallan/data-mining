@@ -5222,9 +5222,76 @@ module.exports =
 /***/ },
 /* 191 */,
 /* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
+/* 193 */
+/***/ function(module, exports) {
+
+	module.exports = require("mongoose");
+
+/***/ },
+/* 194 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	var _mongoose = __webpack_require__(193);
+
+	var _mongoose2 = _interopRequireDefault(_mongoose);
+
+	var _mongooseUniqueValidator = __webpack_require__(195);
+
+	var _mongooseUniqueValidator2 = _interopRequireDefault(_mongooseUniqueValidator);
+
+	var Schema = _mongoose2['default'].Schema;
+
+	var TwitterSchema = new Schema({
+	  date: { type: String },
+	  text: { type: String, 'default': null, trim: true },
+	  user_name: { type: String, trim: true },
+	  screen_name: { type: String, trim: true },
+	  location: { type: String, 'default': null, trim: true },
+	  time_zone: String,
+	  sentiment: Number,
+	  retweet_count: Number,
+	  favorite_count: Number,
+	  timeStamp: Number,
+	  terms: [String],
+	  user_id: String,
+	  id: { type: Number, unique: true },
+	  is_reply: Boolean,
+	  is_retweet: Boolean,
+	  approximated_geo: { type: Boolean, 'default': false },
+	  geo_enabled: { type: Boolean, 'default': false },
+	  has_hashtags: Boolean,
+	  hashtags: [String],
+	  coordinates: { type: String, 'default': null },
+	  has_user_mentions: Boolean,
+	  user_mentions: [String]
+	});
+
+	TwitterSchema.plugin(_mongooseUniqueValidator2['default']);
+	TwitterSchema.path('terms').required(true, 'Tweet must have terms');
+	/* eslint-disable func-names*/
+	TwitterSchema.pre('save', function (next) {
+	  var err = this.validateSync();
+	  next(err);
+	});
+
+	exports['default'] = TwitterSchema;
+	module.exports = exports['default'];
+
+/***/ },
+/* 195 */
+/***/ function(module, exports) {
+
+	module.exports = require("mongoose-unique-validator");
+
+/***/ },
 /* 196 */,
 /* 197 */
 /***/ function(module, exports, __webpack_require__) {
@@ -6052,124 +6119,75 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _mongodb = __webpack_require__(218);
+	var _mongoose = __webpack_require__(193);
 
-	var _mongodb2 = _interopRequireDefault(_mongodb);
+	var _mongoose2 = _interopRequireDefault(_mongoose);
+
+	var _modelsTwitter = __webpack_require__(194);
+
+	var _modelsTwitter2 = _interopRequireDefault(_modelsTwitter);
 
 	var _srcLibAnalyzer = __webpack_require__(197);
 
 	var _srcLibAnalyzer2 = _interopRequireDefault(_srcLibAnalyzer);
 
-	var _async2 = __webpack_require__(207);
-
-	var _async3 = _interopRequireDefault(_async2);
-
 	var _configSettings = __webpack_require__(208);
 
 	var _configSettings2 = _interopRequireDefault(_configSettings);
 
-	var MongoClient = _mongodb2['default'].MongoClient;
+	var Schema = _mongoose2['default'].Schema;
+
 	var MONGO_URL = 'mongodb://localhost/mine-twt';
-	var db = null;
-	var tweets = [];
-	function _connection() {
-	  return new Promise(function (resolve, reject) {
-	    MongoClient.connect(MONGO_URL, function (err, connection) {
-	      resolve(connection);
-	      console.log('connected');
-	      reject(err);
-	    });
-	  });
-	}
+	_mongoose2['default'].connect(MONGO_URL);
+	var Tweets = _mongoose2['default'].model('newTweps02', _modelsTwitter2['default']);
+	var OldTweets = _mongoose2['default'].model('twitters', new Schema({ any: {} }));
 
 	function run() {
 	  return regeneratorRuntime.async(function run$(context$1$0) {
-	    var _this = this;
-
 	    while (1) switch (context$1$0.prev = context$1$0.next) {
 	      case 0:
 	        context$1$0.prev = 0;
-	        context$1$0.next = 3;
-	        return regeneratorRuntime.awrap((function callee$1$0() {
-	          var counter, cursor;
-	          return regeneratorRuntime.async(function callee$1$0$(context$2$0) {
-	            while (1) switch (context$2$0.prev = context$2$0.next) {
-	              case 0:
-	                counter = 0;
 
-	                console.log(new Date());
-	                context$2$0.next = 4;
-	                return regeneratorRuntime.awrap(_connection());
-
-	              case 4:
-	                db = context$2$0.sent;
-	                cursor = db.collection('twitters').find({
-	                  is_retweet: false
-	                }).stream({
-	                  transform: function transform(tweet) {
-	                    // purge user_mentions
-	                    // console.log(tweet.id);
-	                    var userMentionsMatch = _configSettings2['default'].track.toLowerCase().split(',');
-	                    var newTweet = _srcLibAnalyzer2['default'].addToUserMentions([tweet], userMentionsMatch)[0];
-	                    newTweet.terms = _srcLibAnalyzer2['default']._getKeyWords(newTweet.text);
-	                    newTweet.timeStamp = new Date(newTweet.date).getTime();
-	                    return tweet;
-	                  }
-	                });
-
-	                cursor.Option = {
-	                  noTimeout: true,
-	                  maxScan: -1,
-	                  maxTimeMS: 10000
-	                };
-	                cursor.on('data', function (doc) {
-	                  /* db.collection('tweetss').insertOne(doc, (err) => {
-	                    if (err) {
-	                      console.log('insert Error');
-	                      throw new Error(err);
-	                    }
-	                    counter++;
-	                    // console.log(`saved ${doc.id} ${counter}`);
-	                  });*/
-	                  counter++;
-	                  tweets.push(doc.id);
-	                });
-	                cursor.once('end', function () {
-	                  var date = new Date();
-	                  console.log('final tweets saved ' + counter + ' ' + date);
-	                  db.close();
-	                });
-
-	              case 9:
-	              case 'end':
-	                return context$2$0.stop();
+	        (function () {
+	          var counter = 0;
+	          console.log(new Date());
+	          var stream = OldTweets.find().lean().stream({
+	            transform: function transform(tweet) {
+	              // purge user_mentions
+	              var userMentionsMatch = _configSettings2['default'].track.toLowerCase().split(',');
+	              var newTweet = _srcLibAnalyzer2['default'].addToUserMentions([tweet], userMentionsMatch)[0];
+	              newTweet.terms = _srcLibAnalyzer2['default']._getKeyWords(newTweet.text);
+	              newTweet.timeStamp = new Date(newTweet.date).getTime();
+	              return newTweet;
 	            }
-	          }, null, _this);
-	        })());
+	          });
+	          stream.on('data', function (doc) {
+	            counter++;
+	            var tweet = new Tweets(doc);
+	            tweet.save(tweet);
+	          });
+	          stream.once('close', function () {
+	            var date = new Date();
+	            console.log('final tweets saved ' + counter + ' ' + date);
+	          });
+	        })();
 
-	      case 3:
-	        context$1$0.next = 8;
+	        context$1$0.next = 7;
 	        break;
 
-	      case 5:
-	        context$1$0.prev = 5;
+	      case 4:
+	        context$1$0.prev = 4;
 	        context$1$0.t0 = context$1$0['catch'](0);
 	        throw new Error(context$1$0.t0);
 
-	      case 8:
+	      case 7:
 	      case 'end':
 	        return context$1$0.stop();
 	    }
-	  }, null, this, [[0, 5]]);
+	  }, null, this, [[0, 4]]);
 	}
 
 	run();
-
-/***/ },
-/* 218 */
-/***/ function(module, exports) {
-
-	module.exports = require("mongodb");
 
 /***/ }
 /******/ ]);
