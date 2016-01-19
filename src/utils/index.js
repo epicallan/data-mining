@@ -12,9 +12,9 @@ import analyzer from '../../src/lib/analyzer';
 import settings from '../config/settings';
 const Schema = mongoose.Schema;
 
-const MONGO_URL = 'mongodb://localhost/mine-twt';
+const MONGO_URL = 'mongodb://localhost/mine-dev';
 mongoose.connect(MONGO_URL);
-const Tweets = mongoose.model('tweeps', TwitterSchema);
+const Tweets = mongoose.model('twits', TwitterSchema);
 const OldTweets = mongoose.model('twitters', new Schema({ any: {} }));
 
 

@@ -5256,6 +5256,7 @@ module.exports =
 	client.on('error', function (err) {
 	  return console.log(err);
 	});
+	console.log(process.env.MONGO_URL);
 
 	var connection = _mongoose2['default'].createConnection(process.env.MONGO_URL);
 	var Twitter = null;
@@ -5274,7 +5275,7 @@ module.exports =
 
 	connection.once('open', function () {
 	  console.log('connected to Mongo DB in process: ' + process.pid);
-	  Twitter = connection.model('tweeps', _srcModelsTwitter2['default']);
+	  Twitter = connection.model('twits', _srcModelsTwitter2['default']);
 	});
 
 	function processPayload(data) {
@@ -5297,7 +5298,8 @@ module.exports =
 	          twitter.save(function (err) {
 	            if (err) {
 	              notSaved++;
-	              console.log(err.message + ' not saved ' + d.id);
+	              // console.log(err);
+	              console.log('error ' + err.message + ' not saved ' + d.id);
 	            } else {
 	              savedTweets++;
 	            }
@@ -5358,7 +5360,7 @@ module.exports =
 	  if (process.env.NODE_ENV === 'development') {
 	    this.db = 'mine-dev';
 	  } else if (process.env.NODE_ENV === 'production') {
-	    this.db = 'mine-twt';
+	    this.db = 'mine';
 	  } else if (process.env.NODE_ENV === 'test') {
 	    this.db = 'mine-test';
 	  }
@@ -5422,7 +5424,7 @@ module.exports =
 	});
 
 	TwitterSchema.plugin(_mongooseUniqueValidator2['default']);
-	TwitterSchema.path('terms').required(true, 'Tweet must have terms');
+	// TwitterSchema.path('terms').required(true, 'Tweet must have terms');
 	/* eslint-disable func-names*/
 	TwitterSchema.pre('save', function (next) {
 	  var err = this.validateSync();

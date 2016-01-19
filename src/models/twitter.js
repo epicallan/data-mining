@@ -28,7 +28,7 @@ const TwitterSchema = new Schema({
 });
 
 TwitterSchema.plugin(uniqueValidator);
-TwitterSchema.path('terms').required(true, 'Tweet must have terms');
+// TwitterSchema.path('terms').required(true, 'Tweet must have terms');
 /* eslint-disable func-names*/
 TwitterSchema.pre('save', function (next) {
   const err = this.validateSync();

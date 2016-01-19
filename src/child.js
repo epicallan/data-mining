@@ -8,6 +8,7 @@ import _async from 'async';
 /* eslint-disable no-console */
 const client = redis.createClient();
 client.on('error', (err) => console.log(err));
+console.log(process.env.MONGO_URL);
 
 const connection = mongoose.createConnection(process.env.MONGO_URL);
 let Twitter = null;
@@ -26,7 +27,7 @@ function changeState(state) {
 
 connection.once('open', () => {
   console.log(`connected to Mongo DB in process: ${process.pid}`);
-  Twitter = connection.model('tweeps', TwitterSchema);
+  Twitter = connection.model('twits', TwitterSchema);
 });
 
 async function processPayload(data) {
@@ -40,7 +41,8 @@ async function processPayload(data) {
       twitter.save((err) => {
         if (err) {
           notSaved++;
-          console.log(`${err.message} not saved ${d.id}`);
+          // console.log(err);
+          console.log(`error ${err.message} not saved ${d.id}`);
         } else {
           savedTweets++;
         }

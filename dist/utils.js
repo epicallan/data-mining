@@ -5275,7 +5275,7 @@ module.exports =
 	});
 
 	TwitterSchema.plugin(_mongooseUniqueValidator2['default']);
-	TwitterSchema.path('terms').required(true, 'Tweet must have terms');
+	// TwitterSchema.path('terms').required(true, 'Tweet must have terms');
 	/* eslint-disable func-names*/
 	TwitterSchema.pre('save', function (next) {
 	  var err = this.validateSync();
@@ -6137,9 +6137,9 @@ module.exports =
 
 	var Schema = _mongoose2['default'].Schema;
 
-	var MONGO_URL = 'mongodb://localhost/mine-twt';
+	var MONGO_URL = 'mongodb://localhost/mine-dev';
 	_mongoose2['default'].connect(MONGO_URL);
-	var Tweets = _mongoose2['default'].model('tweeps', _modelsTwitter2['default']);
+	var Tweets = _mongoose2['default'].model('twits', _modelsTwitter2['default']);
 	var OldTweets = _mongoose2['default'].model('twitters', new Schema({ any: {} }));
 
 	function run() {
