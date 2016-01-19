@@ -239,7 +239,7 @@ module.exports =
 	      this.stream.on('tweet', function (data) {
 	        _this2.tweetsBuffer.push(data);
 	        _this2.counter++;
-	        if (_this2.tweetsBuffer.length > 2) {
+	        if (_this2.tweetsBuffer.length > 10) {
 	          _this2.isConsumed = false;
 	          console.log('Total Tweets = ' + _this2.counter + ' tweet buffer is ' + _this2.tweetsBuffer.length);
 	          _this2.sendTochildProcess();
