@@ -6,7 +6,7 @@
 > Description
 ## Getting started
 
-src/index.js starts a master node process that mines twitter and spawns off a child process
+dist/index.js starts a master node process that mines twitter and spawns off a child process
 that does some data clean up and saves the data in mongoDB.
 
 ## Todo
