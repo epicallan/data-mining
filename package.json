@@ -10,7 +10,7 @@
     "test": "mocha --recursive --compilers js:babel-core/register --require babel-core/polyfill",
     "utils": "node dist/utils.js",
     "tdd": "NODE_ENV=test npm test -- --watch",
-    "start": "NODE_ENV=production nodemon dist/index.js",
+    "start": "NODE_ENV=production dist/index.js",
     "start-dev": "NODE_ENV=development nodemon dist/index.js"
   },
   "repository": "epicallan/datamining",

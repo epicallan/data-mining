@@ -27,7 +27,7 @@ async function run() {
     .stream({
       transform: (tweet) => {
         // purge user_mentions
-        const userMentionsMatch = settings.track.toLowerCase().split(',');
+        const userMentionsMatch = settings.names;
         const newTweet = analyzer.addToUserMentions([tweet], userMentionsMatch)[0];
         newTweet.terms = analyzer._getKeyWords(newTweet.text);
         newTweet.timeStamp = new Date(newTweet.date).getTime();
