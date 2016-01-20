@@ -6090,6 +6090,7 @@ module.exports =
 	  value: true
 	});
 	var settings = {
+	  names: ['museveni', 'besigye', 'mbabazi', 'baryamureeba', 'bwanika'],
 	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16'
 	};
 	exports['default'] = settings;
@@ -6154,7 +6155,7 @@ module.exports =
 	          var stream = OldTweets.find().lean().stream({
 	            transform: function transform(tweet) {
 	              // purge user_mentions
-	              var userMentionsMatch = _configSettings2['default'].track.toLowerCase().split(',');
+	              var userMentionsMatch = _configSettings2['default'].names;
 	              var newTweet = _srcLibAnalyzer2['default'].addToUserMentions([tweet], userMentionsMatch)[0];
 	              newTweet.terms = _srcLibAnalyzer2['default']._getKeyWords(newTweet.text);
 	              newTweet.timeStamp = new Date(newTweet.date).getTime();

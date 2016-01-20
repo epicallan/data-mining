@@ -3,5 +3,4 @@ coverage
 npm-debug.log
 src/config/cred.js
 src/facebook
-src/config/settings.js
 build
