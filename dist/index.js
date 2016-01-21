@@ -210,7 +210,7 @@ module.exports =
 	      this.stream.on('tweet', function (data) {
 	        _this.tweetsBuffer.push(data);
 	        _this.counter++;
-	        // console.log(this.counter);
+	        console.log(_this.counter);
 	        if (_this.tweetsBuffer.length > 10) {
 	          _this.isConsumed = false;
 	          console.log('Total Tweets = ' + _this.counter + ' tweet buffer is ' + _this.tweetsBuffer.length);

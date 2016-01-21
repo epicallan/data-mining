@@ -63,7 +63,7 @@ class Master {
     this.stream.on('tweet', (data) => {
       this.tweetsBuffer.push(data);
       this.counter++;
-      // console.log(this.counter);
+      console.log(this.counter);
       if (this.tweetsBuffer.length > 10) {
         this.isConsumed = false;
         console.log(`Total Tweets = ${this.counter} tweet buffer is ${this.tweetsBuffer.length}`);

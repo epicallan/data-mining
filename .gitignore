@@ -2,3 +2,4 @@ node_modules
 coverage
 npm-debug.log
 src/facebook
+src/config/cred.js
