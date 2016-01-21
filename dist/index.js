@@ -82,7 +82,7 @@ module.exports =
 	});
 	var settings = {
 	  names: ['museveni', 'besigye', 'mbabazi', 'baryamureeba', 'bwanika'],
-	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16'
+	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16,'
 	};
 	exports['default'] = settings;
 	module.exports = exports['default'];
@@ -107,8 +107,6 @@ module.exports =
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -205,27 +203,15 @@ module.exports =
 	      });
 	    }
 	  }, {
-	    key: 'startEvent',
-	    value: function startEvent() {
-	      var file = _path2['default'].resolve(process.cwd(), 'dist/tw-allan.json');
-	      _fsExtra2['default'].readJson(file, function (err, json) {
-	        if (err) console.error(err);
-	        console.log('read data');
-	        eventEmitter.emit('tweet', json);
-	      });
-	    }
-	  }, {
-	    key: 'listenToEvent',
-	    value: function listenToEvent() {
+	    key: 'listenToStream',
+	    value: function listenToStream() {
 	      var _this = this;
 
-	      eventEmitter.on('tweet', function (data) {
-	        var _tweetsBuffer;
-
-	        console.log('listening');
-	        (_tweetsBuffer = _this.tweetsBuffer).push.apply(_tweetsBuffer, _toConsumableArray(data));
+	      this.stream.on('tweet', function (data) {
+	        _this.tweetsBuffer.push(data);
 	        _this.counter++;
-	        if (_this.tweetsBuffer.length > 1) {
+	        // console.log(this.counter);
+	        if (_this.tweetsBuffer.length > 10) {
 	          _this.isConsumed = false;
 	          console.log('Total Tweets = ' + _this.counter + ' tweet buffer is ' + _this.tweetsBuffer.length);
 	          _this.sendTochildProcess();
@@ -233,33 +219,18 @@ module.exports =
 	      });
 	    }
 	  }, {
-	    key: 'listenToStream',
-	    value: function listenToStream() {
-	      var _this2 = this;
-
-	      this.stream.on('tweet', function (data) {
-	        _this2.tweetsBuffer.push(data);
-	        _this2.counter++;
-	        if (_this2.tweetsBuffer.length > 10) {
-	          _this2.isConsumed = false;
-	          console.log('Total Tweets = ' + _this2.counter + ' tweet buffer is ' + _this2.tweetsBuffer.length);
-	          _this2.sendTochildProcess();
-	        }
-	      });
-	    }
-	  }, {
 	    key: 'getWorker',
 	    value: function getWorker(worker, index) {
-	      var _this3 = this;
+	      var _this2 = this;
 
 	      // if first and second workers are busy just push the
 	      // payload to the last worker
 	      client.getAsync(worker.pid).then(function (reply) {
 	        var isBusy = parseInt(reply, 10);
-	        if (!_this3.isConsumed && !isBusy) {
-	          _this3.isConsumed = true;
-	          _this3.sendPayload(worker);
-	          console.log('PID: ' + worker.pid + ' index: ' + index + ' C : ' + _this3.isConsumed + ' busy: ' + isBusy);
+	        if (!_this2.isConsumed && !isBusy) {
+	          _this2.isConsumed = true;
+	          _this2.sendPayload(worker);
+	          console.log('PID: ' + worker.pid + ' index: ' + index + ' C : ' + _this2.isConsumed + ' busy: ' + isBusy);
 	        }
 	      })['catch'](function (error) {
 	        console.log(error);
@@ -274,10 +245,10 @@ module.exports =
 	  }, {
 	    key: 'sendTochildProcess',
 	    value: function sendTochildProcess() {
-	      var _this4 = this;
+	      var _this3 = this;
 
 	      this.workers.forEach(function (worker, index) {
-	        _this4.getWorker(worker, index);
+	        _this3.getWorker(worker, index);
 	      });
 	    }
 	  }, {
@@ -340,10 +311,10 @@ module.exports =
 	  value: true
 	});
 	var credentials = {
-	  consumer_key: 'toH9iSWqF95DAscyg6zoAHyzq',
-	  consumer_secret: '0E8sVI19HIssKyANacN4PUIrU2AsHWDozMOPlQuIQGM9a7xdEe',
-	  access_token: '405591097-YeJuFeYvxhxACoszpfhZWKdTx1aWH7WgITSOwDpb',
-	  access_token_secret: 'lhrI3zarigK6LrBouNaPQmzXxaMKTUEDZEh8EHcHHUOKd',
+	  consumer_key: 'mEeWQoooOPsXVh8WGYaFZjU93',
+	  consumer_secret: 'RtEGoK1Z1iDrGQOYqO78zn5is1YVQExwvZELSBlPhjPRtuU6KR',
+	  access_token: '282545192-ub693jp5wHs0fubn05mJXqlqCFi2JKipfkGXFxs3',
+	  access_token_secret: 'nwegbEIxA5p2wMfrX9CbWcFXnIJBBxWR1nt8xUZoa0qV5',
 	  callback: 'http://akilihub.io/twitter/callback'
 	};
 	exports['default'] = credentials;

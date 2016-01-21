@@ -59,31 +59,11 @@ class Master {
       track: settings.track,
     });
   }
-
-  startEvent() {
-    const file = path.resolve(process.cwd(), 'dist/tw-allan.json');
-    fs.readJson(file, (err, json) => {
-      if (err) console.error(err);
-      console.log('read data');
-      eventEmitter.emit('tweet', json);
-    });
-  }
-  listenToEvent() {
-    eventEmitter.on('tweet', (data) => {
-      console.log('listening');
-      this.tweetsBuffer.push(...data);
-      this.counter++;
-      if (this.tweetsBuffer.length > 1) {
-        this.isConsumed = false;
-        console.log(`Total Tweets = ${this.counter} tweet buffer is ${this.tweetsBuffer.length}`);
-        this.sendTochildProcess();
-      }
-    });
-  }
   listenToStream() {
     this.stream.on('tweet', (data) => {
       this.tweetsBuffer.push(data);
       this.counter++;
+      // console.log(this.counter);
       if (this.tweetsBuffer.length > 10) {
         this.isConsumed = false;
         console.log(`Total Tweets = ${this.counter} tweet buffer is ${this.tweetsBuffer.length}`);
