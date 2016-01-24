@@ -1,21 +1,17 @@
+/**
+ * child process that does the heavy lifting
+ */
 import './config';
-import mongoose from 'mongoose';
-import TwitterSchema from '../src/models/twitter';
-import TwWorker from './twitter/TwWorker';
+import Twitter from './Twitter';
 import redis from 'redis';
-import _async from 'async';
+import utils from './lib/utils';
 
 /* eslint-disable no-console */
 const client = redis.createClient();
 client.on('error', (err) => console.log(err));
-console.log(process.env.MONGO_URL);
 
-const connection = mongoose.createConnection(process.env.MONGO_URL);
-let Twitter = null;
-let counter = 0;
-let savedTweets = 0;
-let notSaved = 0;
 let isWorking = null;
+let counter = 0;
 
 function changeState(state) {
   isWorking = state;
@@ -25,34 +21,19 @@ function changeState(state) {
   });
 }
 
-connection.once('open', () => {
-  console.log(`connected to Mongo DB in process: ${process.pid}`);
-  Twitter = connection.model('twits', TwitterSchema);
-});
-
 async function processPayload(data) {
   changeState('1');
-  const twWorker = new TwWorker(data);
+  const twitter = new Twitter(data);
+  console.log(`received payload ${data.length}`);
   try {
-    const processedData = await twWorker.processData();
-    _async.each(processedData, (d, callback) => {
-      counter++;
-      const twitter = new Twitter(d);
-      twitter.save((err) => {
-        if (err) {
-          notSaved++;
-          // console.log(err);
-          console.log(`error ${err.message} not saved ${d.id}`);
-        } else {
-          savedTweets++;
-        }
-        callback();
-      });
-    }, (err) => {
-      if (err) console.log(err);
-      const date = new Date();
-      process.send(`processed ${counter} saved: ${savedTweets} notSaved: ${notSaved} ${date}`);
+    const processedData = await twitter.processData();
+    counter += processedData.length;
+    const url = 'http://akilihub.io/api/social/twdata/';
+    // const url = 'http://localhost:5000/api/social/twdata/';
+    utils.sendPayload(processedData, url, (body) => {
       changeState('0');
+      const date = new Date();
+      process.send(`processed ${counter} saved: ${body.saved} notSaved: ${body.notSaved} ${date}`);
     });
   } catch (err) {
     console.log(err.message);

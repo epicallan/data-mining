@@ -1,3 +1,6 @@
+/**
+ * processes mined tweets
+ */
 import analyzer from '../lib/analyzer';
 import settings from '../config/settings';
 

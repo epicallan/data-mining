@@ -5,7 +5,7 @@ import prettyjson from 'prettyjson';
 const expect = chai.expect;
 // import testData from './fixtures/cfdata';
 
-describe('analyzer class', () => {
+describe.skip('analyzer class', () => {
   let data = null;
   before('should read in data for tests', (done) => {
     const filePath = path.resolve(__dirname, './data/tw-allan.json');

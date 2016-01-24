@@ -46,7 +46,7 @@ module.exports =
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(217);
+	module.exports = __webpack_require__(213);
 
 
 /***/ },
@@ -5222,78 +5222,8 @@ module.exports =
 /***/ },
 /* 191 */,
 /* 192 */,
-/* 193 */
-/***/ function(module, exports) {
-
-	module.exports = require("mongoose");
-
-/***/ },
+/* 193 */,
 /* 194 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', {
-	  value: true
-	});
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	var _mongoose = __webpack_require__(193);
-
-	var _mongoose2 = _interopRequireDefault(_mongoose);
-
-	var _mongooseUniqueValidator = __webpack_require__(195);
-
-	var _mongooseUniqueValidator2 = _interopRequireDefault(_mongooseUniqueValidator);
-
-	var Schema = _mongoose2['default'].Schema;
-
-	var TwitterSchema = new Schema({
-	  date: { type: String },
-	  text: { type: String, 'default': null, trim: true },
-	  user_name: { type: String, trim: true },
-	  screen_name: { type: String, trim: true },
-	  location: { type: String, 'default': null, trim: true },
-	  time_zone: String,
-	  sentiment: Number,
-	  retweet_count: Number,
-	  favorite_count: Number,
-	  timeStamp: Number,
-	  terms: [String],
-	  user_id: String,
-	  id: { type: Number, unique: true },
-	  is_reply: Boolean,
-	  is_retweet: Boolean,
-	  approximated_geo: { type: Boolean, 'default': false },
-	  geo_enabled: { type: Boolean, 'default': false },
-	  has_hashtags: Boolean,
-	  hashtags: [String],
-	  coordinates: { type: String, 'default': null },
-	  has_user_mentions: Boolean,
-	  user_mentions: [String]
-	});
-
-	TwitterSchema.plugin(_mongooseUniqueValidator2['default']);
-	// TwitterSchema.path('terms').required(true, 'Tweet must have terms');
-	/* eslint-disable func-names*/
-	TwitterSchema.pre('save', function (next) {
-	  var err = this.validateSync();
-	  next(err);
-	});
-
-	exports['default'] = TwitterSchema;
-	module.exports = exports['default'];
-
-/***/ },
-/* 195 */
-/***/ function(module, exports) {
-
-	module.exports = require("mongoose-unique-validator");
-
-/***/ },
-/* 196 */,
-/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint-disable no-param-reassign*/
@@ -5309,39 +5239,39 @@ module.exports =
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	var _fs = __webpack_require__(198);
+	var _fs = __webpack_require__(195);
 
 	var _fs2 = _interopRequireDefault(_fs);
 
-	var _salient = __webpack_require__(199);
+	var _salient = __webpack_require__(196);
 
 	var _salient2 = _interopRequireDefault(_salient);
 
-	var _cleanUp = __webpack_require__(200);
+	var _cleanUp = __webpack_require__(197);
 
 	var _cleanUp2 = _interopRequireDefault(_cleanUp);
 
-	var _utils = __webpack_require__(202);
+	var _utils = __webpack_require__(199);
 
 	var _utils2 = _interopRequireDefault(_utils);
 
-	var _lodash = __webpack_require__(203);
+	var _lodash = __webpack_require__(201);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _request = __webpack_require__(204);
+	var _request = __webpack_require__(202);
 
 	var _request2 = _interopRequireDefault(_request);
 
-	var _redis = __webpack_require__(205);
+	var _redis = __webpack_require__(203);
 
 	var _redis2 = _interopRequireDefault(_redis);
 
-	var _bluebird = __webpack_require__(206);
+	var _bluebird = __webpack_require__(204);
 
 	var _bluebird2 = _interopRequireDefault(_bluebird);
 
-	var _async2 = __webpack_require__(207);
+	var _async2 = __webpack_require__(205);
 
 	var _async3 = _interopRequireDefault(_async2);
 
@@ -5871,19 +5801,19 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 198 */
+/* 195 */
 /***/ function(module, exports) {
 
 	module.exports = require("fs");
 
 /***/ },
-/* 199 */
+/* 196 */
 /***/ function(module, exports) {
 
 	module.exports = require("salient");
 
 /***/ },
-/* 200 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -5901,11 +5831,11 @@ module.exports =
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	var _uid = __webpack_require__(201);
+	var _uid = __webpack_require__(198);
 
 	var _uid2 = _interopRequireDefault(_uid);
 
-	var _utils = __webpack_require__(202);
+	var _utils = __webpack_require__(199);
 
 	var _utils2 = _interopRequireDefault(_utils);
 
@@ -6009,19 +5939,18 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 201 */
+/* 198 */
 /***/ function(module, exports) {
 
 	module.exports = require("uid");
 
 /***/ },
-/* 202 */
-/***/ function(module, exports) {
+/* 199 */
+/***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * utils
 	 */
-
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', {
@@ -6030,7 +5959,13 @@ module.exports =
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	var _nodeFetch = __webpack_require__(200);
+
+	var _nodeFetch2 = _interopRequireDefault(_nodeFetch);
 
 	var Utils = (function () {
 	  function Utils() {
@@ -6042,6 +5977,21 @@ module.exports =
 	    value: function isEmpty(str) {
 	      return typeof str === 'string' && !str.trim() || typeof str === 'undefined' || str === null;
 	    }
+	  }, {
+	    key: 'sendPayload',
+	    value: function sendPayload(data, url, cb) {
+	      (0, _nodeFetch2['default'])(url, {
+	        method: 'POST',
+	        headers: {
+	          'Content-Type': 'application/json'
+	        },
+	        body: JSON.stringify(data)
+	      }).then(function (res) {
+	        return res.json();
+	      }).then(function (json) {
+	        cb(json);
+	      });
+	    }
 	  }]);
 
 	  return Utils;
@@ -6051,37 +6001,43 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 203 */
+/* 200 */
+/***/ function(module, exports) {
+
+	module.exports = require("node-fetch");
+
+/***/ },
+/* 201 */
 /***/ function(module, exports) {
 
 	module.exports = require("lodash");
 
 /***/ },
-/* 204 */
+/* 202 */
 /***/ function(module, exports) {
 
 	module.exports = require("request");
 
 /***/ },
-/* 205 */
+/* 203 */
 /***/ function(module, exports) {
 
 	module.exports = require("redis");
 
 /***/ },
-/* 206 */
+/* 204 */
 /***/ function(module, exports) {
 
 	module.exports = require("bluebird");
 
 /***/ },
-/* 207 */
+/* 205 */
 /***/ function(module, exports) {
 
 	module.exports = require("async");
 
 /***/ },
-/* 208 */
+/* 206 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6091,24 +6047,23 @@ module.exports =
 	});
 	var settings = {
 	  names: ['museveni', 'besigye', 'mbabazi', 'baryamureeba', 'bwanika'],
-	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16,'
+	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro,' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16'
 	};
 	exports['default'] = settings;
 	module.exports = exports['default'];
 
 /***/ },
+/* 207 */,
+/* 208 */,
 /* 209 */,
 /* 210 */,
 /* 211 */,
 /* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
+	 * i used this class to clean up old data
 	 * go through entire dataset
 	 * add a time stamp field
 	 * add used terms
@@ -6120,19 +6075,19 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _mongoose = __webpack_require__(193);
+	var _mongoose = __webpack_require__(214);
 
 	var _mongoose2 = _interopRequireDefault(_mongoose);
 
-	var _modelsTwitter = __webpack_require__(194);
+	var _modelsTwitter = __webpack_require__(215);
 
 	var _modelsTwitter2 = _interopRequireDefault(_modelsTwitter);
 
-	var _srcLibAnalyzer = __webpack_require__(197);
+	var _srcLibAnalyzer = __webpack_require__(194);
 
 	var _srcLibAnalyzer2 = _interopRequireDefault(_srcLibAnalyzer);
 
-	var _configSettings = __webpack_require__(208);
+	var _configSettings = __webpack_require__(206);
 
 	var _configSettings2 = _interopRequireDefault(_configSettings);
 
@@ -6189,6 +6144,76 @@ module.exports =
 	}
 
 	run();
+
+/***/ },
+/* 214 */
+/***/ function(module, exports) {
+
+	module.exports = require("mongoose");
+
+/***/ },
+/* 215 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	var _mongoose = __webpack_require__(214);
+
+	var _mongoose2 = _interopRequireDefault(_mongoose);
+
+	var _mongooseUniqueValidator = __webpack_require__(216);
+
+	var _mongooseUniqueValidator2 = _interopRequireDefault(_mongooseUniqueValidator);
+
+	var Schema = _mongoose2['default'].Schema;
+
+	var TwitterSchema = new Schema({
+	  date: { type: String },
+	  text: { type: String, 'default': null, trim: true },
+	  user_name: { type: String, trim: true },
+	  screen_name: { type: String, trim: true },
+	  location: { type: String, 'default': null, trim: true },
+	  time_zone: String,
+	  sentiment: Number,
+	  retweet_count: Number,
+	  favorite_count: Number,
+	  timeStamp: Number,
+	  terms: [String],
+	  user_id: String,
+	  id: { type: Number, unique: true },
+	  is_reply: Boolean,
+	  is_retweet: Boolean,
+	  approximated_geo: { type: Boolean, 'default': false },
+	  geo_enabled: { type: Boolean, 'default': false },
+	  has_hashtags: Boolean,
+	  hashtags: [String],
+	  coordinates: { type: String, 'default': null },
+	  has_user_mentions: Boolean,
+	  user_mentions: [String]
+	});
+
+	TwitterSchema.plugin(_mongooseUniqueValidator2['default']);
+	// TwitterSchema.path('terms').required(true, 'Tweet must have terms');
+	/* eslint-disable func-names*/
+	TwitterSchema.pre('save', function (next) {
+	  var err = this.validateSync();
+	  next(err);
+	});
+
+	exports['default'] = TwitterSchema;
+	module.exports = exports['default'];
+
+/***/ },
+/* 216 */
+/***/ function(module, exports) {
+
+	module.exports = require("mongoose-unique-validator");
 
 /***/ }
 /******/ ]);

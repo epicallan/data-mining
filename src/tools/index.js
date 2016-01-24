@@ -1,4 +1,5 @@
 /**
+ * i used this class to clean up old data
  * go through entire dataset
  * add a time stamp field
  * add used terms

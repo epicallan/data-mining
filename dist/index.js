@@ -50,7 +50,7 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _master = __webpack_require__(209);
+	var _master = __webpack_require__(207);
 
 	var _master2 = _interopRequireDefault(_master);
 
@@ -58,21 +58,21 @@ module.exports =
 
 /***/ },
 
-/***/ 205:
+/***/ 203:
 /***/ function(module, exports) {
 
 	module.exports = require("redis");
 
 /***/ },
 
-/***/ 206:
+/***/ 204:
 /***/ function(module, exports) {
 
 	module.exports = require("bluebird");
 
 /***/ },
 
-/***/ 208:
+/***/ 206:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -82,14 +82,14 @@ module.exports =
 	});
 	var settings = {
 	  names: ['museveni', 'besigye', 'mbabazi', 'baryamureeba', 'bwanika'],
-	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16,'
+	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro,' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16'
 	};
 	exports['default'] = settings;
 	module.exports = exports['default'];
 
 /***/ },
 
-/***/ 209:
+/***/ 207:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -110,47 +110,38 @@ module.exports =
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	var _child_process = __webpack_require__(210);
+	var _child_process = __webpack_require__(208);
 
 	var _child_process2 = _interopRequireDefault(_child_process);
 
-	var _twit = __webpack_require__(211);
+	var _twit = __webpack_require__(209);
 
 	var _twit2 = _interopRequireDefault(_twit);
 
-	var _path = __webpack_require__(212);
+	var _path = __webpack_require__(210);
 
 	var _path2 = _interopRequireDefault(_path);
 
-	var _configCred = __webpack_require__(213);
+	var _configCred = __webpack_require__(211);
 
 	var _configCred2 = _interopRequireDefault(_configCred);
 
-	var _configSettings = __webpack_require__(208);
+	var _configSettings = __webpack_require__(206);
 
 	var _configSettings2 = _interopRequireDefault(_configSettings);
 
-	var _os = __webpack_require__(214);
+	var _os = __webpack_require__(212);
 
 	var _os2 = _interopRequireDefault(_os);
 
-	var _fsExtra = __webpack_require__(215);
-
-	var _fsExtra2 = _interopRequireDefault(_fsExtra);
-
-	var _redis = __webpack_require__(205);
+	var _redis = __webpack_require__(203);
 
 	var _redis2 = _interopRequireDefault(_redis);
 
-	var _bluebird = __webpack_require__(206);
+	var _bluebird = __webpack_require__(204);
 
 	var _bluebird2 = _interopRequireDefault(_bluebird);
 
-	var _events = __webpack_require__(216);
-
-	var _events2 = _interopRequireDefault(_events);
-
-	var eventEmitter = new _events2['default'].EventEmitter();
 	var client = _redis2['default'].createClient();
 	var twitter = new _twit2['default'](_configCred2['default']);
 	var childPath = _path2['default'].resolve(process.cwd(), 'dist/child.js');
@@ -169,7 +160,7 @@ module.exports =
 	    this.counter = 0;
 	    this.stream = null;
 	    this.workers = [];
-	    this.isConsumed = false;
+	    this.isTobeConsumed = false;
 	    this.createWorkerPool();
 	    console.log('Master process pid ' + process.pid);
 	  }
@@ -179,8 +170,6 @@ module.exports =
 	    value: function init() {
 	      this.startStream();
 	      this.listenToStream();
-	      // this.startEvent();
-	      // this.listenToEvent();
 	      this.listenToWorkers();
 	    }
 	  }, {
@@ -210,45 +199,40 @@ module.exports =
 	      this.stream.on('tweet', function (data) {
 	        _this.tweetsBuffer.push(data);
 	        _this.counter++;
-	        console.log(_this.counter);
-	        if (_this.tweetsBuffer.length > 10) {
-	          _this.isConsumed = false;
+	        if (_this.tweetsBuffer.length > 10 && !_this.isTobeConsumed) {
 	          console.log('Total Tweets = ' + _this.counter + ' tweet buffer is ' + _this.tweetsBuffer.length);
-	          _this.sendTochildProcess();
+	          _this.isTobeConsumed = true;
+	          _this.sendToWorkerProcess();
 	        }
 	      });
 	    }
 	  }, {
-	    key: 'getWorker',
-	    value: function getWorker(worker, index) {
-	      var _this2 = this;
-
-	      // if first and second workers are busy just push the
-	      // payload to the last worker
-	      client.getAsync(worker.pid).then(function (reply) {
-	        var isBusy = parseInt(reply, 10);
-	        if (!_this2.isConsumed && !isBusy) {
-	          _this2.isConsumed = true;
-	          _this2.sendPayload(worker);
-	          console.log('PID: ' + worker.pid + ' index: ' + index + ' C : ' + _this2.isConsumed + ' busy: ' + isBusy);
-	        }
+	    key: 'getWorkerStatus',
+	    value: function getWorkerStatus(worker, cb) {
+	      // check for status of worker from redis
+	      return client.getAsync(worker.pid).then(function (reply) {
+	        cb(parseInt(reply, 10));
 	      })['catch'](function (error) {
 	        console.log(error);
 	      });
 	    }
 	  }, {
-	    key: 'sendPayload',
-	    value: function sendPayload(worker) {
-	      worker.send(this.tweetsBuffer);
-	      this.tweetsBuffer = [];
-	    }
-	  }, {
-	    key: 'sendTochildProcess',
-	    value: function sendTochildProcess() {
-	      var _this3 = this;
+	    key: 'sendToWorkerProcess',
+	    value: function sendToWorkerProcess() {
+	      var _this2 = this;
 
+	      var isConsumed = false;
 	      this.workers.forEach(function (worker, index) {
-	        _this3.getWorker(worker, index);
+	        _this2.getWorkerStatus(worker, function (isWorkerBusy) {
+	          if (!isWorkerBusy && !isConsumed) {
+	            worker.send(_this2.tweetsBuffer);
+	            console.log('PID: ' + worker.pid + ' index: ' + index + ' ');
+	            isConsumed = true;
+	            // reset
+	            _this2.tweetsBuffer = [];
+	            _this2.isTobeConsumed = false;
+	          }
+	        });
 	      });
 	    }
 	  }, {
@@ -257,6 +241,7 @@ module.exports =
 	      // TODO remove from pool on exit or close
 	      this.workers.forEach(function (child) {
 	        child.on('message', function (msg) {
+	          // reset and start accepting new payload
 	          console.log('child pid ' + child.pid + ' : message ' + msg);
 	        });
 
@@ -281,28 +266,28 @@ module.exports =
 
 /***/ },
 
-/***/ 210:
+/***/ 208:
 /***/ function(module, exports) {
 
 	module.exports = require("child_process");
 
 /***/ },
 
-/***/ 211:
+/***/ 209:
 /***/ function(module, exports) {
 
 	module.exports = require("twit");
 
 /***/ },
 
-/***/ 212:
+/***/ 210:
 /***/ function(module, exports) {
 
 	module.exports = require("path");
 
 /***/ },
 
-/***/ 213:
+/***/ 211:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -322,24 +307,10 @@ module.exports =
 
 /***/ },
 
-/***/ 214:
+/***/ 212:
 /***/ function(module, exports) {
 
 	module.exports = require("os");
-
-/***/ },
-
-/***/ 215:
-/***/ function(module, exports) {
-
-	module.exports = require("fs-extra");
-
-/***/ },
-
-/***/ 216:
-/***/ function(module, exports) {
-
-	module.exports = require("events");
 
 /***/ }
 

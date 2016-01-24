@@ -10,12 +10,9 @@ import path from 'path';
 import crendentials from './config/cred';
 import settings from './config/settings';
 import os from 'os';
-import fs from 'fs-extra';
 import redis from 'redis';
 import bluebird from 'bluebird';
-import events from 'events';
 
-const eventEmitter = new events.EventEmitter();
 const client = redis.createClient();
 const twitter = new Twit(crendentials);
 const childPath = path.resolve(process.cwd(), 'dist/child.js');
@@ -31,7 +28,7 @@ class Master {
     this.counter = 0;
     this.stream = null;
     this.workers = [];
-    this.isConsumed = false;
+    this.isTobeConsumed = false;
     this.createWorkerPool();
     console.log(`Master process pid ${process.pid}`);
   }
@@ -39,8 +36,6 @@ class Master {
   init() {
     this.startStream();
     this.listenToStream();
-    // this.startEvent();
-    // this.listenToEvent();
     this.listenToWorkers();
   }
   createWorkerPool() {
@@ -63,38 +58,36 @@ class Master {
     this.stream.on('tweet', (data) => {
       this.tweetsBuffer.push(data);
       this.counter++;
-      console.log(this.counter);
-      if (this.tweetsBuffer.length > 10) {
-        this.isConsumed = false;
+      if (this.tweetsBuffer.length > 10 && !this.isTobeConsumed) {
         console.log(`Total Tweets = ${this.counter} tweet buffer is ${this.tweetsBuffer.length}`);
-        this.sendTochildProcess();
+        this.isTobeConsumed = true;
+        this.sendToWorkerProcess();
       }
     });
   }
 
-  getWorker(worker, index) {
-    // if first and second workers are busy just push the
-    // payload to the last worker
-    client.getAsync(worker.pid).then((reply) => {
-      const isBusy = parseInt(reply, 10);
-      if (!this.isConsumed && !isBusy) {
-        this.isConsumed = true;
-        this.sendPayload(worker);
-        console.log(`PID: ${worker.pid} index: ${index} C : ${this.isConsumed} busy: ${isBusy}`);
-      }
+  getWorkerStatus(worker, cb) {
+    // check for status of worker from redis
+    return client.getAsync(worker.pid).then((reply) => {
+      cb(parseInt(reply, 10));
     }).catch((error) => {
       console.log(error);
     });
   }
 
-  sendPayload(worker) {
-    worker.send(this.tweetsBuffer);
-    this.tweetsBuffer = [];
-  }
-
-  sendTochildProcess() {
+  sendToWorkerProcess() {
+    let isConsumed = false;
     this.workers.forEach((worker, index) => {
-      this.getWorker(worker, index);
+      this.getWorkerStatus(worker, (isWorkerBusy) => {
+        if (!isWorkerBusy && !isConsumed) {
+          worker.send(this.tweetsBuffer);
+          console.log(`PID: ${worker.pid} index: ${index} `);
+          isConsumed = true;
+          // reset
+          this.tweetsBuffer = [];
+          this.isTobeConsumed = false;
+        }
+      });
     });
   }
 
@@ -102,6 +95,7 @@ class Master {
     // TODO remove from pool on exit or close
     this.workers.forEach((child) => {
       child.on('message', (msg) => {
+        // reset and start accepting new payload
         console.log(`child pid ${child.pid} : message ${msg}`);
       });
 
