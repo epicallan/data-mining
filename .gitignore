@@ -5,3 +5,4 @@ src/facebook
 src/config/cred.js
 src/config/index.js
 dist
+data
