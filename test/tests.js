@@ -4,6 +4,8 @@ import Twitter from '../src/Twitter';
 import path from 'path';
 import utils from '../src/lib/utils';
 import prettyjson from 'prettyjson';
+import { AKILIHUB_API } from '../config';
+
 
 const expect = chai.expect;
 /* eslint-disable func-names */
@@ -25,7 +27,7 @@ describe('twitter worker tests', function () {
       { name: 'allan' },
       { name: 'ak' },
     ];
-    utils.sendPayload(payload, 'http://akilihub.io/api/social/twdata/', (body) => {
+    utils.sendPayload(payload, AKILIHUB_API, (body) => {
       console.log(prettyjson.render(body));
       expect(body).to.be.an('object');
       done();
@@ -37,7 +39,7 @@ describe('twitter worker tests', function () {
     try {
       const processedData = await twitter.processData();
       // console.log(prettyjson.render(processedData[0]));
-      utils.sendPayload(processedData, 'http://akilihub.io/api/social/twdata/', (body) => {
+      utils.sendPayload(processedData, AKILIHUB_API, (body) => {
         console.log(body);
         expect(body).to.be.an('object');
         done();
