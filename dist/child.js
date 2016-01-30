@@ -5282,7 +5282,6 @@ module.exports =
 	        counter += processedData.length;
 	        url = _config.AKILIHUB_API;
 
-	        // const url = 'http://localhost:5000/api/social/twdata/';
 	        _libUtils2['default'].sendPayload(processedData, url, function (body) {
 	          changeState('0');
 	          var date = new Date();

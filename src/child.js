@@ -29,7 +29,6 @@ async function processPayload(data) {
     const processedData = await twitter.processData();
     counter += processedData.length;
     const url = AKILIHUB_API;
-    // const url = 'http://localhost:5000/api/social/twdata/';
     utils.sendPayload(processedData, url, (body) => {
       changeState('0');
       const date = new Date();
