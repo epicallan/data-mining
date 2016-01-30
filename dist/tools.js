@@ -5221,7 +5221,33 @@ module.exports =
 
 /***/ },
 /* 191 */,
-/* 192 */,
+/* 192 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+	if (process.env.NODE_ENV === 'development') {
+	  undefined.db = 'mine-dev';
+	} else if (process.env.NODE_ENV === 'production') {
+	  undefined.db = 'mine';
+	} else if (process.env.NODE_ENV === 'test') {
+	  undefined.db = 'mine-test';
+	}
+	process.env.MONGO_URL = 'mongodb://localhost/' + undefined.db;
+
+	var MONGO_URL = 'mongodb://localhost/' + undefined.db;
+	exports.MONGO_URL = MONGO_URL;
+	var GOOGLE_API_KEY = 'AIzaSyChXVTkq8bGhAxeJnQnNHfsmWcGcC2GXEE';
+	exports.GOOGLE_API_KEY = GOOGLE_API_KEY;
+	var AKILIHUB_API = 'http://akilihub.io/api/social/twdata/';
+	exports.AKILIHUB_API = AKILIHUB_API;
+
+/***/ },
 /* 193 */,
 /* 194 */
 /***/ function(module, exports, __webpack_require__) {
@@ -5275,9 +5301,13 @@ module.exports =
 
 	var _async3 = _interopRequireDefault(_async2);
 
+	var _config = __webpack_require__(192);
+
+	var _config2 = _interopRequireDefault(_config);
+
 	// import prettyjson from 'prettyjson';
 
-	var GOOGLE_API_KEY = 'AIzaSyChXVTkq8bGhAxeJnQnNHfsmWcGcC2GXEE';
+	var GOOGLE_API_KEY = _config2['default'].GOOGLE_API_KEY;
 	var GEO_CODE_API = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
 	_bluebird2['default'].promisifyAll(_redis2['default'].RedisClient.prototype);
 	_bluebird2['default'].promisifyAll(_redis2['default'].Multi.prototype);
@@ -6047,7 +6077,7 @@ module.exports =
 	});
 	var settings = {
 	  names: ['museveni', 'besigye', 'mbabazi', 'baryamureeba', 'bwanika'],
-	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro,' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16'
+	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro,' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16' + 'nrm,fdc uganda'
 	};
 	exports['default'] = settings;
 	module.exports = exports['default'];
@@ -6065,8 +6095,7 @@ module.exports =
 	/**
 	 * i used this class to clean up old data
 	 * go through entire dataset
-	 * add a time stamp field
-	 * add used terms
+	 * add a time stamp field and add used terms
 	 * and save it to a new collection
 	 */
 	/* eslint-disable no-console */

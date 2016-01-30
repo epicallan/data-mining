@@ -1,7 +1,7 @@
 /**
  * child process that does the heavy lifting
  */
-import './config';
+import { AKILIHUB_API } from './config';
 import Twitter from './Twitter';
 import redis from 'redis';
 import utils from './lib/utils';
@@ -28,7 +28,7 @@ async function processPayload(data) {
   try {
     const processedData = await twitter.processData();
     counter += processedData.length;
-    const url = 'http://akilihub.io/api/social/twdata/';
+    const url = AKILIHUB_API;
     // const url = 'http://localhost:5000/api/social/twdata/';
     utils.sendPayload(processedData, url, (body) => {
       changeState('0');
@@ -41,6 +41,5 @@ async function processPayload(data) {
 }
 
 process.on('message', async(data) => {
-  // set process to be busy on redis
   processPayload(data);
 });

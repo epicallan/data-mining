@@ -1,8 +1,7 @@
 /**
  * i used this class to clean up old data
  * go through entire dataset
- * add a time stamp field
- * add used terms
+ * add a time stamp field and add used terms
  * and save it to a new collection
  */
 /* eslint-disable no-console */

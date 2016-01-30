@@ -54,6 +54,7 @@ class Master {
       track: settings.track,
     });
   }
+
   listenToStream() {
     this.stream.on('tweet', (data) => {
       this.tweetsBuffer.push(data);
@@ -81,7 +82,7 @@ class Master {
       this.getWorkerStatus(worker, (isWorkerBusy) => {
         if (!isWorkerBusy && !isConsumed) {
           worker.send(this.tweetsBuffer);
-          console.log(`PID: ${worker.pid} index: ${index} `);
+          console.log(`Process in use PID: ${worker.pid} index: ${index} `);
           isConsumed = true;
           // reset
           this.tweetsBuffer = [];

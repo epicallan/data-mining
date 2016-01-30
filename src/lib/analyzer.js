@@ -8,9 +8,10 @@ import request from 'request';
 import redis from 'redis';
 import bluebird from 'bluebird';
 import _async from 'async';
+import config from '../config';
 // import prettyjson from 'prettyjson';
 
-const GOOGLE_API_KEY = 'AIzaSyChXVTkq8bGhAxeJnQnNHfsmWcGcC2GXEE';
+const GOOGLE_API_KEY = config.GOOGLE_API_KEY;
 const GEO_CODE_API = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
 bluebird.promisifyAll(redis.RedisClient.prototype);
 bluebird.promisifyAll(redis.Multi.prototype);

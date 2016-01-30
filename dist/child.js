@@ -5232,7 +5232,7 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	__webpack_require__(192);
+	var _config = __webpack_require__(192);
 
 	var _Twitter = __webpack_require__(193);
 
@@ -5280,7 +5280,7 @@ module.exports =
 	        processedData = context$1$0.sent;
 
 	        counter += processedData.length;
-	        url = 'http://akilihub.io/api/social/twdata/';
+	        url = _config.AKILIHUB_API;
 
 	        // const url = 'http://localhost:5000/api/social/twdata/';
 	        _libUtils2['default'].sendPayload(processedData, url, function (body) {
@@ -5308,7 +5308,6 @@ module.exports =
 	  return regeneratorRuntime.async(function callee$0$0$(context$1$0) {
 	    while (1) switch (context$1$0.prev = context$1$0.next) {
 	      case 0:
-	        // set process to be busy on redis
 	        processPayload(data);
 
 	      case 1:
@@ -5328,24 +5327,22 @@ module.exports =
 	  value: true
 	});
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+	if (process.env.NODE_ENV === 'development') {
+	  undefined.db = 'mine-dev';
+	} else if (process.env.NODE_ENV === 'production') {
+	  undefined.db = 'mine';
+	} else if (process.env.NODE_ENV === 'test') {
+	  undefined.db = 'mine-test';
+	}
+	process.env.MONGO_URL = 'mongodb://localhost/' + undefined.db;
 
-	var Config = function Config() {
-	  _classCallCheck(this, Config);
-
-	  process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-	  if (process.env.NODE_ENV === 'development') {
-	    this.db = 'mine-dev';
-	  } else if (process.env.NODE_ENV === 'production') {
-	    this.db = 'mine';
-	  } else if (process.env.NODE_ENV === 'test') {
-	    this.db = 'mine-test';
-	  }
-	  process.env.MONGO_URL = 'mongodb://localhost/' + this.db;
-	};
-
-	exports['default'] = new Config();
-	module.exports = exports['default'];
+	var MONGO_URL = 'mongodb://localhost/' + undefined.db;
+	exports.MONGO_URL = MONGO_URL;
+	var GOOGLE_API_KEY = 'AIzaSyChXVTkq8bGhAxeJnQnNHfsmWcGcC2GXEE';
+	exports.GOOGLE_API_KEY = GOOGLE_API_KEY;
+	var AKILIHUB_API = 'http://akilihub.io/api/social/twdata/';
+	exports.AKILIHUB_API = AKILIHUB_API;
 
 /***/ },
 /* 193 */
@@ -5514,9 +5511,13 @@ module.exports =
 
 	var _async3 = _interopRequireDefault(_async2);
 
+	var _config = __webpack_require__(192);
+
+	var _config2 = _interopRequireDefault(_config);
+
 	// import prettyjson from 'prettyjson';
 
-	var GOOGLE_API_KEY = 'AIzaSyChXVTkq8bGhAxeJnQnNHfsmWcGcC2GXEE';
+	var GOOGLE_API_KEY = _config2['default'].GOOGLE_API_KEY;
 	var GEO_CODE_API = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
 	_bluebird2['default'].promisifyAll(_redis2['default'].RedisClient.prototype);
 	_bluebird2['default'].promisifyAll(_redis2['default'].Multi.prototype);
@@ -6286,7 +6287,7 @@ module.exports =
 	});
 	var settings = {
 	  names: ['museveni', 'besigye', 'mbabazi', 'baryamureeba', 'bwanika'],
-	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro,' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16'
+	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro,' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16' + 'nrm,fdc uganda'
 	};
 	exports['default'] = settings;
 	module.exports = exports['default'];

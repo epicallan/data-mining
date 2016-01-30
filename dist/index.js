@@ -82,7 +82,7 @@ module.exports =
 	});
 	var settings = {
 	  names: ['museveni', 'besigye', 'mbabazi', 'baryamureeba', 'bwanika'],
-	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro,' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16'
+	  track: 'museveni,besigye,ugandaDecides,AmamaMbabazi,amama mbabazi,ugdebate16,benon beraro,' + 'JPM uganda,amama Uganda,abed bwanika,baryamureeba,Prof. V Baryamureeba,UGDebate16' + 'nrm,fdc uganda'
 	};
 	exports['default'] = settings;
 	module.exports = exports['default'];
@@ -226,7 +226,7 @@ module.exports =
 	        _this2.getWorkerStatus(worker, function (isWorkerBusy) {
 	          if (!isWorkerBusy && !isConsumed) {
 	            worker.send(_this2.tweetsBuffer);
-	            console.log('PID: ' + worker.pid + ' index: ' + index + ' ');
+	            console.log('Process in use PID: ' + worker.pid + ' index: ' + index + ' ');
 	            isConsumed = true;
 	            // reset
 	            _this2.tweetsBuffer = [];
