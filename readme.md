@@ -1,7 +1,4 @@
 # datamining
-[![Build Status][travis-image]][travis-url]
-[![Coveralls Status][coveralls-image]][coveralls-url]
-[![Dependency Status][depstat-image]][depstat-url]
 
 > Description
 ## Getting started
