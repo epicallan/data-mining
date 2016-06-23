@@ -14,7 +14,14 @@
     "start-dev": "NODE_ENV=development node dist/index.js"
   },
   "repository": "epicallan/datamining",
-  "keywords": [],
+  "keywords": [
+    "twitter",
+    "data",
+    "minning",
+    "data mining",
+    "nlp",
+    "natural language processing"
+    ],
   "files": [
     "dist",
     "src"
